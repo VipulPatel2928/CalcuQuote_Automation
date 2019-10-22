@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content passed suite-CalcuQuote_Functional_TestCases_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CalcuQuote_Functional_TestCases_Suite" title="com.automation.index.CalcuQuote_Login_Index" hash-for-method="BOM_TestCase_01">BOM_TestCase_01</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CalcuQuote_Functional_TestCases_Suite" title="com.automation.index.CalcuQuote_Login_Index" hash-for-method="Labor_TestCase_01">Labor_TestCase_01</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-CalcuQuote_Functional_TestCases_Suite" title="com.automation.index.CalcuQuote_Login_Index" hash-for-method="Material_Costing_TestCase_01">Material_Costing_TestCase_01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CalcuQuote_Functional_TestCases_Suite -->
@@ -130,16 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="BOM_TestCase_01">
-                  </a> <!-- BOM_TestCase_01 -->
-                  <span class="method-name">BOM_TestCase_01</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Labor_TestCase_01">
-                  </a> <!-- Labor_TestCase_01 -->
-                  <span class="method-name">Labor_TestCase_01</span>
+                  <a name="Material_Costing_TestCase_01">
+                  </a> <!-- Material_Costing_TestCase_01 -->
+                  <span class="method-name">Material_Costing_TestCase_01</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,8 +161,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.automation.index.CalcuQuote_Login_Index&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;BOM_TestCase_01&quot;/&gt;
-          &lt;include name=&quot;Labor_TestCase_01&quot;/&gt;
+          &lt;include name=&quot;Material_Costing_TestCase_01&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.automation.index.CalcuQuote_Login_Index --&gt;
     &lt;/classes&gt;
@@ -216,20 +203,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Labor_TestCase_01')
+data.setCell(0, 1, 'Material_Costing_TestCase_01')
 data.setCell(0, 2, 'com.automation.index.CalcuQuote_Login_Index')
-data.setCell(0, 3, 147602);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'BOM_TestCase_01')
-data.setCell(1, 2, 'com.automation.index.CalcuQuote_Login_Index')
-data.setCell(1, 3, 98515);
+data.setCell(0, 3, 238340);
 window.suiteTableData['CalcuQuote_Functional_TestCases_Suite']= { tableData: data, tableDiv: 'times-div-CalcuQuote_Functional_TestCases_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-CalcuQuote_Functional_TestCases_Suite">
               </div> <!-- times-div-CalcuQuote_Functional_TestCases_Suite -->
             </div> <!-- times-div -->
@@ -241,10 +224,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">Labor_TestCase_01</span>
+              <span class="reporter-method-name">Material_Costing_TestCase_01</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong></span>
-                <span class="reporter-method-output"><strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Labor::To verify that user is able to enter the labor activities in RFQ</h1> </strong></span>
+                <span class="reporter-method-output"><strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Material_Costing::To verify that user is able to Update Pricing and Auto Select</h1> </strong></span>
                 <span class="reporter-method-output"><br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br></span>
                 <span class="reporter-method-output"><strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong></span>
                 <span class="reporter-method-output"><strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> </span>
@@ -256,66 +239,20 @@ return data;
                 <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br></span>
                 <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br></span>
                 <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br></span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 4: Select Labor Activity/Activities</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Tab <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::1</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::2</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::3</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::4</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::5</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::6</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::7</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br></span>
-                <span class="reporter-method-output"><strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified Labor Activity Added Successfully <-----</h1> </strong></span>
-                <span class="reporter-method-output"><strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> </span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 5: Submit Labor</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Submit Button <---</br></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">BOM_TestCase_01</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong></span>
-                <span class="reporter-method-output"><strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_BOM::To verify that user is able to Import BOM and Submit.</h1> </strong></span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br></span>
-                <span class="reporter-method-output"><strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong></span>
-                <span class="reporter-method-output"><strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> </span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br></span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br></span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 4: Import BOM</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Import BOM Icon <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> File Selected for Import <---</br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> BOM imported <---</br></span>
-                <span class="reporter-method-output"><strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified BOM Imported Successfully <-----</h1> </strong></span>
-                <span class="reporter-method-output"><strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> </span>
-                <span class="reporter-method-output"><br><strong><font color="blue">Step 5: Submit BOM</font></strong></br></span>
-                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on BOM Submit Button <---</br></span>
+                <span class="reporter-method-output"><br><strong><font color="blue">Step 4: Navigate to Material Costing Page</font></strong></br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Tab <---</br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Update Pricing Tab <---</br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Submit Button for Update Pricing <---</br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Available for All line and All Quantity <---</br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item start <---</br></span>
+                <span class="reporter-method-output"></br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item finished <---</br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-CalcuQuote_Functional_TestCases_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -323,11 +260,15 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">RFQ_TestCase_01</span>
                 <br/>
+                <span class="ignored-method-name">Labor_TestCase_01</span>
+                <br/>
                 <span class="ignored-method-name">Signin_TestCase_02</span>
                 <br/>
                 <span class="ignored-method-name">Signin_TestCase_01</span>
                 <br/>
                 <span class="ignored-method-name">NRE_TestCase_01</span>
+                <br/>
+                <span class="ignored-method-name">BOM_TestCase_01</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -345,36 +286,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@23fe1d71)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@8e24743)</span>
                 <span class="method-start">11 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01(), org.testng.TestRunner@23f...)</span>
-                <span class="method-start">592 ms</span>
+                <span class="method-name">setUp(public void com.automation.index.CalcuQuote_Login_Index.Material_Costing_TestCase_01(), org.testng.T...)</span>
+                <span class="method-start">620 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">BOM_TestCase_01</span>
-                <span class="method-start">11190 ms</span>
+                <span class="method-name">Material_Costing_TestCase_01</span>
+                <span class="method-start">16697 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=BOM_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.BOM_TestCase_01()[pri:...)</span>
-                <span class="method-start">109706 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.automation.index.CalcuQuote_Login_Index.Labor_TestCase_01(), org.testng.TestRunner@2...)</span>
-                <span class="method-start">123535 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Labor_TestCase_01</span>
-                <span class="method-start">135271 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=Labor_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Labor_TestCase_01()[...)</span>
-                <span class="method-start">282874 ms</span>
+                <span class="method-name">tearDown([TestResult name=Material_Costing_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Material_...)</span>
+                <span class="method-start">255040 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">zipfileupdate</span>
-                <span class="method-start">295072 ms</span>
+                <span class="method-start">269416 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

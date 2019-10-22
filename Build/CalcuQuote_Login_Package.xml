@@ -57,7 +57,8 @@
 					<include name="Signin_TestCase_01" dependsOnMethods ="Signin_TestCase_02" />
 					<include name="Signin_TestCase_02" />
 					<include name="RFQ_TestCase_01" dependsOnMethods = "Signin_TestCase_01"/>		
-					<include name="BOM_TestCase_01" dependsOnMethods ="RFQ_TestCase_01"/>					
+					<include name="BOM_TestCase_01" dependsOnMethods ="RFQ_TestCase_01"/>		
+					<include name="Labor_TestCase_01" dependsOnMethods ="BOM_TestCase_01"/>			
 				</methods>
 			</class>
 		</classes>
@@ -68,8 +69,9 @@
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Login_Index">
 				<methods>
-					<include name="BOM_TestCase_01" />
-					<include name="Labor_TestCase_01" />
+				<!-- 	<include name="BOM_TestCase_01" />
+					<include name="Labor_TestCase_01" /> -->
+					<include name="Material_Costing_TestCase_01" />					
 				</methods>
 			</class>
 		</classes>

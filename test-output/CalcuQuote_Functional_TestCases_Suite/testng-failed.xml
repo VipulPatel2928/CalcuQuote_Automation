@@ -22,8 +22,8 @@
         <methods>
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
-          <include name="Labor_TestCase_01"/>
           <include name="setUp"/>
+          <include name="Material_Costing_TestCase_01"/>
           <include name="zipfileupdate"/>
           <include name="BOM_TestCase_01"/>
           <include name="sheetupdate"/>

@@ -307,6 +307,7 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			
 	}// End of BOM_TestCase_01
 	
+	// Labor Module TestCases
 	@Test(priority = 0, enabled = true, dependsOnMethods="BOM_TestCase_01")
 	public void Labor_TestCase_01() {
 		step = 1;
@@ -330,7 +331,7 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
 			LogClass.AssertFailed();
 			LogClass.AssertFailed_Extent_Report();
-			LogClass.makeScreenshot(driver, "BOM_Login_fail");
+			LogClass.makeScreenshot(driver, "Labor_Login_fail");
 			// softAssertion.assertTrue(false);
 			Assert.assertTrue(false);
 		}
@@ -361,7 +362,7 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			LogClass.logExtent("-----> Verified Labor Activity is not Added Successfully <-----");
 			LogClass.AssertFailed();
 			LogClass.AssertFailed_Extent_Report();
-			LogClass.makeScreenshot(driver, "BOM_import_fail");
+			LogClass.makeScreenshot(driver, "Labor_activity_fail");
 			// softAssertion.assertTrue(false);
 			Assert.assertTrue(false);
 		}
@@ -371,7 +372,73 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		LogClass.logExtent(report_msg);
 		packageVerification = CalcuQuote_Login_Indexpage.clicksubmitLabor();
 		
-	}
+	}//End of Labor_TestCase_01 
+	
+	// Material Costing Module TestCases , dependsOnMethods="BOM_TestCase_01"
+		@Test(priority = 0, enabled = true)
+		public void Material_Costing_TestCase_01() {
+			step = 1;
+			String report_msg;// String for the log in the Report
+			LogClass.logcase(" ");
+			report_msg = "CalcuQuote_Material_Costing::To verify that user is able to Update Pricing and Auto Select";
+			LogClass.logcase(report_msg);
+			LogClass.logExtent(report_msg);
+
+			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			
+			if (packageVerification.homepageverify()) {
+				LogClass.logveri("-----> Verified CalcuQuote home page is open <-----");
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logveri("-----> Verified CalcuQuote home page is not open <-----");
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+
+			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+			
+			report_msg = "Step " + (step++) + ": Navigate to Material Costing Page";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.materialcosting_activities();
+			
+		/*
+		 * if (packageVerification.price_update_and_auto_selected_verification()) {
+		 * LogClass.
+		 * logveri("-----> Verified prices updated and auto selected Successfully <-----"
+		 * ); LogClass.
+		 * logExtent("-----> Verified prices updated and auto selected Successfully <-----"
+		 * ); LogClass.AssertPassed(); Assert.assertTrue(true); } else { LogClass.
+		 * logveri("-----> Verified prices are not updated and auto selected Successfully <-----"
+		 * ); LogClass.
+		 * logExtent("-----> Verified prices are not updated and auto selected Successfully <-----"
+		 * ); LogClass.AssertFailed(); LogClass.AssertFailed_Extent_Report();
+		 * LogClass.makeScreenshot(driver, "Price_update_auto_select_fail"); //
+		 * softAssertion.assertTrue(false); Assert.assertTrue(false); }
+		 * 
+		 * report_msg = "Step " + (step++) + ": Submit Material Costing";
+		 * LogClass.logstep(report_msg); LogClass.logExtent(report_msg);
+		 * packageVerification =
+		 * CalcuQuote_Login_Indexpage.clicksubmitmaterialcosting();
+		 */
+		}//End of Labor_TestCase_01 
+			
 		
 
 }// End of Class

@@ -8,7 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.automation.init.CalcuQuote_AbstractPage;
 import com.automation.init.CalcuQuote_SeleniumInit;
 import com.automation.utility.CalcuQuote_TestData;
@@ -777,8 +780,7 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 			LogClass.logExtent("---> Click on Next Button <---");
 			
 			options.deselectByIndex(j);	
-		    funcs.waitforseconds(1);
-			
+		    funcs.waitforseconds(1);	
 		}
 		return new CalcuQuote_Login_Verification(driver);
 	}
@@ -790,6 +792,71 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.clickon_element(driver, labor_submit_btn);
 		LogClass.log("---> Click on Labor Submit Button <---");
 		LogClass.logExtent("---> Click on Labor Submit Button <---");
+		return new CalcuQuote_Login_Verification(driver);
+	}
+
+	@FindBy(xpath="//ul//li[4]//a[contains(text(),' Material Costing')]")private static WebElement material_costing_tab;
+	@FindBy(xpath="//button[@id='btnUpdatePricing']")private static WebElement update_pricing;
+	@FindBy(xpath="//button[text()='Submit']")private static WebElement MC_POPup_submit_btn;
+	@FindBy(xpath="//button[@ng-click='stopAutoPricing()']")private static WebElement stopautopricing;
+	@FindBy(xpath="//button[@id='btnAutoSelect']")private static WebElement auto_select_btn;
+	
+	@FindBy(xpath="//a[@uib-tooltip='Pricing Available  ']")private static List<WebElement> pricing_available;
+	@FindBy(xpath="//div[@class='ui-grid-cell-contents ng-binding']")private static List<WebElement> select_line;
+	@FindBy(xpath="//span[@ng-if='IsMoreThanOneQuantity']")private static WebElement apply_to_all_quantity;
+	@FindBy(xpath="//span[@class='fa fa-times close']")private static WebElement close_CQPS;
+	@FindBy(xpath="//button[text()='Ok']")private static WebElement ok_btn;
+	
+	public static CalcuQuote_Login_Verification materialcosting_activities() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_tab );
+		LogClass.log("---> Click on Material Costing Tab <---");
+		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,update_pricing );
+		LogClass.log("---> Click on Update Pricing Tab <---");
+		LogClass.logExtent("---> Click on Update Pricing Tab <---");
+		
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver,MC_POPup_submit_btn );
+		LogClass.log("---> Click on Submit Button for Update Pricing <---");
+		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
+		
+		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
+		///WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(element));
+		
+		/*
+		 * funcs.waitforseconds(3); funcs.clickon_element(driver,auto_select_btn );
+		 * LogClass.log("---> Click on Auto Select Button <---");
+		 * LogClass.logExtent("---> Click on Auto Select Button <---");
+		 */
+		
+		if(pricing_available.size()==8) {
+			LogClass.log("---> Pricing Available for All line and All Quantity <---");
+			LogClass.logExtent("---> Pricing Available for All line and All Quantity <---");
+		}
+		
+		
+		LogClass.log("---> Pricing Selection for each line item start <---");
+		LogClass.logExtent("---> Pricing Selection for each line item start <---");
+		System.out.println("pricing available="+pricing_available.size());
+		for(int i=0;i<=pricing_available.size()-2;i=i+2) {
+			System.out.println("i="+i);
+			funcs.clickon_element(driver,pricing_available.get(i) );
+			funcs.waitforseconds(3);
+			funcs.clickon_element(driver,select_line.get(1) );
+			funcs.clickon_element(driver,apply_to_all_quantity );
+			funcs.waitforseconds(8);
+			funcs.clickon_element(driver,close_CQPS );
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver,ok_btn );
+		}
+		LogClass.log("---> Pricing Selection for each line item finished <---");
+		LogClass.logExtent("---> Pricing Selection for each line item finished <---");
+		
+		funcs.waitforseconds(10);
 		return new CalcuQuote_Login_Verification(driver);
 	}
 }
