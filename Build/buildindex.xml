@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CalcuQuote_Functional_TestCases_Suite" verbose="10"
+	parallel="tests" thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.browser" value="chrome" /> -->
+	<!-- <parameter name="selenium.browser" value="m-headless" /> -->
+	<!-- <parameter name="selenium.browser" value="firefox" /> -->
+	<!-- <parameter name="selenium.browser" value="ie11" /> -->
+	<!-- <parameter name="selenium.browser" value="Android_Chrome" /> -->
+	<!-- <parameter name="selenium.browser" value="ie11" /> -->
+	<!-- <parameter name="selenium.browser" value="browserstack" /> -->
+	<parameter name="selenium.url"
+		value="https://qa.calcuquote.com/Staging2/" />
+
+	<listeners>
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterListener" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterEmailBuildSummary" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterforEmail" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterBuildSummary" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterTestpassDetails" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterTestFailureDetails" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterTestskipDetails" />
+		<listener
+			class-name="com.automation.utility.CalcuQuote_CustomReporterTestDetails" />
+
+		<listener
+			class-name="com.automation.utility.CalcuQuote_TestListener" />
+		<!-- <listener class-name="com.automation.utility.CalcuQuote_AnnotationTransformer" 
+			/> -->
+
+		<!-- <listener class-name="com.automation.utility.CalcuQuote_RetryListenerClass" 
+			/> -->  <!-- for the Retry Class to run the fail test 2 times -->
+	</listeners>
+	
+	<test
+		name="CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values">
+		<classes>
+			<class name="com.automation.index.CalcuQuote_Login_Index">
+				<methods>
+					<include name="NRE_TestCase_01" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

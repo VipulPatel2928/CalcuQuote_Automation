@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [CalcuQuote_Functional_TestCases_Suite]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="selenium.url" value="https://qa.calcuquote.com/Staging2/"/>
+  <listeners>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterListener"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterEmailBuildSummary"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterforEmail"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterBuildSummary"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestpassDetails"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestFailureDetails"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestskipDetails"/>
+    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestDetails"/>
+    <listener class-name="com.automation.utility.CalcuQuote_TestListener"/>
+  </listeners>
+  <test thread-count="1" verbose="0" name="CalcuQuote_Login::To verify that user is able to login with valid credentials(failed)" parallel="tests">
+    <classes>
+      <class name="com.automation.index.CalcuQuote_Login_Index">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="Labor_TestCase_01"/>
+          <include name="setUp"/>
+          <include name="zipfileupdate"/>
+          <include name="BOM_TestCase_01"/>
+          <include name="sheetupdate"/>
+        </methods>
+      </class> <!-- com.automation.index.CalcuQuote_Login_Index -->
+    </classes>
+  </test> <!-- CalcuQuote_Login::To verify that user is able to login with valid credentials(failed) -->
+</suite> <!-- Failed suite [CalcuQuote_Functional_TestCases_Suite] -->
