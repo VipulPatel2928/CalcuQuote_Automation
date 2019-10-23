@@ -786,12 +786,21 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 	}
 
 	@FindBy(xpath="//button[@class='btn']")private static WebElement labor_submit_btn;
+	@FindBy(xpath="//button[text()='Yes']")private static WebElement labor_submit_yes_btn;
 	public static CalcuQuote_Login_Verification clicksubmitLabor() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, labor_submit_btn);
 		LogClass.log("---> Click on Labor Submit Button <---");
 		LogClass.logExtent("---> Click on Labor Submit Button <---");
+		
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver, labor_submit_yes_btn);
+		LogClass.log("---> Click on Yes Button <---");
+		LogClass.logExtent("---> Click on Yes Button <---");
+		
+		funcs.waitforseconds(4);
+		
 		return new CalcuQuote_Login_Verification(driver);
 	}
 
@@ -804,6 +813,8 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 	@FindBy(xpath="//a[@uib-tooltip='Pricing Available  ']")private static List<WebElement> pricing_available;
 	@FindBy(xpath="//div[@class='ui-grid-cell-contents ng-binding']")private static List<WebElement> select_line;
 	@FindBy(xpath="//span[@ng-if='IsMoreThanOneQuantity']")private static WebElement apply_to_all_quantity;
+	
+	@FindBy(xpath="//span[@ng-click='Next()']")private static WebElement cqps_next_btn;
 	@FindBy(xpath="//span[@class='fa fa-times close']")private static WebElement close_CQPS;
 	@FindBy(xpath="//button[text()='Ok']")private static WebElement ok_btn;
 	
@@ -841,22 +852,57 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		
 		LogClass.log("---> Pricing Selection for each line item start <---");
 		LogClass.logExtent("---> Pricing Selection for each line item start <---");
+		
 		System.out.println("pricing available="+pricing_available.size());
-		for(int i=0;i<=pricing_available.size()-2;i=i+2) {
-			System.out.println("i="+i);
-			funcs.clickon_element(driver,pricing_available.get(i) );
+		funcs.clickon_element(driver,pricing_available.get(0) );
+		
+		for(int i=0;i<=3;i++) {
+			//System.out.println("i="+i);
+			//funcs.clickon_element(driver,pricing_available.get(i) );
 			funcs.waitforseconds(3);
 			funcs.clickon_element(driver,select_line.get(1) );
 			funcs.clickon_element(driver,apply_to_all_quantity );
-			funcs.waitforseconds(8);
-			funcs.clickon_element(driver,close_CQPS );
-			funcs.waitforseconds(1);
-			funcs.clickon_element(driver,ok_btn );
+			funcs.waitforseconds(4);
+			funcs.clickon_element(driver,cqps_next_btn );
+			funcs.waitforseconds(8);			
 		}
+		
+		funcs.waitforseconds(4);
+		funcs.clickon_element(driver,close_CQPS );
+		//funcs.waitforseconds(1);
+		//funcs.clickon_element(driver,ok_btn );
+		
 		LogClass.log("---> Pricing Selection for each line item finished <---");
 		LogClass.logExtent("---> Pricing Selection for each line item finished <---");
 		
 		funcs.waitforseconds(10);
+		return new CalcuQuote_Login_Verification(driver);
+	}
+
+	
+	@FindBy(xpath="//button[@id='btnPurchaseSubmit']")private static WebElement material_costing_submit_btn;
+	@FindBy(xpath="//button[text()='Ok']")private static WebElement material_submit_ok_btn;
+	public static CalcuQuote_Login_Verification clicksubmitmaterialcosting() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_submit_btn );
+		LogClass.log("---> Click on Material Costing Submit button <---");
+		LogClass.logExtent("---> Click on Material Costing Submit button <---");
+		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_submit_ok_btn );
+		LogClass.log("---> Click on OK button <---");
+		LogClass.logExtent("---> Click on OK button <---");
+		return new CalcuQuote_Login_Verification(driver);
+	}
+
+	@FindBy(xpath="//button[@title='Submit']")private static WebElement nre_submit_btn;
+	public static CalcuQuote_Login_Verification clicksubmitnre() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,nre_submit_btn );
+		LogClass.log("---> Click on NRE Submit button <---");
+		LogClass.logExtent("---> Click on NRE Submit button <---");
 		return new CalcuQuote_Login_Verification(driver);
 	}
 }

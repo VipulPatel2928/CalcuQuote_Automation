@@ -121,7 +121,6 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 	}// End of Signin_TestCase_02.
 
 //NRE Module Test Cases	
-//dependsOnMethods={"com.automation.index.CalcuQuote_RFQ_Index.RFQ_TestCase_01"}
 	@Test(priority = 0, enabled = true, dependsOnMethods = { "Signin_TestCase_01", "RFQ_TestCase_01" ,"BOM_TestCase_01"})
 	public void NRE_TestCase_01() {
 		step = 1;
@@ -182,6 +181,12 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			// softAssertion.assertTrue(false); Assert.assertTrue(false);
 		}
 
+		report_msg = "Step " + (step++) + ": Submit NRE";
+		LogClass.logstep(report_msg);
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.clicksubmitnre();
+		 
+		
 	}// End of NRE_TestCase_01().
 
 //RFQ Module Test Cases	
@@ -240,8 +245,8 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 
 	}// End of RFQ_TestCase_01.
 	
-//BOM Module TestCases , dependsOnMethods="RFQ_TestCase_01"
-	@Test(priority = 0, enabled = true)
+//BOM Module TestCases 
+	@Test(priority = 0, enabled = true, dependsOnMethods="RFQ_TestCase_01")
 	public void BOM_TestCase_01() {
 
 		step = 1;
@@ -374,8 +379,8 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		
 	}//End of Labor_TestCase_01 
 	
-	// Material Costing Module TestCases , dependsOnMethods="BOM_TestCase_01"
-		@Test(priority = 0, enabled = true)
+	// Material Costing Module TestCases
+		@Test(priority = 0, enabled = true, dependsOnMethods="BOM_TestCase_01")
 		public void Material_Costing_TestCase_01() {
 			step = 1;
 			String report_msg;// String for the log in the Report
@@ -418,25 +423,26 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.materialcosting_activities();
 			
-		/*
-		 * if (packageVerification.price_update_and_auto_selected_verification()) {
-		 * LogClass.
-		 * logveri("-----> Verified prices updated and auto selected Successfully <-----"
-		 * ); LogClass.
-		 * logExtent("-----> Verified prices updated and auto selected Successfully <-----"
-		 * ); LogClass.AssertPassed(); Assert.assertTrue(true); } else { LogClass.
-		 * logveri("-----> Verified prices are not updated and auto selected Successfully <-----"
-		 * ); LogClass.
-		 * logExtent("-----> Verified prices are not updated and auto selected Successfully <-----"
-		 * ); LogClass.AssertFailed(); LogClass.AssertFailed_Extent_Report();
-		 * LogClass.makeScreenshot(driver, "Price_update_auto_select_fail"); //
-		 * softAssertion.assertTrue(false); Assert.assertTrue(false); }
-		 * 
-		 * report_msg = "Step " + (step++) + ": Submit Material Costing";
-		 * LogClass.logstep(report_msg); LogClass.logExtent(report_msg);
-		 * packageVerification =
-		 * CalcuQuote_Login_Indexpage.clicksubmitmaterialcosting();
-		 */
+		
+		  if (packageVerification.price_update_and_auto_selected_verification()) {
+		  LogClass.logveri("-----> Verified prices assigned Successfully <-----"); 
+		  LogClass.logExtent("-----> Verified prices assigned Successfully <-----"); 
+		  LogClass.AssertPassed(); Assert.assertTrue(true);
+		  } 
+		  else { 
+			  LogClass.logveri("-----> Verified All prices are not assigned Successfully <-----"); 
+			  LogClass.logExtent("-----> Verified All prices are not assigned Successfully <-----"); 
+			  LogClass.AssertFailed(); 
+			  LogClass.AssertFailed_Extent_Report();
+		      LogClass.makeScreenshot(driver, "Price_update_auto_select_fail");
+		      //softAssertion.assertTrue(false); 
+		      Assert.assertTrue(false); 
+		      }
+		  
+		  report_msg = "Step " + (step++) + ": Submit Material Costing";
+		  LogClass.logstep(report_msg); LogClass.logExtent(report_msg);
+		  packageVerification = CalcuQuote_Login_Indexpage.clicksubmitmaterialcosting();
+		 
 		}//End of Labor_TestCase_01 
 			
 		

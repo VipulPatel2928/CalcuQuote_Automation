@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>TestNG:  Regression Suite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Suite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 23 12:05:07 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1037 seconds (1037492 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01()'><b>BOM_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-1795623936" onClick='toggleBox("Output-1795623936", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1795623936" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1795623936">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_BOM::To verify that user is able to Import BOM and Submit.</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br><br/>
+<br><strong><font color="blue">Step 4: Import BOM</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Import BOM Icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> File Selected for Import <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> BOM imported <---</br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified BOM Imported Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 5: Submit BOM</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on BOM Submit Button <---</br><br/>
+</div>
+</td>
+<td></td>
+<td>98</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.Labor_TestCase_01()'><b>Labor_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-883946165" onClick='toggleBox("Output-883946165", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-883946165" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-883946165">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Labor::To verify that user is able to enter the labor activities in RFQ</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br><br/>
+<br><strong><font color="blue">Step 4: Select Labor Activity/Activities</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Tab <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::1</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::2</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::3</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::4</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::5</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified Labor Activity Added Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 5: Submit Labor</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Submit Button <---</br><br/>
+</div>
+</td>
+<td></td>
+<td>129</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.Material_Costing_TestCase_01()'><b>Material_Costing_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-1192006253" onClick='toggleBox("Output-1192006253", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1192006253" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1192006253">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Material_Costing::To verify that user is able to Update Pricing and Auto Select</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br><br/>
+<br><strong><font color="blue">Step 4: Navigate to Material Costing Page</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Tab <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Update Pricing Tab <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Submit Button for Update Pricing <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Available for All line and All Quantity <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item start <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item finished <---</br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified prices assigned Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 5: Submit Material Costing</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Submit button <---</br><br/>
+</div>
+</td>
+<td></td>
+<td>253</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.NRE_TestCase_01()'><b>NRE_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-102764612" onClick='toggleBox("Output-102764612", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-102764612" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-102764612">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br><br/>
+<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br><br/>
+<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+</div>
+</td>
+<td></td>
+<td>210</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01()'><b>RFQ_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-557689123" onClick='toggleBox("Output-557689123", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-557689123" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-557689123">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_RFQ:To verify that user is able to create RFQ with multiple Quantities</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: RFQ with multiple quantities</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on new RFQ button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Company name selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Job type selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Order type selected <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Customer name <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Customer name <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly Number <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 1st Quantity <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Add Quantity Icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 2nd Quantity <---</br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified RFQ Submitted Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+</div>
+</td>
+<td></td>
+<td>90</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01()'><b>Signin_TestCase_01</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-1041813609" onClick='toggleBox("Output-1041813609", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1041813609" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1041813609">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that user is able to login with valid credentials</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br><br/>
+<br><strong><font color="blue">Step 3: Verification Start for the Test Case</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Icon <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Profile <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Checked the User Login Details <---</br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified User has Logged in Successfully <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+<tr>
+<td title='com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_02()'><b>Signin_TestCase_02</b><br>Test class: com.automation.index.CalcuQuote_Login_Index<br/>
+<a href="#Output-828667096" onClick='toggleBox("Output-828667096", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-828667096" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-828667096">
+<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong><br/>
+<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that User gets validation messages for the invalid credentials</h1> </strong><br/>
+<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br><br/>
+<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong><br/>
+<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> <br/>
+<br><strong><font color="blue">Step 2: Enter inValid Credentials</font></strong></br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Blank Email id and Blank Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified|Email Id and Password are required|msgs are display <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Invalid Email id or Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Enter Click on Login Button <---</br><br/>
+</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified | Please double check your email id and password.|msg is displayed <---</br><br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.automation.index.CalcuQuote_Login_Index@4d41cee</td></tr>
+</table><p>
+</body>
+</html>

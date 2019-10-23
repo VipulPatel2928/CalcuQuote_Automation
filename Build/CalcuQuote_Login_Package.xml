@@ -49,7 +49,7 @@
 	</listeners>
 	
 	
-	<!-- <test name="Regression Suite">
+	<test name="Regression Suite">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Login_Index">
 				<methods>
@@ -58,24 +58,26 @@
 					<include name="Signin_TestCase_02" />
 					<include name="RFQ_TestCase_01" dependsOnMethods = "Signin_TestCase_01"/>		
 					<include name="BOM_TestCase_01" dependsOnMethods ="RFQ_TestCase_01"/>		
-					<include name="Labor_TestCase_01" dependsOnMethods ="BOM_TestCase_01"/>			
+					<include name="Labor_TestCase_01" dependsOnMethods ="BOM_TestCase_01"/>	
+					<include name="Material_Costing_TestCase_01" dependsOnMethods="BOM_TestCase_01" />				
 				</methods>
 			</class>
 		</classes>
-	</test> -->
-	
+	</test>
+	<!-- 
 	<test
 		name="CalcuQuote_Login::To verify that user is able to login with valid credentials">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Login_Index">
 				<methods>
-				<!-- 	<include name="BOM_TestCase_01" />
-					<include name="Labor_TestCase_01" /> -->
-					<include name="Material_Costing_TestCase_01" />					
+					<include name="BOM_TestCase_01" />
+					<include name="Labor_TestCase_01" />
+					<include name="Material_Costing_TestCase_01" />		
+	                <include name="RFQ_TestCase_01" />					
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 	<!-- <test
 		name="CalcuQuote_Login::To verify that User gets validation messages for the invalid credentials">

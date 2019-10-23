@@ -164,4 +164,13 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		}
 		
 	}
+
+	public boolean price_update_and_auto_selected_verification() {
+		// TODO Auto-generated method stub
+		List<WebElement> noofprices = driver.findElements(By.xpath("//a[contains(text(),'$')]"));
+		if(noofprices.size()==8) 
+		return true;
+		else
+		return false;
+	}
 }

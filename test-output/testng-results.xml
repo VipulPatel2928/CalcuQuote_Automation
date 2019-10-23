@@ -1,6 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that User gets validation messages for the invalid credentials</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter inValid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Blank Email id and Blank Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified|Email Id and Password are required|msgs are display <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Invalid Email id or Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Enter Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified | Please double check your email id and password.|msg is displayed <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that user is able to login with valid credentials</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: Verification Start for the Test Case</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Profile <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Checked the User Login Details <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified User has Logged in Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_RFQ:To verify that user is able to create RFQ with multiple Quantities</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: RFQ with multiple quantities</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on new RFQ button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Company name selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Job type selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Order type selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Customer name <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Customer name <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly Number <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 1st Quantity <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Add Quantity Icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 2nd Quantity <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified RFQ Submitted Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_BOM::To verify that user is able to Import BOM and Submit.</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 4: Import BOM</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Import BOM Icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> File Selected for Import <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> BOM imported <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified BOM Imported Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 5: Submit BOM</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on BOM Submit Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Labor::To verify that user is able to enter the labor activities in RFQ</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 4: Select Labor Activity/Activities</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Tab <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::1</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::2</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::3</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::4</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::5</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified Labor Activity Added Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 5: Submit Labor</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Submit Button <---</br>]]>
+    </line>
     <line>
       <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
     </line>
@@ -61,28 +466,631 @@
     <line>
       <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item finished <---</br>]]>
     </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified prices assigned Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 5: Submit Material Costing</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Submit button <---</br>]]>
+    </line>
   </reporter-output>
-  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="268958" started-at="2019-10-22T12:57:38Z" finished-at="2019-10-22T13:02:07Z">
+  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="1037492" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:52:25Z">
     <groups>
     </groups>
-    <test name="CalcuQuote_Login::To verify that user is able to login with valid credentials" duration-ms="268958" started-at="2019-10-22T12:57:38Z" finished-at="2019-10-22T13:02:07Z">
+    <test name="Regression Suite" duration-ms="1037492" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:52:25Z">
       <class name="com.automation.index.CalcuQuote_Login_Index">
-        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="sheetupdate" is-config="true" duration-ms="8" started-at="2019-10-22T12:57:38Z" finished-at="2019-10-22T12:57:38Z">
+        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="sheetupdate" is-config="true" duration-ms="19" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:35:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sheetupdate -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="fetchSuiteConfiguration" is-config="true" duration-ms="594" started-at="2019-10-22T12:57:38Z" finished-at="2019-10-22T12:57:39Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="fetchSuiteConfiguration" is-config="true" duration-ms="669" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:35:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@8e24743]]>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="setUp" is-config="true" duration-ms="16077" started-at="2019-10-22T12:57:39Z" finished-at="2019-10-22T12:57:55Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11570" started-at="2019-10-23T06:35:08Z" finished-at="2019-10-23T06:35:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_02()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Signin_TestCase_02" duration-ms="14567" started-at="2019-10-23T06:35:20Z" finished-at="2019-10-23T06:35:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that User gets validation messages for the invalid credentials</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter inValid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Blank Email id and Blank Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified|Email Id and Password are required|msgs are display <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Invalid Email id or Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Enter Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Verified | Please double check your email id and password.|msg is displayed <---</br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Signin_TestCase_02 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="12787" started-at="2019-10-23T06:35:34Z" finished-at="2019-10-23T06:35:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Signin_TestCase_02 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="12876" started-at="2019-10-23T06:35:47Z" finished-at="2019-10-23T06:36:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Signin_TestCase_01" duration-ms="60700" started-at="2019-10-23T06:36:00Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_02" finished-at="2019-10-23T06:37:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Login::To verify that user is able to login with valid credentials</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: Verification Start for the Test Case</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on User Profile <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Checked the User Login Details <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified User has Logged in Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Signin_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13576" started-at="2019-10-23T06:37:01Z" finished-at="2019-10-23T06:37:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Signin_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11389" started-at="2019-10-23T06:37:14Z" finished-at="2019-10-23T06:37:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="RFQ_TestCase_01" duration-ms="90255" started-at="2019-10-23T06:37:26Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01" finished-at="2019-10-23T06:38:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_RFQ:To verify that user is able to create RFQ with multiple Quantities</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: RFQ with multiple quantities</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on new RFQ button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Company name selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Job type selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Order type selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Customer name <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Customer name <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly Number <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 1st Quantity <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Add Quantity Icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 2nd Quantity <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified RFQ Submitted Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- RFQ_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13252" started-at="2019-10-23T06:38:56Z" finished-at="2019-10-23T06:39:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RFQ_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="16425" started-at="2019-10-23T06:39:09Z" finished-at="2019-10-23T06:39:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="BOM_TestCase_01" duration-ms="98466" started-at="2019-10-23T06:39:25Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01" finished-at="2019-10-23T06:41:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_BOM::To verify that user is able to Import BOM and Submit.</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 4: Import BOM</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Import BOM Icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> File Selected for Import <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> BOM imported <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified BOM Imported Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 5: Submit BOM</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on BOM Submit Button <---</br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- BOM_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13597" started-at="2019-10-23T06:41:04Z" finished-at="2019-10-23T06:41:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BOM_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11847" started-at="2019-10-23T06:41:18Z" finished-at="2019-10-23T06:41:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.NRE_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="NRE_TestCase_01" duration-ms="210686" started-at="2019-10-23T06:41:29Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01, com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01, com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01" finished-at="2019-10-23T06:45:00Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- NRE_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="11964" started-at="2019-10-23T06:45:00Z" finished-at="2019-10-23T06:45:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NRE_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="13500" started-at="2019-10-23T06:45:12Z" finished-at="2019-10-23T06:45:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.Labor_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Labor_TestCase_01" duration-ms="129539" started-at="2019-10-23T06:45:26Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01" finished-at="2019-10-23T06:47:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_Labor::To verify that user is able to enter the labor activities in RFQ</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 4: Select Labor Activity/Activities</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Tab <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::1</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::2</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::3</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::4</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity Selected <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Labor Activity added for the RFQ <---::5</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Next Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified Labor Activity Added Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 5: Submit Labor</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Labor Submit Button <---</br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Labor_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13253" started-at="2019-10-23T06:47:35Z" finished-at="2019-10-23T06:47:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Labor_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="9342" started-at="2019-10-23T06:47:48Z" finished-at="2019-10-23T06:47:58Z">
           <params>
             <param index="0">
               <value>
@@ -91,14 +1099,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@8e24743]]>
+                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="Material_Costing_TestCase_01" duration-ms="238340" started-at="2019-10-22T12:57:55Z" finished-at="2019-10-22T13:01:53Z">
+        <test-method status="PASS" signature="Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Material_Costing_TestCase_01" duration-ms="253055" started-at="2019-10-23T06:47:58Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01" finished-at="2019-10-23T06:52:11Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -160,24 +1168,36 @@
             <line>
               <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Pricing Selection for each line item finished <---</br>]]>
             </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified prices assigned Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 5: Submit Material Costing</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Submit button <---</br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Material_Costing_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="tearDown" is-config="true" duration-ms="13929" started-at="2019-10-22T13:01:53Z" finished-at="2019-10-22T13:02:07Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="14152" started-at="2019-10-23T06:52:11Z" finished-at="2019-10-23T06:52:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Material_Costing_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=Material_Costing_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="zipfileupdate" is-config="true" duration-ms="139" started-at="2019-10-22T13:02:07Z" finished-at="2019-10-22T13:02:08Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="zipfileupdate" is-config="true" duration-ms="19" started-at="2019-10-23T06:52:25Z" finished-at="2019-10-23T06:52:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->
       </class> <!-- com.automation.index.CalcuQuote_Login_Index -->
-    </test> <!-- CalcuQuote_Login::To verify that user is able to login with valid credentials -->
+    </test> <!-- Regression Suite -->
   </suite> <!-- CalcuQuote_Functional_TestCases_Suite -->
 </testng-results>
