@@ -10,6 +10,15 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.automation.init.CalcuQuote_SeleniumInit;
 
 import com.automation.indexpage.CalcuQuote_Login_Indexpage;
+import com.automation.indexpage.CalcuQuote_RFQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_BOM_Indexpage;
+import com.automation.indexpage.CalcuQuote_Labor_Indexpage;
+import com.automation.indexpage.CalcuQuote_Material_Costing_Indexpage;
+import com.automation.indexpage.CalcuQuote_NRE_Indexpage;
+import com.automation.indexpage.CalcuQuote_Summary_Indexpage;
+import com.automation.indexpage.CalcuQuote_BidCQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_ShopCQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_SearchCQ_Indexpage;
 
 public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 
@@ -119,7 +128,7 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_inValid_Credentials();
 
 	}// End of Signin_TestCase_02.
-
+/*
 //NRE Module Test Cases	
 	@Test(priority = 0, enabled = true, dependsOnMethods = { "Signin_TestCase_01", "RFQ_TestCase_01" ,"BOM_TestCase_01"})
 	public void NRE_TestCase_01() {
@@ -188,9 +197,11 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		 
 		
 	}// End of NRE_TestCase_01().
-
-//RFQ Module Test Cases	
-	@Test(priority = 0, enabled = true, dependsOnMethods = "Signin_TestCase_01")
+	
+*/	
+/*
+//RFQ Module Test Cases	, dependsOnMethods = "Signin_TestCase_01"
+	@Test(priority = 0, enabled = true)
 	public void RFQ_TestCase_01() {
 
 		step = 1;
@@ -244,9 +255,10 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		}
 
 	}// End of RFQ_TestCase_01.
-	
-//BOM Module TestCases 
-	@Test(priority = 0, enabled = true, dependsOnMethods="RFQ_TestCase_01")
+*/	
+/*	
+//BOM Module TestCases , dependsOnMethods="RFQ_TestCase_01,BOM_TestCase_02"
+	@Test(priority = 0, enabled = true)
 	public void BOM_TestCase_01() {
 
 		step = 1;
@@ -312,8 +324,77 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 			
 	}// End of BOM_TestCase_01
 	
-	// Labor Module TestCases
-	@Test(priority = 0, enabled = true, dependsOnMethods="BOM_TestCase_01")
+	//BOM Module TestCases 
+		@Test(priority = 0, enabled = true, dependsOnMethods="RFQ_TestCase_01")
+		public void BOM_TestCase_02() {
+
+			step = 1;
+			String report_msg;// String for the log in the Report
+			LogClass.logcase(" ");
+			report_msg = "CalcuQuote_BOM::To verify that user is able to Add line Item Manually.";
+			LogClass.logcase(report_msg);
+			LogClass.logExtent(report_msg);
+
+			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			
+			if (packageVerification.homepageverify()) {
+				LogClass.logveri("-----> Verified CalcuQuote home page is open <-----");
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logveri("-----> Verified CalcuQuote home page is not open <-----");
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_manual_line_item_Login_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+
+			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+			
+			report_msg = "Step " + (step++) + ": Add Line Item Manually";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.addlineitemmanually();
+			/*
+			if (packageVerification.manual_line_item_added()) {
+				LogClass.logveri("-----> Verified manualy line item added Successfully <-----");
+				LogClass.logExtent("-----> Verified manualy line item added Successfully <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logveri("-----> Verified manualy line item is not added Successfully <-----");
+				LogClass.logExtent("-----> Verified manualy line item is not added Successfully <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_manual_line_item_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+			report_msg = "Step " + (step++) + ": Submit BOM";
+			LogClass.logstep(report_msg);
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.clicksubmitBOM();
+				
+		}// End of BOM_TestCase_02
+*/		
+	
+	/*
+	// Labor Module TestCases , dependsOnMethods="BOM_TestCase_01"
+	@Test(priority = 0, enabled = true)
 	public void Labor_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report
@@ -379,6 +460,8 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		
 	}//End of Labor_TestCase_01 
 	
+	*/
+	/*
 	// Material Costing Module TestCases
 		@Test(priority = 0, enabled = true, dependsOnMethods="BOM_TestCase_01")
 		public void Material_Costing_TestCase_01() {
@@ -443,8 +526,8 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		  LogClass.logstep(report_msg); LogClass.logExtent(report_msg);
 		  packageVerification = CalcuQuote_Login_Indexpage.clicksubmitmaterialcosting();
 		 
-		}//End of Labor_TestCase_01 
-			
+		}//End of Material_Costing_TestCase_01
+		*/	
 		
 
 }// End of Class

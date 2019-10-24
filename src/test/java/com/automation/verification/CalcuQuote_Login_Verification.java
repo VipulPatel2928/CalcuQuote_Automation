@@ -103,7 +103,7 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		}
 		
 	}
-
+/*
 	public boolean CalcuQuote_NRE_calculation_verification() {
 		// TODO Auto-generated method stub		
 		try {
@@ -117,7 +117,9 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 			return false;
 		}
 	}
-
+	
+	*/
+/*
 	public boolean rfqsubmitted() {
 		// TODO Auto-generated method stub
 		
@@ -135,7 +137,8 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 			  return false;
 		  }
 	}
-
+*/
+	/*
 	public boolean BOM_imported() {
 		// TODO Auto-generated method stub
 		try {
@@ -149,7 +152,8 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 			return false;
 		}
 	}
-
+*/
+	/*
 	public boolean laboractivity_added_verification() {
 		// TODO Auto-generated method stub
 		try {
@@ -164,7 +168,8 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		}
 		
 	}
-
+*/
+	/*
 	public boolean price_update_and_auto_selected_verification() {
 		// TODO Auto-generated method stub
 		List<WebElement> noofprices = driver.findElements(By.xpath("//a[contains(text(),'$')]"));
@@ -172,5 +177,5 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		return true;
 		else
 		return false;
-	}
+	}*/
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="1" total="8" passed="7">
   <reporter-output>
     <line>
       <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -149,6 +149,12 @@
       <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 2nd Quantity <---</br>]]>
     </line>
     <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Add Quantity Icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 3rd Quantity <---</br>]]>
+    </line>
+    <line>
       <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified RFQ Submitted Successfully <-----</h1> </strong>]]>
     </line>
     <line>
@@ -216,93 +222,6 @@
     </line>
     <line>
       <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on BOM Submit Button <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
-    </line>
-    <line>
-      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
-    </line>
-    <line>
-      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
-    </line>
-    <line>
-      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
-    </line>
-    <line>
-      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
-    </line>
-    <line>
-      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-    </line>
-    <line>
-      <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
-    </line>
-    <line>
-      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
-    </line>
-    <line>
-      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
     </line>
     <line>
       <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -478,28 +397,120 @@
     <line>
       <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Submit button <---</br>]]>
     </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on OK button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<br><strong><font color="blue">Step 6: Submit NRE</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Submit button <---</br>]]>
+    </line>
   </reporter-output>
-  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="1037492" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:52:25Z">
+  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="1073756" started-at="2019-10-24T07:26:39Z" finished-at="2019-10-24T07:44:33Z">
     <groups>
     </groups>
-    <test name="Regression Suite" duration-ms="1037492" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:52:25Z">
+    <test name="CalcuQuote_Login_Module_TestCases" duration-ms="118915" started-at="2019-10-24T07:26:39Z" finished-at="2019-10-24T07:28:38Z">
       <class name="com.automation.index.CalcuQuote_Login_Index">
-        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="sheetupdate" is-config="true" duration-ms="19" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:35:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sheetupdate -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="fetchSuiteConfiguration" is-config="true" duration-ms="669" started-at="2019-10-23T06:35:07Z" finished-at="2019-10-23T06:35:08Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="fetchSuiteConfiguration" is-config="true" duration-ms="685" started-at="2019-10-24T07:26:39Z" finished-at="2019-10-24T07:26:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@4524411f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11570" started-at="2019-10-23T06:35:08Z" finished-at="2019-10-23T06:35:20Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="setUp" is-config="true" duration-ms="11350" started-at="2019-10-24T07:26:40Z" finished-at="2019-10-24T07:26:51Z">
           <params>
             <param index="0">
               <value>
@@ -508,14 +519,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@4524411f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Signin_TestCase_02" duration-ms="14567" started-at="2019-10-23T06:35:20Z" finished-at="2019-10-23T06:35:34Z">
+        <test-method status="PASS" signature="Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="Signin_TestCase_02" duration-ms="14474" started-at="2019-10-24T07:26:51Z" finished-at="2019-10-24T07:27:06Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -558,18 +569,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- Signin_TestCase_02 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="12787" started-at="2019-10-23T06:35:34Z" finished-at="2019-10-23T06:35:47Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="tearDown" is-config="true" duration-ms="12902" started-at="2019-10-24T07:27:06Z" finished-at="2019-10-24T07:27:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Signin_TestCase_02 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=Signin_TestCase_02 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="12876" started-at="2019-10-23T06:35:47Z" finished-at="2019-10-23T06:36:00Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="setUp" is-config="true" duration-ms="9818" started-at="2019-10-24T07:27:18Z" finished-at="2019-10-24T07:27:28Z">
           <params>
             <param index="0">
               <value>
@@ -578,14 +589,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@4524411f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Signin_TestCase_01" duration-ms="60700" started-at="2019-10-23T06:36:00Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_02" finished-at="2019-10-23T06:37:01Z">
+        <test-method status="PASS" signature="Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="Signin_TestCase_01" duration-ms="56426" started-at="2019-10-24T07:27:28Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_02" finished-at="2019-10-24T07:28:25Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -634,34 +645,49 @@
             </line>
           </reporter-output>
         </test-method> <!-- Signin_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13576" started-at="2019-10-23T06:37:01Z" finished-at="2019-10-23T06:37:14Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f]" name="tearDown" is-config="true" duration-ms="13239" started-at="2019-10-24T07:28:25Z" finished-at="2019-10-24T07:28:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Signin_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=Signin_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Signin_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@17579e0f] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11389" started-at="2019-10-23T06:37:14Z" finished-at="2019-10-23T06:37:26Z">
+      </class> <!-- com.automation.index.CalcuQuote_Login_Index -->
+    </test> <!-- CalcuQuote_Login_Module_TestCases -->
+    <test name="CalcuQuote_RFQ_Module_TestCases" duration-ms="142901" started-at="2019-10-24T07:28:38Z" finished-at="2019-10-24T07:31:01Z">
+      <class name="com.automation.index.CalcuQuote_RFQ_Index">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_RFQ_Index@2f943d71]" name="fetchSuiteConfiguration" is-config="true" duration-ms="101" started-at="2019-10-24T07:28:38Z" finished-at="2019-10-24T07:28:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01()]]>
+                <![CDATA[org.testng.TestRunner@401e7803]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_RFQ_Index@2f943d71]" name="setUp" is-config="true" duration-ms="11245" started-at="2019-10-24T07:28:38Z" finished-at="2019-10-24T07:28:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_RFQ_Index.RFQ_TestCase_01()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@401e7803]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="RFQ_TestCase_01" duration-ms="90255" started-at="2019-10-23T06:37:26Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01" finished-at="2019-10-23T06:38:56Z">
+        <test-method status="PASS" signature="RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_RFQ_Index@2f943d71]" name="RFQ_TestCase_01" duration-ms="118237" started-at="2019-10-24T07:28:50Z" finished-at="2019-10-24T07:30:48Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -727,6 +753,12 @@
               <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 2nd Quantity <---</br>]]>
             </line>
             <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click On Add Quantity Icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter 3rd Quantity <---</br>]]>
+            </line>
+            <line>
               <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified RFQ Submitted Successfully <-----</h1> </strong>]]>
             </line>
             <line>
@@ -734,34 +766,49 @@
             </line>
           </reporter-output>
         </test-method> <!-- RFQ_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13252" started-at="2019-10-23T06:38:56Z" finished-at="2019-10-23T06:39:09Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_RFQ_Index@2f943d71]" name="tearDown" is-config="true" duration-ms="13318" started-at="2019-10-24T07:30:48Z" finished-at="2019-10-24T07:31:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RFQ_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=RFQ_TestCase_01 status=SUCCESS method=CalcuQuote_RFQ_Index.RFQ_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_RFQ_Index@2f943d71] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="16425" started-at="2019-10-23T06:39:09Z" finished-at="2019-10-23T06:39:25Z">
+      </class> <!-- com.automation.index.CalcuQuote_RFQ_Index -->
+    </test> <!-- CalcuQuote_RFQ_Module_TestCases -->
+    <test name="CalcuQuote_BOM_Module_TestCases" duration-ms="125733" started-at="2019-10-24T07:31:01Z" finished-at="2019-10-24T07:33:07Z">
+      <class name="com.automation.index.CalcuQuote_BOM_Index">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@7d70d1b1]" name="fetchSuiteConfiguration" is-config="true" duration-ms="40" started-at="2019-10-24T07:31:01Z" finished-at="2019-10-24T07:31:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01()]]>
+                <![CDATA[org.testng.TestRunner@10dba097]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@7d70d1b1]" name="setUp" is-config="true" duration-ms="11366" started-at="2019-10-24T07:31:01Z" finished-at="2019-10-24T07:31:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_BOM_Index.BOM_TestCase_01()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@10dba097]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="BOM_TestCase_01" duration-ms="98466" started-at="2019-10-23T06:39:25Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01" finished-at="2019-10-23T06:41:04Z">
+        <test-method status="PASS" signature="BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@7d70d1b1]" name="BOM_TestCase_01" duration-ms="103009" started-at="2019-10-24T07:31:13Z" finished-at="2019-10-24T07:32:56Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -828,152 +875,49 @@
             </line>
           </reporter-output>
         </test-method> <!-- BOM_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13597" started-at="2019-10-23T06:41:04Z" finished-at="2019-10-23T06:41:18Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@7d70d1b1]" name="tearDown" is-config="true" duration-ms="11317" started-at="2019-10-24T07:32:56Z" finished-at="2019-10-24T07:33:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BOM_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=BOM_TestCase_01 status=SUCCESS method=CalcuQuote_BOM_Index.BOM_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@7d70d1b1] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="11847" started-at="2019-10-23T06:41:18Z" finished-at="2019-10-23T06:41:29Z">
+      </class> <!-- com.automation.index.CalcuQuote_BOM_Index -->
+    </test> <!-- CalcuQuote_BOM_Module_TestCases -->
+    <test name="CalcuQuote_Labor_Module_TestCases" duration-ms="151664" started-at="2019-10-24T07:33:07Z" finished-at="2019-10-24T07:35:39Z">
+      <class name="com.automation.index.CalcuQuote_Labor_Index">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Labor_Index@2173f6d9]" name="fetchSuiteConfiguration" is-config="true" duration-ms="36" started-at="2019-10-24T07:33:07Z" finished-at="2019-10-24T07:33:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.NRE_TestCase_01()]]>
+                <![CDATA[org.testng.TestRunner@1786f9d5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Labor_Index@2173f6d9]" name="setUp" is-config="true" duration-ms="10386" started-at="2019-10-24T07:33:07Z" finished-at="2019-10-24T07:33:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Labor_Index.Labor_TestCase_01()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@1786f9d5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="NRE_TestCase_01" duration-ms="210686" started-at="2019-10-23T06:41:29Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01, com.automation.index.CalcuQuote_Login_Index.Signin_TestCase_01, com.automation.index.CalcuQuote_Login_Index.RFQ_TestCase_01" finished-at="2019-10-23T06:45:00Z">
-          <reporter-output>
-            <line>
-              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
-            </line>
-            <line>
-              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
-            </line>
-            <line>
-              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
-            </line>
-            <line>
-              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
-            </line>
-            <line>
-              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
-            </line>
-            <line>
-              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
-            </line>
-            <line>
-              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
-            </line>
-            <line>
-              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- NRE_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="11964" started-at="2019-10-23T06:45:00Z" finished-at="2019-10-23T06:45:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=NRE_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="13500" started-at="2019-10-23T06:45:12Z" finished-at="2019-10-23T06:45:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.Labor_TestCase_01()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Labor_TestCase_01" duration-ms="129539" started-at="2019-10-23T06:45:26Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01" finished-at="2019-10-23T06:47:35Z">
+        <test-method status="PASS" signature="Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Labor_Index@2173f6d9]" name="Labor_TestCase_01" duration-ms="127956" started-at="2019-10-24T07:33:17Z" finished-at="2019-10-24T07:35:25Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -1079,34 +1023,49 @@
             </line>
           </reporter-output>
         </test-method> <!-- Labor_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="13253" started-at="2019-10-23T06:47:35Z" finished-at="2019-10-23T06:47:48Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Labor_Index@2173f6d9]" name="tearDown" is-config="true" duration-ms="13286" started-at="2019-10-24T07:35:25Z" finished-at="2019-10-24T07:35:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Labor_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=Labor_TestCase_01 status=SUCCESS method=CalcuQuote_Labor_Index.Labor_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Labor_Index@2173f6d9] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="setUp" is-config="true" duration-ms="9342" started-at="2019-10-23T06:47:48Z" finished-at="2019-10-23T06:47:58Z">
+      </class> <!-- com.automation.index.CalcuQuote_Labor_Index -->
+    </test> <!-- CalcuQuote_Labor_Module_TestCases -->
+    <test name="CalcuQuote_Material_Costing_Module_TestCases" duration-ms="312982" started-at="2019-10-24T07:35:39Z" finished-at="2019-10-24T07:40:52Z">
+      <class name="com.automation.index.CalcuQuote_Material_Costing_Index">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@631330c]" name="fetchSuiteConfiguration" is-config="true" duration-ms="42" started-at="2019-10-24T07:35:39Z" finished-at="2019-10-24T07:35:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_Login_Index.Material_Costing_TestCase_01()]]>
+                <![CDATA[org.testng.TestRunner@704d6e83]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@631330c]" name="setUp" is-config="true" duration-ms="9716" started-at="2019-10-24T07:35:39Z" finished-at="2019-10-24T07:35:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_01()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@12c8a2c0]]>
+                <![CDATA[org.testng.TestRunner@704d6e83]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="Material_Costing_TestCase_01" duration-ms="253055" started-at="2019-10-23T06:47:58Z" depends-on-methods="com.automation.index.CalcuQuote_Login_Index.BOM_TestCase_01" finished-at="2019-10-23T06:52:11Z">
+        <test-method status="PASS" signature="Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@631330c]" name="Material_Costing_TestCase_01" duration-ms="289075" started-at="2019-10-24T07:35:48Z" finished-at="2019-10-24T07:40:37Z">
           <reporter-output>
             <line>
               <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
@@ -1180,24 +1139,170 @@
             <line>
               <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Material Costing Submit button <---</br>]]>
             </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on OK button <---</br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Material_Costing_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="tearDown" is-config="true" duration-ms="14152" started-at="2019-10-23T06:52:11Z" finished-at="2019-10-23T06:52:25Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@631330c]" name="tearDown" is-config="true" duration-ms="14147" started-at="2019-10-24T07:40:37Z" finished-at="2019-10-24T07:40:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Material_Costing_TestCase_01 status=SUCCESS method=CalcuQuote_Login_Index.Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+                <![CDATA[[TestResult name=Material_Costing_TestCase_01 status=SUCCESS method=CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@631330c] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Login_Index@4d41cee]" name="zipfileupdate" is-config="true" duration-ms="19" started-at="2019-10-23T06:52:25Z" finished-at="2019-10-23T06:52:25Z">
+      </class> <!-- com.automation.index.CalcuQuote_Material_Costing_Index -->
+    </test> <!-- CalcuQuote_Material_Costing_Module_TestCases -->
+    <test name="CalcuQuote_NRE_Module_TestCases" duration-ms="221133" started-at="2019-10-24T07:40:52Z" finished-at="2019-10-24T07:44:33Z">
+      <class name="com.automation.index.CalcuQuote_NRE_Index">
+        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="sheetupdate" is-config="true" duration-ms="12" started-at="2019-10-24T07:26:39Z" finished-at="2019-10-24T07:26:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sheetupdate -->
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="fetchSuiteConfiguration" is-config="true" duration-ms="39" started-at="2019-10-24T07:40:52Z" finished-at="2019-10-24T07:40:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@43a0cee9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="setUp" is-config="true" duration-ms="9596" started-at="2019-10-24T07:40:52Z" finished-at="2019-10-24T07:41:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_NRE_Index.NRE_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@43a0cee9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="NRE_TestCase_01" duration-ms="197401" started-at="2019-10-24T07:41:01Z" finished-at="2019-10-24T07:44:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:DarkViolet;font-size:13px;"> CalcuQuote_NRE::To verify that user is able to create NRE and Update the NRE values</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 1:Open : https://qa.calcuquote.com/Staging2/</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified CalcuQuote home page is open <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 2: Enter Valid Credentials</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Username <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Password <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Login Button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 3: Select one of the existing RFQ</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on RFQ List icon <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Assembly No. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on Assembly Id. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 4: Create NRE Standard and optional</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click create NRE Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter NRE Name <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Select the Charge type :Standard <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Default Value <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click SAVE button <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click Add Standard Tab. <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Enter Value of NRE <---</br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 5: Verification Start for the Test Case</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[<strong><h1 style="color:saddlebrown;font-size:11px;"> -----> Verified NRE Calculation Successfully <-----</h1> </strong>]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<br><strong><font color="blue">Step 6: Submit NRE</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;---> Click on NRE Submit button <---</br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- NRE_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="tearDown" is-config="true" duration-ms="14097" started-at="2019-10-24T07:44:19Z" finished-at="2019-10-24T07:44:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NRE_TestCase_01 status=SUCCESS method=CalcuQuote_NRE_Index.NRE_TestCase_01()[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31] output=<strong><h1 style="color:DarkViolet;font-size:13px;">  </h1> </strong>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_NRE_Index@27808f31]" name="zipfileupdate" is-config="true" duration-ms="40" started-at="2019-10-24T07:44:33Z" finished-at="2019-10-24T07:44:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->
-      </class> <!-- com.automation.index.CalcuQuote_Login_Index -->
-    </test> <!-- Regression Suite -->
+      </class> <!-- com.automation.index.CalcuQuote_NRE_Index -->
+    </test> <!-- CalcuQuote_NRE_Module_TestCases -->
   </suite> <!-- CalcuQuote_Functional_TestCases_Suite -->
 </testng-results>

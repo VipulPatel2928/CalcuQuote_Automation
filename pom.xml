@@ -117,7 +117,7 @@
 				<version>3.0.0-M1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>Build/CalcuQuote_Login_Package.xml</suiteXmlFile>
+						<suiteXmlFile>Build/CalcuQuote_Package_Index.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>Build/CalcuQuote_RFQ_Package.xml</suiteXmlFile> -->
 						<!-- <suiteXmlFile>Build/buildindex.xml</suiteXmlFile> -->
 						<!-- <suiteXmlFile>Build/MobilePackage.xml</suiteXmlFile> -->

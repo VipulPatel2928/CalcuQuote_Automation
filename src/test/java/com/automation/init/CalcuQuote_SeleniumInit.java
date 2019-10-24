@@ -35,6 +35,26 @@ import org.testng.internal.Utils;
 
 import com.automation.indexpage.CalcuQuote_Login_Indexpage;
 import com.automation.indexpage.CalcuQuote_RFQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_BOM_Indexpage;
+import com.automation.indexpage.CalcuQuote_Labor_Indexpage;
+import com.automation.indexpage.CalcuQuote_Material_Costing_Indexpage;
+import com.automation.indexpage.CalcuQuote_NRE_Indexpage;
+import com.automation.indexpage.CalcuQuote_Summary_Indexpage;
+import com.automation.indexpage.CalcuQuote_BidCQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_ShopCQ_Indexpage;
+import com.automation.indexpage.CalcuQuote_SearchCQ_Indexpage;
+
+import com.automation.verification.CalcuQuote_Login_Verification;
+import com.automation.verification.CalcuQuote_RFQ_Verification;
+import com.automation.verification.CalcuQuote_BOM_Verification;
+import com.automation.verification.CalcuQuote_Labor_Verification;
+import com.automation.verification.CalcuQuote_MaterialCosting_Verification;
+import com.automation.verification.CalcuQuote_NRE_Verification;
+import com.automation.verification.CalcuQuote_Summary_Verification;
+import com.automation.verification.CalcuQuote_BidCQ_Verification;
+import com.automation.verification.CalcuQuote_ShopCQ_Verification;
+import com.automation.verification.CalcuQuote_SearchCQ_Verification;
+
 //import com.automation.indexpage.PackageIndexpage_demo;
 //import com.automation.indexpage.PackageIndexpage_mobile;
 import com.automation.utility.CalcuQuote_Common;
@@ -42,8 +62,6 @@ import com.automation.utility.CalcuQuote_CustomReporterBuildSummary;
 import com.automation.utility.CalcuQuote_CustomReporterforEmail;
 import com.automation.utility.CalcuQuote_TestData;
 import com.automation.utility.LogClass;
-import com.automation.verification.CalcuQuote_Login_Verification;
-import com.automation.verification.CalcuQuote_RFQ_Verification;
 import com.aventstack.extentreports.ExtentReports;
 import com.automation.utility.CalcuQuote_ExtentManager;
 public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
@@ -76,11 +94,36 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 	public static String browserVersion = "";
 	public static String TestCaseName = "";
 	public static String TestName = "";
+	
 	public static CalcuQuote_Login_Indexpage packageIndexpage;
 	public static CalcuQuote_Login_Verification packageVerification;
 	
 	public static CalcuQuote_RFQ_Indexpage rfq_packageIndexpage;
 	public static CalcuQuote_RFQ_Verification rfq_packageVerification;
+	
+	public static CalcuQuote_BOM_Indexpage bom_packageIndexpage;
+	public static CalcuQuote_BOM_Verification bom_packageVerification;
+	
+	public static CalcuQuote_Labor_Indexpage labor_packageIndexpage;
+	public static CalcuQuote_Labor_Verification labor_packageVerification;
+	
+	public static CalcuQuote_Material_Costing_Indexpage material_costing_packageIndexpage;
+	public static CalcuQuote_MaterialCosting_Verification material_costing_packageVerification;
+	
+	public static CalcuQuote_NRE_Indexpage nre_packageIndexpage;
+	public static CalcuQuote_NRE_Verification nre_packageVerification;
+	
+	public static CalcuQuote_Summary_Indexpage summary_packageIndexpage;
+	public static CalcuQuote_Summary_Verification summary_packageVerification;
+	
+	public static CalcuQuote_BidCQ_Indexpage bidcq_packageIndexpage;
+	public static CalcuQuote_BidCQ_Verification bidcq_packageVerification;
+	
+	public static CalcuQuote_ShopCQ_Indexpage shopcq_packageIndexpage;
+	public static CalcuQuote_ShopCQ_Verification shopcq_packageVerification;
+	
+	public static CalcuQuote_SearchCQ_Indexpage searchcq_packageIndexpage;
+	public static CalcuQuote_SearchCQ_Verification searchcq_packageVerification;
 	
 	
 	
@@ -313,8 +356,40 @@ else if (targetBrowser.contains("browserstack")) {
 		driver.get(testUrl);
 		packageIndexpage = new CalcuQuote_Login_Indexpage(driver);
 		packageVerification = new CalcuQuote_Login_Verification(driver);
-
 		
+		rfq_packageIndexpage = new CalcuQuote_RFQ_Indexpage(driver);
+		rfq_packageVerification = new CalcuQuote_RFQ_Verification(driver);
+		
+		bom_packageIndexpage = new CalcuQuote_BOM_Indexpage(driver);
+		bom_packageVerification = new CalcuQuote_BOM_Verification(driver);
+		
+		labor_packageIndexpage = new CalcuQuote_Labor_Indexpage(driver);
+		labor_packageVerification = new CalcuQuote_Labor_Verification(driver);
+		
+		material_costing_packageIndexpage = new CalcuQuote_Material_Costing_Indexpage(driver);
+		material_costing_packageVerification = new CalcuQuote_MaterialCosting_Verification(driver);
+			
+		nre_packageIndexpage = new CalcuQuote_NRE_Indexpage(driver);
+		nre_packageVerification = new CalcuQuote_NRE_Verification(driver);
+		
+		summary_packageIndexpage = new CalcuQuote_Summary_Indexpage(driver);
+		summary_packageVerification = new CalcuQuote_Summary_Verification(driver);
+		
+		bidcq_packageIndexpage = new CalcuQuote_BidCQ_Indexpage(driver);
+		bidcq_packageVerification = new CalcuQuote_BidCQ_Verification(driver);
+		
+		shopcq_packageIndexpage = new CalcuQuote_ShopCQ_Indexpage(driver);
+		shopcq_packageVerification = new CalcuQuote_ShopCQ_Verification(driver);
+		
+		searchcq_packageIndexpage = new CalcuQuote_SearchCQ_Indexpage(driver);
+		searchcq_packageVerification = new CalcuQuote_SearchCQ_Verification(driver);
+		
+		
+		
+		
+		
+		
+			
 	}
 
 	/**

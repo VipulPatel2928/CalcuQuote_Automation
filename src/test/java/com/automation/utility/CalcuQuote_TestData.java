@@ -20,15 +20,12 @@ public class CalcuQuote_TestData {
 	public static int randBetween(int start, int end) {
 		return start + (int) Math.round(Math.random() * (end - start));
 	}
-	
-	
-	public static String numberofquantity(int row) {
 
-		  System.out.println("Call Quantity.......");
-		  getExcelSheet(0).getRow(row).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
-		  return getExcelSheet(0).getRow(row).getCell(1).getStringCellValue();
-		}
-	
+	public static String numberofquantity(int row) {
+		System.out.println("Call Quantity.......");
+		getExcelSheet(0).getRow(row).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
+		return getExcelSheet(0).getRow(row).getCell(1).getStringCellValue();
+	}
 
 	public static Sheet getExcelSheet(int sheetIndex) {
 		String dataFilePath = "Resources/Credential.xlsx";
@@ -37,19 +34,13 @@ public class CalcuQuote_TestData {
 		Sheet firstSheet = null;
 
 		try {
-					
 			System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
-
 			FileInputStream inputStream = new FileInputStream(new File(fullpath));
-
 			Workbook workbook = new XSSFWorkbook(inputStream);
 			firstSheet = workbook.getSheetAt(sheetIndex);
-
 			workbook.close();
 			inputStream.close();
-
 		} catch (Exception e) {
-
 		}
 		return firstSheet;
 	}
@@ -61,165 +52,106 @@ public class CalcuQuote_TestData {
 		Sheet firstSheet = null;
 
 		try {
-
 			System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
-
 			FileInputStream inputStream = new FileInputStream(new File(fullpath));
-
 			Workbook workbook = new XSSFWorkbook(inputStream);
 			firstSheet = workbook.getSheetAt(sheetIndex);
-
 			workbook.close();
 			inputStream.close();
-
 		} catch (Exception e) {
 
 		}
 		return firstSheet;
 	}
 
-	
-	//this function is used to change the value of the Excel sheet cell as per Test Result
-	public static void SheetResultcellupdate(int row_no,int cell_no,String value) {
-		
+	// this function is used to change the value of the Excel sheet cell as per Test
+	// Result
+	public static void SheetResultcellupdate(int row_no, int cell_no, String value) {
 		String dataFilePath = "Resources/[3DBroadCastSales]-Script_Result.xlsx";
 		File datafile = new File(dataFilePath);
 		String fullpath = datafile.getAbsolutePath();
 		Sheet firstSheet = null;
-
 		try {
-					
 			System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
-
 			FileInputStream inputStream = new FileInputStream(new File(fullpath));
-
 			Workbook workbook = new XSSFWorkbook(inputStream);
 			firstSheet = workbook.getSheetAt(1);
-			
 			Cell cell2Update = firstSheet.getRow(row_no).getCell(cell_no);
 			cell2Update.setCellValue(value);
-			inputStream.close();			
-			FileOutputStream output_file =new FileOutputStream(new File(fullpath)); 
+			inputStream.close();
+			FileOutputStream output_file = new FileOutputStream(new File(fullpath));
 			workbook.write(output_file);
 			workbook.close();
 			output_file.close();
 			System.out.println("Sheet Cell Value is Updated");
-
 		} catch (Exception e) {
 
 		}
-		
+
 	}
-	
-	
-	//this function set the all Test result to skipped before updating the Test Result Sheet
-	
-public static void SheetResultcellupdatetoskipped(int row) {
-		
+
+	// this function set the all Test result to skipped before updating the Test
+	// Result Sheet
+
+	public static void SheetResultcellupdatetoskipped(int row) {
+
 		String dataFilePath = "Resources/[3DBroadCastSales]-Script_Result.xlsx";
 		File datafile = new File(dataFilePath);
 		String fullpath = datafile.getAbsolutePath();
 		Sheet firstSheet = null;
 
 		try {
-					
-			//System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
-
+			// System.out.println("full path " + datafile.getAbsolutePath() + " con " +
+			// datafile.getCanonicalPath());
 			FileInputStream inputStream = new FileInputStream(new File(fullpath));
 			Workbook workbook = new XSSFWorkbook(inputStream);
 			firstSheet = workbook.getSheetAt(1);
-			
-			 Cell cell2Update = firstSheet.getRow(row).getCell(3);
-			 cell2Update.setCellValue("Skipped");
-			
-			inputStream.close();			
-			
-			FileOutputStream output_file =new FileOutputStream(new File(fullpath)); 
+			Cell cell2Update = firstSheet.getRow(row).getCell(3);
+			cell2Update.setCellValue("Skipped");
+			inputStream.close();
+			FileOutputStream output_file = new FileOutputStream(new File(fullpath));
 			workbook.write(output_file);
 			workbook.close();
 			output_file.close();
-			
 			System.out.println("All Sheet Cells Updated to Skipped Status");
-
 		} catch (Exception e) {
 
 		}
-		
+
 	}
-	
+
 //this function is calling the SheetResultcellupdatetoskipped function as per number of row
-public static void getnumberofrow() {
-	
-	String dataFilePath = "Resources/[3DBroadCastSales]-Script_Result.xlsx";
-	File datafile = new File(dataFilePath);
-	String fullpath = datafile.getAbsolutePath();
-	Sheet firstSheet = null;
-
-	try {
-				
-		System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
-
-		FileInputStream inputStream = new FileInputStream(new File(fullpath));
-		Workbook workbook = new XSSFWorkbook(inputStream);
-		firstSheet = workbook.getSheetAt(1);
-		int noofrow = firstSheet.getLastRowNum();
-		System.out.println("Number of rows :" +noofrow);
-		inputStream.close();	
-		for(int i =1;i<noofrow;i++) {
-			SheetResultcellupdatetoskipped(i);
+	public static void getnumberofrow() {
+		String dataFilePath = "Resources/[3DBroadCastSales]-Script_Result.xlsx";
+		File datafile = new File(dataFilePath);
+		String fullpath = datafile.getAbsolutePath();
+		Sheet firstSheet = null;
+		try {
+			System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
+			FileInputStream inputStream = new FileInputStream(new File(fullpath));
+			Workbook workbook = new XSSFWorkbook(inputStream);
+			firstSheet = workbook.getSheetAt(1);
+			int noofrow = firstSheet.getLastRowNum();
+			System.out.println("Number of rows :" + noofrow);
+			inputStream.close();
+			for (int i = 1; i < noofrow; i++) {
+				SheetResultcellupdatetoskipped(i);
+			}
+		} catch (Exception e) {
 		}
-		
-		
-	} catch (Exception e) {
 
 	}
-	
-}
-	
-	
-	
-	
+
 	public static String getURL(String TestName) {
-        String testUrl;
+		String testUrl;
 		System.out.println("Call getURL.......");
-		CalcuQuote_SeleniumInit.username=getExcelSheet(0).getRow(1).getCell(1).getStringCellValue();
-		CalcuQuote_SeleniumInit.password=getExcelSheet(0).getRow(2).getCell(1).getStringCellValue();
-		CalcuQuote_SeleniumInit.userprofilename=getExcelSheet(0).getRow(3).getCell(1).getStringCellValue();
-		/*
-		 * CalcuQuote_SeleniumInit.q1=getExcelSheet(0).getRow(8).getCell(1).
-		 * getStringCellValue();
-		 * CalcuQuote_SeleniumInit.q2=getExcelSheet(0).getRow(9).getCell(1).
-		 * getStringCellValue();
-		 * CalcuQuote_SeleniumInit.q3=getExcelSheet(0).getRow(10).getCell(1).
-		 * getStringCellValue();
-		 * CalcuQuote_SeleniumInit.q4=getExcelSheet(0).getRow(11).getCell(1).
-		 * getStringCellValue();
-		 */
-		
-		
-		
-		
-		System.out.println("User prifile name :"+CalcuQuote_SeleniumInit.userprofilename);
+		CalcuQuote_SeleniumInit.username = getExcelSheet(0).getRow(1).getCell(1).getStringCellValue();
+		CalcuQuote_SeleniumInit.password = getExcelSheet(0).getRow(2).getCell(1).getStringCellValue();
+		CalcuQuote_SeleniumInit.userprofilename = getExcelSheet(0).getRow(3).getCell(1).getStringCellValue();
+		System.out.println("User prifile name :" + CalcuQuote_SeleniumInit.userprofilename);
 		return getExcelSheet(0).getRow(0).getCell(1).getStringCellValue();
-		
-		
-		//return "https://login.yahoo.com/?.src=ym&.lang=en-IN&.intl=in&.done=https%3A%2F%2Fmail.yahoo.com%2Fd";
-		//return "https://www.toolsqa.com/";
-		/*
-		 * if(TestName.
-		 * equals("Practice_Automation_Form:: Simple form with different Functionalities"
-		 * )) { testUrl="https://www.toolsqa.com/";
-		 * System.out.println("TestURL :"+testUrl); return testUrl;}
-		 * 
-		 * if(TestName.equals("Yahoomail_login: Verify User LogIn functionality")) {
-		 * testUrl=
-		 * "https://login.yahoo.com/?.src=ym&.lang=en-IN&.intl=in&.done=https%3A%2F%2Fmail.yahoo.com%2Fd";
-		 * System.out.println("TestURL :"+testUrl); return testUrl;} return "default";
-		 */
-		
 	}
 
-	
 	public static String getUserName() {
 
 		return getExcelSheet(0).getRow(1).getCell(1).getStringCellValue();
@@ -234,29 +166,23 @@ public static void getnumberofrow() {
 
 		return getExcelSheet(0).getRow(5).getCell(1).getStringCellValue();
 	}
-	
+
 	public static String getRandomDate() {
 
 		Calendar cal = Calendar.getInstance();
-
 		cal.add(Calendar.DAY_OF_MONTH, 1);
-
 		int fromday = cal.get(Calendar.DAY_OF_MONTH);
 		int fromyear = cal.get(Calendar.YEAR);
-
 		cal.add(Calendar.MONTH, 2);
-
 		String day = String.valueOf(getDate(fromday));
 		String month = CalcuQuote_TestData.getMonthD(cal.get(Calendar.MONTH));
 		String year = String.valueOf(fromyear);
-
 		return day + " " + month + " " + year;
 	}
 
 	public static int getDate(int fromday) {
 
 		if (fromday < 10) {
-
 			return 10 + (int) Math.round(Math.random() * (30 - 10));
 		} else {
 			return fromday;
@@ -317,159 +243,150 @@ public static void getnumberofrow() {
 
 	public static String getHeadless() {
 		// TODO Auto-generated method stub
-		try
-		{
+		try {
 			return getExcelSheet(0).getRow(4).getCell(1).getStringCellValue();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			return "No";
-		}	
+		}
 	}
-	
-	//Vipul
+
+	// Vipul
 	public static String ts_firstname() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(0).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(0).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_lastname() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(1).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(1).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_emailaddress() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(2).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(2).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_phone() {
 
-		  System.out.println("Call getURL.......");
-		  getExcelSheet(1).getRow(3).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
-		  
-		  return getExcelSheet(1).getRow(3).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		getExcelSheet(1).getRow(3).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
+
+		return getExcelSheet(1).getRow(3).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_address() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(4).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(4).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_city() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(5).getCell(1).getStringCellValue();
-		}
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(5).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_country() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(6).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(6).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_state() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(1).getRow(7).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(1).getRow(7).getCell(1).getStringCellValue();
+	}
+
 	public static String ts_postalcode() {
 
-		  System.out.println("Call getURL.......");
-		  getExcelSheet(1).getRow(8).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
-		  return getExcelSheet(1).getRow(8).getCell(1).getStringCellValue();
-		}
-	
-	
-	
-	//E-Signature
-	
+		System.out.println("Call getURL.......");
+		getExcelSheet(1).getRow(8).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
+		return getExcelSheet(1).getRow(8).getCell(1).getStringCellValue();
+	}
+
+	// E-Signature
+
 	public static String esign_username() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(0).getCell(1).getStringCellValue();
-		}
-	
+		System.out.println("Call getURL.......");
+		return getExcelSheet(2).getRow(0).getCell(1).getStringCellValue();
+	}
+
 	public static String esign_password() {
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(1).getCell(1).getStringCellValue();
-		}
-	
-	/*public static String esign_firstname() {
+		System.out.println("Call getURL.......");
+		return getExcelSheet(2).getRow(1).getCell(1).getStringCellValue();
+	}
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(2).getCell(1).getStringCellValue();
-		}
-	
-	public static String esign_lastname() {
+	/*
+	 * public static String esign_firstname() {
+	 * 
+	 * System.out.println("Call getURL......."); return
+	 * getExcelSheet(2).getRow(2).getCell(1).getStringCellValue(); }
+	 * 
+	 * public static String esign_lastname() {
+	 * 
+	 * System.out.println("Call getURL......."); return
+	 * getExcelSheet(2).getRow(3).getCell(1).getStringCellValue(); }
+	 * 
+	 * public static String esign_emailaddress() {
+	 * 
+	 * System.out.println("Call getURL......."); return
+	 * getExcelSheet(2).getRow(4).getCell(1).getStringCellValue(); }
+	 * 
+	 * public static String esign_phonenumber() {
+	 * 
+	 * System.out.println("Call getURL......."); return
+	 * getExcelSheet(2).getRow(5).getCell(1).getStringCellValue(); }
+	 */
 
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(3).getCell(1).getStringCellValue();
-		}
-	
-	public static String esign_emailaddress() {
-
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(4).getCell(1).getStringCellValue();
-		}
-	
-	public static String esign_phonenumber() {
-
-		  System.out.println("Call getURL.......");
-		  return getExcelSheet(2).getRow(5).getCell(1).getStringCellValue();
-		}*/
-	
 	private static final String ALPHA_NUMERIC_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
 	public static String randomAlphaNumeric(int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
-		int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
-		builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+			int character = (int) (Math.random() * ALPHA_NUMERIC_STRING.length());
+			builder.append(ALPHA_NUMERIC_STRING.charAt(character));
 		}
 		return builder.toString();
-		}
+	}
 
 	private static final String ALPHA_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 	public static String randomAlpha(int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
-		int character = (int)(Math.random()*ALPHA_STRING.length());
-		builder.append(ALPHA_STRING.charAt(character));
+			int character = (int) (Math.random() * ALPHA_STRING.length());
+			builder.append(ALPHA_STRING.charAt(character));
 		}
 		return builder.toString();
-		}
-	
+	}
 
 	private static final String NUMERIC_STRING = "01234567890123456789";
+
 	public static String randomNumeric(int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
-		int character = (int)(Math.random()*NUMERIC_STRING.length());
-		builder.append(NUMERIC_STRING.charAt(character));
+			int character = (int) (Math.random() * NUMERIC_STRING.length());
+			builder.append(NUMERIC_STRING.charAt(character));
 		}
 		return builder.toString();
-		}
-	
+	}
+
 	private static final String numberofdocuments = "54321";
-	
+
 	public static String numberofducuments() {
-		int count=1;
+		int count = 1;
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
-		int character = (int)(Math.random()*numberofdocuments.length());
-		builder.append(numberofdocuments.charAt(character));
-		}
-		/*StringBuilder builder = new StringBuilder();
-		int character = (int)(Math.random()*numberofdocuments.length());
-		builder.append(numberofdocuments.charAt(character));*/
+			int character = (int) (Math.random() * numberofdocuments.length());
+			builder.append(numberofdocuments.charAt(character));
+		}		
 		return builder.toString();
-		}
-	
-	
-	
+	}
+
 }
