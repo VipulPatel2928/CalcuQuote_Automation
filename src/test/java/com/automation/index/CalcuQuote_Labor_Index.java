@@ -45,22 +45,18 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 	public void Labor_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report
-		LogClass.logcase(" ");
+		
 		report_msg = "CalcuQuote_Labor::To verify that user is able to enter the labor activities in RFQ";
-		LogClass.logcase(report_msg);
 		LogClass.logExtent(report_msg);
 
 		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
-		LogClass.logstep(report_msg);
 		LogClass.logExtent(report_msg);
 		
 		if (packageVerification.homepageverify()) {
-			LogClass.logveri("-----> Verified CalcuQuote home page is open <-----");
 			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
 			LogClass.AssertPassed();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logveri("-----> Verified CalcuQuote home page is not open <-----");
 			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
 			LogClass.AssertFailed();
 			LogClass.AssertFailed_Extent_Report();
@@ -70,28 +66,23 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		}
 
 		report_msg = "Step " + (step++) + ": Enter Valid Credentials";
-		LogClass.logstep(report_msg);
 		LogClass.logExtent(report_msg);
 		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
 
 		report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
-		LogClass.logstep(report_msg);
 		LogClass.logExtent(report_msg);
 		packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
 		
 		report_msg = "Step " + (step++) + ": Select Labor Activity/Activities";
-		LogClass.logstep(report_msg);
 		LogClass.logExtent(report_msg);
 		labor_packageVerification = CalcuQuote_Labor_Indexpage.labor_activities();
 		
 		
 		if (labor_packageVerification.laboractivity_added_verification()) {
-			LogClass.logveri("-----> Verified Labor Activity Added Successfully <-----");
 			LogClass.logExtent("-----> Verified Labor Activity Added Successfully <-----");
 			LogClass.AssertPassed();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logveri("-----> Verified Labor Activity is not Added Successfully <-----");
 			LogClass.logExtent("-----> Verified Labor Activity is not Added Successfully <-----");
 			LogClass.AssertFailed();
 			LogClass.AssertFailed_Extent_Report();
@@ -101,9 +92,21 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		}
 		
 		report_msg = "Step " + (step++) + ": Submit Labor";
-		LogClass.logstep(report_msg);
 		LogClass.logExtent(report_msg);
 		labor_packageVerification = CalcuQuote_Labor_Indexpage.clicksubmitLabor();
+		
+		if (labor_packageVerification.laboractivity_submit()) {
+			LogClass.logExtent("-----> Verified Labor Costs added to the Quote <-----");
+			LogClass.AssertPassed();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified Labor Costs not added to the Quote <-----");
+			LogClass.AssertFailed();
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "Labor_submission_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
 		
 	}//End of Labor_TestCase_01 
 }

@@ -1,0 +1,13 @@
+precondtion is "minification" should be off. Only then we can find the method and do the necessary steps. 
+
+1.) Go to the "Sources" 
+2.) Press ctrl + O
+3.) type : ui-grid-stable.js
+4.) Press ctrl + F
+5.) tyep : beginCellEdit [line no approximate 15882]
+6.) Select the code line and put the break point.
+7) Now Click on the action you want to do [eg. Select the text field or dropdown list etc]
+8) exection will get pause
+9) Click on "Elements" from the console window.
+10.) Click on the element you want to find the xpath or and locators.
+11) 

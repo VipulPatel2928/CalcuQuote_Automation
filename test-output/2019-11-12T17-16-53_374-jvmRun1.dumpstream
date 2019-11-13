@@ -1,0 +1,57 @@
+# Created at 2019-11-12T17:20:37.253
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created at 2019-11-12T17:20:43.356
+Unexpected IOException with stream: I am in onTestFailure method BOM_TestCase_01 failed
+
+
+# Created at 2019-11-12T17:20:43.361
+Unexpected IOException with stream: I am in onTestFailure method BOM_TestCase_01 failed
+
+
+# Created at 2019-11-12T17:20:43.391
+Unexpected IOException with stream: I am in onFinish method CalcuQuote_BOM_Module_TestCases
+
+
+# Created at 2019-11-12T17:20:43.629
+Unexpected IOException with stream: Calling ZipFile for the Extent Report.........
+
+
+# Created at 2019-11-12T17:20:43.635
+Unexpected IOException with stream: Regular file :C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\Extent_Report_new.html is zipped to archive :C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\Extent_Report_new.zip
+
+
+# Created at 2019-11-12T17:20:43.637
+Unexpected IOException with stream: ---Getting references to all files in: C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots
+
+
+# Created at 2019-11-12T17:20:43.638
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\Extent_Report_new.html
+
+
+# Created at 2019-11-12T17:20:43.638
+Unexpected IOException with stream: ---Creating zip file
+
+
+# Created at 2019-11-12T17:20:43.639
+Unexpected IOException with stream: Writing 'Extent_Report_new.html' to zip file
+
+
+# Created at 2019-11-12T17:20:43.641
+Unexpected IOException with stream: ---Done
+
+
+# Created at 2019-11-12T17:20:43.673
+Unexpected IOException with stream: In CustomReportBuildSummary Browser Name:chrome
+
+
+# Created at 2019-11-12T17:20:43.692
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

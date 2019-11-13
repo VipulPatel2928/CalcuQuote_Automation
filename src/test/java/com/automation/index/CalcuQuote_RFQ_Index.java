@@ -46,21 +46,16 @@ public class CalcuQuote_RFQ_Index extends CalcuQuote_SeleniumInit{
 
 			step = 1;
 			String report_msg;// String for the log in the Report
-			LogClass.logcase(" ");
 			report_msg = "CalcuQuote_RFQ:To verify that user is able to create RFQ with multiple Quantities";
-			LogClass.logcase(report_msg);
 			LogClass.logExtent(report_msg);
 
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
-			LogClass.logstep(report_msg);
 			LogClass.logExtent(report_msg);
 			if (packageVerification.homepageverify()) {
-				LogClass.logveri("-----> Verified CalcuQuote home page is open <-----");
 				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
 				LogClass.AssertPassed();
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logveri("-----> Verified CalcuQuote home page is not open <-----");
 				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
 				LogClass.AssertFailed();
 				LogClass.AssertFailed_Extent_Report();
@@ -70,22 +65,18 @@ public class CalcuQuote_RFQ_Index extends CalcuQuote_SeleniumInit{
 			}
 
 			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
-			LogClass.logstep(report_msg);
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
 
 			report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
-			LogClass.logstep(report_msg);
 			LogClass.logExtent(report_msg);
 			rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
 
 			if (rfq_packageVerification.rfqsubmitted()) {
-				LogClass.logveri("-----> Verified RFQ Submitted Successfully <-----");
 				LogClass.logExtent("-----> Verified RFQ Submitted Successfully <-----");
 				LogClass.AssertPassed();
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logveri("-----> Verified RFQ is not Submitted Successfully <-----");
 				LogClass.logExtent("-----> Verified RFQ is not Submitted Successfully <-----");
 				LogClass.AssertFailed();
 				LogClass.AssertFailed_Extent_Report();

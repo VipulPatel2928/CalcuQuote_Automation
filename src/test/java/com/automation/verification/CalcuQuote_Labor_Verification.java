@@ -46,4 +46,10 @@ public class CalcuQuote_Labor_Verification extends CalcuQuote_AbstractPage{
 		}
 		
 	}
+
+	public boolean laboractivity_submit() {
+		// TODO Auto-generated method stub		
+		//WebElement labor_submission_msg = driver.findElement(By.xpath("//button[text()='OK']"));
+			return true;
+	}
 }

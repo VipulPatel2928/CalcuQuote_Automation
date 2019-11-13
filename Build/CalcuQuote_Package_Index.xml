@@ -48,7 +48,9 @@
 			/> -->  <!-- for the Retry Class to run the fail test 2 times -->
 	</listeners>
 		
-	<test name="CalcuQuote_Login_Module_TestCases">
+		
+	<!-- Methods for Login -->	
+	<!-- <test name="CalcuQuote_Login_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Login_Index">
 				<methods>					
@@ -57,8 +59,11 @@
 				</methods>
 			</class>
 		</classes>
-	</test>	
-	<test
+	</test>	 -->
+	
+	
+	<!-- Methods for RFQ -->	
+	<!-- <test
 		name="CalcuQuote_RFQ_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_RFQ_Index">
@@ -68,17 +73,25 @@
 			</class>
 		</classes>
 	</test>
-	<test
+	 -->
+	
+	<!-- Methods for BOM -->	
+<!-- 	<test
 		name="CalcuQuote_BOM_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_BOM_Index">
-				<methods>		
-	                <include name="BOM_TestCase_01" />					
+				<methods>	 	
+				    <include name="BOM_TestCase_01" />
+	                <include name="BOM_TestCase_02" />	                			
 				</methods>
+	
 			</class>
 		</classes>
-	</test>	
-	<test
+	</test>	 -->
+	
+	
+	<!-- Methods for Labor -->	
+<!-- 	<test
 		name="CalcuQuote_Labor_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Labor_Index">
@@ -87,8 +100,11 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
-	<test
+	</test> -->
+	
+	
+	<!-- Methods for Material Costing -->	
+	<!-- <test
 		name="CalcuQuote_Material_Costing_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
@@ -98,15 +114,20 @@
 			</class>
 		</classes>
 	</test>
+	 -->
+	
+	<!-- Methods for NRE -->	
 	<test
 		name="CalcuQuote_NRE_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_NRE_Index">
 				<methods>							
-	                <include name="NRE_TestCase_01" />					
+	                <include name="NRE_TestCase_01" />		
+	                <include name="NRE_TestCase_02" />								
 				</methods>
 			</class>
 		</classes>
 	</test>
+	
 </suite>
  

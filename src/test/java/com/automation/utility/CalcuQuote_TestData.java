@@ -22,7 +22,7 @@ public class CalcuQuote_TestData {
 	}
 
 	public static String numberofquantity(int row) {
-		System.out.println("Call Quantity.......");
+		//System.out.println("Call Quantity.......");
 		getExcelSheet(0).getRow(row).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
 		return getExcelSheet(0).getRow(row).getCell(1).getStringCellValue();
 	}
@@ -34,7 +34,7 @@ public class CalcuQuote_TestData {
 		Sheet firstSheet = null;
 
 		try {
-			System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
+			//System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
 			FileInputStream inputStream = new FileInputStream(new File(fullpath));
 			Workbook workbook = new XSSFWorkbook(inputStream);
 			firstSheet = workbook.getSheetAt(sheetIndex);
@@ -144,7 +144,7 @@ public class CalcuQuote_TestData {
 
 	public static String getURL(String TestName) {
 		String testUrl;
-		System.out.println("Call getURL.......");
+		//System.out.println("Call getURL.......");
 		CalcuQuote_SeleniumInit.username = getExcelSheet(0).getRow(1).getCell(1).getStringCellValue();
 		CalcuQuote_SeleniumInit.password = getExcelSheet(0).getRow(2).getCell(1).getStringCellValue();
 		CalcuQuote_SeleniumInit.userprofilename = getExcelSheet(0).getRow(3).getCell(1).getStringCellValue();

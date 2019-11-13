@@ -24,6 +24,6 @@ public abstract class CalcuQuote_AbstractPage extends CalcuQuote_SeleniumInit {
 		ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, DRIVER_WAIT);
 		
 		PageFactory.initElements(finder, this);
-		System.out.println("======Abstract Page======");
+		//System.out.println("======Abstract Page======");
 	}
 }

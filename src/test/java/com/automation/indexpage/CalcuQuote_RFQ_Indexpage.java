@@ -112,27 +112,22 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 
 		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, rfq_list);
-		LogClass.log("---> Click on RFQ List icon <---");
 		LogClass.logExtent("---> Click on RFQ List icon <---");
 
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, new_rfq_btn);
-		LogClass.log("---> Click on new RFQ button <---");
 		LogClass.logExtent("---> Click on new RFQ button <---");
 
 		funcs.waitforseconds(3);
 		funcs.selectFromComboByIndex(company_name, 1);
-		LogClass.log("---> Company name selected <---");
 		LogClass.logExtent("---> Company name selected <---");
 
 		funcs.waitforseconds(1);
 		funcs.selectFromCombo(job_type, "6");
-		LogClass.log("---> Job type selected <---");
 		LogClass.logExtent("---> Job type selected <---");
 
 		funcs.waitforseconds(1);
 		funcs.selectFromCombo(order_type, "7");
-		LogClass.log("---> Order type selected <---");
 		LogClass.logExtent("---> Order type selected <---");
 
 		
@@ -141,12 +136,10 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		String customername = CalcuQuote_TestData.numberofquantity(29);
 		System.out.println("Customer Name from the Excelfile :"+customername);
 		funcs.senddata(driver, customer_name, customername);
-		LogClass.log("---> Enter Customer name <---");
 		LogClass.logExtent("---> Enter Customer name <---");
 
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, select_customer);
-		LogClass.log("---> Click On Customer name <---");
 		LogClass.logExtent("---> Click On Customer name <---");
 
 		funcs.waitforseconds(1);
@@ -157,7 +150,6 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		String assemblyno = "Automation_" + CalcuQuote_TestData.randomAlphaNumeric(3);
 
 		funcs.senddata(driver, assemblynumber, assemblyno);
-		LogClass.log("---> Enter Assembly Number <---");
 		LogClass.logExtent("---> Enter Assembly Number <---");
 
 		String totalQuantity = CalcuQuote_TestData.numberofquantity(7);
@@ -186,7 +178,6 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		if (totalQ >= 1) {
 			funcs.waitforseconds(3);
 			funcs.senddata(driver, quantity_0, q1);
-			LogClass.log("---> Enter 1st Quantity <---");
 			LogClass.logExtent("---> Enter 1st Quantity <---");
 
 		}
@@ -194,11 +185,9 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		if (totalQ >= 2) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(0));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_1, q2);
-			LogClass.log("---> Enter 2nd Quantity <---");
 			LogClass.logExtent("---> Enter 2nd Quantity <---");
 
 		}
@@ -206,11 +195,9 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		if (totalQ >= 3) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(1));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_2, q3);
-			LogClass.log("---> Enter 3rd Quantity <---");
 			LogClass.logExtent("---> Enter 3rd Quantity <---");
 
 		}
@@ -218,187 +205,153 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		if (totalQ >= 4) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(2));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_3, q4);
-			LogClass.log("---> Enter 4th Quantity <---");
 			LogClass.logExtent("---> Enter 4th Quantity <---");
 		}
 
 		if (totalQ >= 5) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(3));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_4, q5);
-			LogClass.log("---> Enter 5th Quantity <---");
 			LogClass.logExtent("---> Enter 5th Quantity <---");
 		}
 
 		if (totalQ >= 6) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(4));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_5, q6);
-			LogClass.log("---> Enter 6th Quantity <---");
 			LogClass.logExtent("---> Enter 6th Quantity <---");
 		}
 
 		if (totalQ >= 7) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(5));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_6, q7);
-			LogClass.log("---> Enter 7th Quantity <---");
 			LogClass.logExtent("---> Enter 7th Quantity <---");
 		}
 
 		if (totalQ >= 8) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(6));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_7, q8);
-			LogClass.log("---> Enter 8th Quantity <---");
 			LogClass.logExtent("---> Enter 8th Quantity <---");
 		}
 
 		if (totalQ >= 9) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(7));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_8, q9);
-			LogClass.log("---> Enter 9th Quantity <---");
 			LogClass.logExtent("---> Enter 9th Quantity <---");
 		}
 
 		if (totalQ >= 10) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(8));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_9, q10);
-			LogClass.log("---> Enter 10th Quantity <---");
 			LogClass.logExtent("---> Enter 10th Quantity <---");
 		}
 
 		if (totalQ >= 11) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(9));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_10, q11);
-			LogClass.log("---> Enter 11th Quantity <---");
 			LogClass.logExtent("---> Enter 11th Quantity <---");
 		}
 
 		if (totalQ >= 12) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(10));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_11, q12);
-			LogClass.log("---> Enter 12th Quantity <---");
 			LogClass.logExtent("---> Enter 12th Quantity <---");
 		}
 
 		if (totalQ >= 13) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(11));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_12, q13);
-			LogClass.log("---> Enter 13th Quantity <---");
 			LogClass.logExtent("---> Enter 13th Quantity <---");
 		}
 
 		if (totalQ >= 14) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(12));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_13, q14);
-			LogClass.log("---> Enter 14th Quantity <---");
 			LogClass.logExtent("---> Enter 14th Quantity <---");
 		}
 
 		if (totalQ >= 15) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(13));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_14, q15);
-			LogClass.log("---> Enter 15th Quantity <---");
 			LogClass.logExtent("---> Enter 15th Quantity <---");
 		}
 
 		if (totalQ >= 16) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(14));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_15, q16);
-			LogClass.log("---> Enter 16th Quantity <---");
 			LogClass.logExtent("---> Enter 16th Quantity <---");
 		}
 
 		if (totalQ >= 17) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(15));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_16, q17);
-			LogClass.log("---> Enter 17th Quantity <---");
 			LogClass.logExtent("---> Enter 17th Quantity <---");
 		}
 
 		if (totalQ >= 18) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(16));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_17, q18);
-			LogClass.log("---> Enter 18th Quantity <---");
 			LogClass.logExtent("---> Enter 18th Quantity <---");
 		}
 
 		if (totalQ >= 19) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(17));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_18, q19);
-			LogClass.log("---> Enter 19th Quantity <---");
 			LogClass.logExtent("---> Enter 19th Quantity <---");
 		}
 
 		if (totalQ >= 20) {
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, add_quantity.get(18));
-			LogClass.log("---> Click On Add Quantity Icon <---");
 			LogClass.logExtent("---> Click On Add Quantity Icon <---");
 			funcs.waitforseconds(1);
 			funcs.senddata(driver, quantity_19, q20);
-			LogClass.log("---> Enter 20th Quantity <---");
 			LogClass.logExtent("---> Enter 20th Quantity <---");
 		}
 

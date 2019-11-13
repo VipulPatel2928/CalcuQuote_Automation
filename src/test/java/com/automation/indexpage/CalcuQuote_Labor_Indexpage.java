@@ -49,27 +49,23 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, labor_tab);
-		LogClass.log("---> Click on Labor Tab <---");
 		LogClass.logExtent("---> Click on Labor Tab <---");
 		
-		funcs.waitforseconds(4);		
+		funcs.waitforseconds(6);		
 		Select options = new Select(select_labor_activities);
 		int i = labor_activities_options.size();
 		for(int j=0;j<=i;j++) {
 			
 			if(j>4) break;
 			options.selectByIndex(j);			
-			LogClass.log("---> Labor Activity Selected <---");
 			LogClass.logExtent("---> Labor Activity Selected <---");
 			
 			funcs.waitforseconds(1);			
 			funcs.clickon_element(driver, arrow_labor_select);
-			LogClass.log("---> Labor Activity added for the RFQ <---::"+(j+1));
 			LogClass.logExtent("---> Labor Activity added for the RFQ <---::"+(j+1));
 			
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, click_next_labor);
-			LogClass.log("---> Click on Next Button <---");
 			LogClass.logExtent("---> Click on Next Button <---");
 			
 			options.deselectByIndex(j);	
@@ -84,7 +80,6 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, labor_submit_btn);
-		LogClass.log("---> Click on Labor Submit Button <---");
 		LogClass.logExtent("---> Click on Labor Submit Button <---");
 		
 		//funcs.waitforseconds(5);
@@ -92,7 +87,7 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		//LogClass.log("---> Click on Yes Button <---");
 		//LogClass.logExtent("---> Click on Yes Button <---");
 		
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(3);
 		
 		return new CalcuQuote_Labor_Verification(driver);
 	}

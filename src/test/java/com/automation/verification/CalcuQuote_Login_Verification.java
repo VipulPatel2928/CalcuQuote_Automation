@@ -49,13 +49,11 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		WebElement user_icon = driver.findElement(By.xpath("//i[@class='glyphicon glyphicon-user']"));		
 		funcs.waitforelementclickable(driver, user_icon);
-		LogClass.log("---> Click on User Icon <---");
 		LogClass.logExtent("---> Click on User Icon <---");
 		
 		funcs.waitforseconds(2);
 		WebElement profile = driver.findElement(By.xpath("//a[@id='PrfileUpdate']"));
 		funcs.waitforelementclickable(driver, profile);		
-		LogClass.log("---> Click on User Profile <---");
 		LogClass.logExtent("---> Click on Profile <---");
 		
 		funcs.waitforseconds(5);
@@ -63,7 +61,7 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		System.out.println("User Profile Name:"+CalcuQuote_SeleniumInit.userprofilename);
 		WebElement userprofilename = driver.findElement(By.xpath("//strong[text()='"+profilename+"']"));
 		
-		LogClass.log("---> Checked the User Login Details <---");
+		
 		LogClass.logExtent("---> Checked the user Login Details <---");
 		
 		if(userprofilename.isDisplayed())
@@ -78,11 +76,9 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		WebElement psw_required = driver.findElement(By.xpath("//span[text()='Password is required.']"));
 		
 		if(email_id_required.isDisplayed() && psw_required.isDisplayed()){		
-			LogClass.log("---> Verified|Email Id and Password are required|msgs are display <---");
 			LogClass.logExtent("---> Verified|Email Id and Password are required|msgs are display <---");
 		}
 		else {			
-			LogClass.log("---> Verified |Email Id or Password is required | msg are NOT displayed <---");
 			LogClass.logExtent("---> Verified |Email Id or Password is required | msg are NOT displayed <---");
 		}
 		
@@ -94,11 +90,9 @@ public class CalcuQuote_Login_Verification extends CalcuQuote_AbstractPage {
 		WebElement double_check_idorpsw = driver.findElement(By.xpath("//div[@id='divErrorMessage']"));
 		String msg = double_check_idorpsw.getText();
 		if(msg.equals("Please double check your email id and password.")) {			
-			LogClass.log("---> Verified | Please double check your email id and password.|msg is displayed <---");
 			LogClass.logExtent("---> Verified | Please double check your email id and password.|msg is displayed <---");
 		}
 		else {
-			LogClass.log("---> Verified | Please double check your email id and password.|msg is displayed <---");
 			LogClass.logExtent("---> Verified | Please double check your email id and password.|msg is displayed <---");
 		}
 		

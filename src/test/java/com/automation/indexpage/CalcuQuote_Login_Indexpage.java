@@ -51,15 +51,12 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(1);
 		funcs.senddata(driver, calcuquote_username, CalcuQuote_SeleniumInit.username);
 
-		LogClass.log("---> Enter Username <---");
 		LogClass.logExtent("---> Enter Username <---");
 		funcs.senddata(driver, calcuquote_password, CalcuQuote_SeleniumInit.password);
 
-		LogClass.log("---> Enter Password <---");
 		LogClass.logExtent("---> Enter Password <---");
 		funcs.clickon_element(driver, calcuquote_login_btn);
 
-		LogClass.log("---> Click on Login Button <---");
 		LogClass.logExtent("---> Click on Login Button <---");
 		funcs.waitforseconds(1);
 		return new CalcuQuote_Login_Verification(driver);
@@ -76,25 +73,21 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 
-		LogClass.log("---> Blank Email id and Blank Password <---");
 		LogClass.logExtent("---> Blank Email id and Blank Password <---");
 		funcs.clickon_element(driver, login_btn_validation);
 		CalcuQuote_Login_Verification.blankusername_psw();
 
 		funcs.waitforseconds(1);
-		LogClass.log("---> Invalid Email id or Password <---");
+		
 		LogClass.logExtent("---> Invalid Email id or Password <---");
-
-		funcs.senddata(driver, calcuquote_username_validation, "Test@mailinator.com");
-		LogClass.log("---> Enter Username <---");
+		
+		funcs.senddata(driver, calcuquote_username_validation, "Test@mailinator.com");		
 		LogClass.logExtent("---> Enter Username <---");
-
-		funcs.senddata(driver, calcuquote_password_validation, "Invalidpassword");
-		LogClass.log("---> Enter Password <---");
+		
+		funcs.senddata(driver, calcuquote_password_validation, "Invalidpassword");		
 		LogClass.logExtent("---> Enter Password <---");
+		
 		funcs.clickon_element(driver, login_btn_validation);
-
-		LogClass.log("---> Enter Enter Click on Login Button <---");
 		LogClass.logExtent("---> Enter Click on Login Button <---");
 		CalcuQuote_Login_Verification.invalidusername_psw();
 
@@ -116,9 +109,8 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, rfq_list);
-		LogClass.log("---> Click on RFQ List icon <---");
 		LogClass.logExtent("---> Click on RFQ List icon <---");
-		
+		/*
 		String fileName = "lib/Assembly_number";
 		ArrayList<String> line = funcs.ReadTextFile(fileName, 1);
 		System.out.println("Assembly no read from the text file:"+line.get(0));
@@ -129,12 +121,10 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		//funcs.senddata(driver, assembly_no.get(3), line.get(0));		
 		LogClass.log("---> Enter Assembly No. <---");
 		LogClass.logExtent("---> Enter Assembly No. <---");
-
-		funcs.waitforseconds(2);
+        */
+		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, assembly_id);
-		LogClass.log("---> Click on Assembly Id. <---");
-		LogClass.logExtent("---> Click on Assembly Id. <---");
-		
+		LogClass.logExtent("---> Click on Assembly Id. <---");		
 		funcs.waitforseconds(2);//increase or decrease the wait as per requirements
 		/*
 		 * funcs.waitforseconds(12); funcs.clickon_element(driver, NRE);

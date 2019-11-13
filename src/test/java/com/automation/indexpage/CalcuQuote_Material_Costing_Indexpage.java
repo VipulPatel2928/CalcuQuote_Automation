@@ -55,17 +55,14 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_tab );
-		LogClass.log("---> Click on Material Costing Tab <---");
 		LogClass.logExtent("---> Click on Material Costing Tab <---");
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,update_pricing );
-		LogClass.log("---> Click on Update Pricing Tab <---");
 		LogClass.logExtent("---> Click on Update Pricing Tab <---");
 		
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver,MC_POPup_submit_btn );
-		LogClass.log("---> Click on Submit Button for Update Pricing <---");
 		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
 		
 		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
@@ -81,12 +78,10 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		int totalQ = Integer.parseInt(totalQuantity);
 		int prices = totalQ*4;
 		if(pricing_available.size()==prices) {
-			LogClass.log("---> Pricing Available for All line and All Quantity <---");
 			LogClass.logExtent("---> Pricing Available for All line and All Quantity <---");
 		}
 		
 		
-		LogClass.log("---> Pricing Selection for each line item start <---");
 		LogClass.logExtent("---> Pricing Selection for each line item start <---");
 		
 		System.out.println("pricing available="+pricing_available.size());
@@ -108,7 +103,6 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		//funcs.waitforseconds(1);
 		//funcs.clickon_element(driver,ok_btn );
 		
-		LogClass.log("---> Pricing Selection for each line item finished <---");
 		LogClass.logExtent("---> Pricing Selection for each line item finished <---");
 		
 		funcs.waitforseconds(10);
@@ -121,13 +115,12 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_submit_btn );
-		LogClass.log("---> Click on Material Costing Submit button <---");
 		LogClass.logExtent("---> Click on Material Costing Submit button <---");
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_submit_ok_btn );
-		LogClass.log("---> Click on OK button <---");
 		LogClass.logExtent("---> Click on OK button <---");
+		funcs.waitforseconds(3);
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 

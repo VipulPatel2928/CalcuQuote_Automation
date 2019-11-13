@@ -45,19 +45,16 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, import_bom);
-		LogClass.log("---> Click On Import BOM Icon <---");
 		LogClass.logExtent("---> Click On Import BOM Icon <---");
 		
 		funcs.waitforseconds(4);
 		String filepath="Resources/35LineBOM.xlsx";
 		funcs.uploadthefile(driver, choose_file, 5, filepath);
 		funcs.waitforseconds(2);
-		LogClass.log("---> File Selected for Import <---");
 		LogClass.logExtent("---> File Selected for Import <---");
 		
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, import_bom_after_choose_file);
-		LogClass.log("---> BOM imported <---");
 		LogClass.logExtent("---> BOM imported <---");
 		funcs.waitforseconds(10);
 		return new CalcuQuote_BOM_Verification(driver);
@@ -68,7 +65,6 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, bom_submit_btn);
-		LogClass.log("---> Click on BOM Submit Button <---");
 		LogClass.logExtent("---> Click on BOM Submit Button <---");
 		return new CalcuQuote_BOM_Verification(driver);
 	}
@@ -76,25 +72,36 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	@FindBy(xpath="//span[text()='Or, if you prefer...']//..//i[1]")private static WebElement plus_icon_manual_add;
 	@FindBy(xpath="//div[@class='height-grid ui-grid-cell-contents ng-binding ng-scope invalid ui-grid-cell-focus']")private static WebElement line_no;
 	@FindBy(xpath="//div[@id='dvQty_0']")private static WebElement qty_on_brd;
+	@FindBy(xpath="//div[@id='dvPartClass_0']") private static WebElement part_class;
+	@FindBy(xpath="//div[@id='dvMPN_0']")private static WebElement mpn;
+	
 	
 	public static CalcuQuote_BOM_Verification addlineitemmanually() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, plus_icon_manual_add);
-		LogClass.log("---> Click On + Icon <---");
 		LogClass.logExtent("---> Click On + Icon <---");
 		
-		funcs.waitforseconds(2);
-		funcs.senddata(driver, line_no, "1");
-		LogClass.log("---> Enter Line no <---");
+		funcs.waitforseconds(1);
+		line_no.sendKeys("1");
+		//funcs.senddata(driver, line_no, "1");
 		LogClass.logExtent("---> Enter Line No <---");
 		
-		funcs.waitforseconds(2);
-		funcs.senddata(driver, qty_on_brd, "10");
-		LogClass.log("---> Enter Quantity on Board <---");
-		LogClass.logExtent("---> Enter Quantity on Board <---");
+		funcs.waitforseconds(1);
+		//funcs.senddata(driver, qty_on_brd, "10");
+		qty_on_brd.sendKeys("10");
+		LogClass.logExtent("---> Enter Quantity on Board <---");	
 		
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, part_class);
+		LogClass.logExtent("---> Click On Part Class <---");
 		
+		funcs.waitforseconds(1);
+		//funcs.senddata(driver, line_no, "5014_Automation");
+		mpn.sendKeys("5014_Automation");
+		LogClass.logExtent("---> Enter MPN <---");
+		
+		funcs.waitforseconds(10);
 		
 		return new CalcuQuote_BOM_Verification(driver);
 	}

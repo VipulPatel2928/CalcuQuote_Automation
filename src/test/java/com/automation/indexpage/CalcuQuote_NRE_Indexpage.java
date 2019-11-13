@@ -65,24 +65,15 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 	private static WebElement dollar_double_click;
 
 //	@FindBy(xpath="//div[@class=\"ui-grid-cell-contents ng-binding ng-scope invalid ui-grid-cell-focus\"]")private static WebElement second_click;
-	public static CalcuQuote_NRE_Verification create_NRE() {
-		// TODO Auto-generated method stub
-		
+	public static CalcuQuote_NRE_Verification add_NRE() {
+		// TODO Auto-generated method stub		
 		
 		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, NRE);
-		LogClass.log("---> Click on NRE Tab. <---");
-		LogClass.logExtent("---> Click on NRE Tab. <---");
+		LogClass.logExtent("---> Click on NRE Tab. <---");		
 		
-		
-		funcs.waitforseconds(6);
-
-		// Don't call this function if don't want to create the NRE.
-		create_nre();
-
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver, add_standard);
-		LogClass.log("---> Click Add Standard Tab. <---");
 		LogClass.logExtent("---> Click Add Standard Tab. <---");
 		funcs.waitforseconds(3);
 
@@ -93,7 +84,7 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 		Select value = new Select(NRE_value);
 		value.selectByIndex(1);
 
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(5);
 
 		try {
 
@@ -106,7 +97,6 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 				System.out.println("---> Click for the value<---");
 				enter_value_4_NRE.sendKeys("10.20");
 				System.out.println("---> Enter Value of NRE <---");
-				LogClass.log("---> Enter Value of NRE <---");
 				LogClass.logExtent("---> Enter Value of NRE <---");
 			}
 		} catch (Exception e) {
@@ -116,14 +106,12 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 			Actions act = new Actions(driver);
 			act.doubleClick(dollar_double_click).build().perform();
 			enter_value_4_NRE.sendKeys("10.20");
-			LogClass.log("---> Enter Value of NRE <---");
 			LogClass.logExtent("---> Enter Value of NRE <---");
 
 		}
 
 		funcs.waitforseconds(7);
 		funcs.clickon_element(driver, add_standard);
-		LogClass.log("---> Click Add Standard Tab. <---");
 		LogClass.logExtent("---> Click Add Standard Tab. <---");
 
 		funcs.waitforseconds(3);
@@ -144,7 +132,6 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 				act.doubleClick(first_click.get(0)).build().perform();
 				System.out.println("---> Click for the value<---");
 				enter_value_4_NRE.sendKeys("100.25");
-				LogClass.log("---> Enter Value of NRE <---");
 				LogClass.logExtent("---> Enter Value of NRE <---");
 			}
 		} catch (Exception e) {
@@ -154,14 +141,12 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 			Actions act = new Actions(driver);
 			act.doubleClick(dollar_double_click).build().perform();
 			enter_value_4_NRE.sendKeys("100.25");
-			LogClass.log("---> Enter Value of NRE <---");
 			LogClass.logExtent("---> Enter Value of NRE <---");
 
 		}
 
 		funcs.waitforseconds(7);
 		funcs.clickon_element(driver, add_standard);
-		LogClass.log("---> Click Add Standard Tab. <---");
 		LogClass.logExtent("---> Click Add Standard Tab. <---");
 
 		funcs.waitforseconds(3);
@@ -182,7 +167,6 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 				act.doubleClick(first_click.get(0)).build().perform();
 				System.out.println("---> Click for the value<---");
 				enter_value_4_NRE.sendKeys("1.25");
-				LogClass.log("---> Enter Value of NRE <---");
 				LogClass.logExtent("---> Enter Value of NRE <---");
 			}
 		} catch (Exception e) {
@@ -193,7 +177,6 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 			Actions act = new Actions(driver);
 			act.doubleClick(dollar_double_click).build().perform();
 			enter_value_4_NRE.sendKeys("1.25");
-			LogClass.log("---> Enter Value of NRE <---");
 			LogClass.logExtent("---> Enter Value of NRE <---");
 
 		}
@@ -202,46 +185,49 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 		return new CalcuQuote_NRE_Verification(driver);
 	}
 
-	public static void create_nre() {
-		// Entire code is to create the NRE
-
-		funcs.clickon_element(driver, create_NRE);
-		LogClass.log("---> Click create NRE Tab. <---");
-		LogClass.logExtent("---> Click create NRE Tab. <---");
-
-		String NRE_name_value = "Automation_" + CalcuQuote_TestData.randomAlpha(4);
-
-		funcs.waitforseconds(4);
-		funcs.senddata(driver, NRE_name, NRE_name_value);
-		LogClass.log("---> Enter NRE Name <---");
-		LogClass.logExtent("---> Enter NRE Name <---");
-
-		funcs.waitforseconds(2);
-		Select charge = new Select(charge_type);
-		charge.selectByIndex(1);
-		LogClass.log("---> Select the Charge type :Standard <---");
-		LogClass.logExtent("---> Select the Charge type :Standard <---");
-
-		funcs.waitforseconds(2);
-		funcs.senddata(driver, default_value, "10");
-		LogClass.log("---> Enter Default Value <---");
-		LogClass.logExtent("---> Enter Default Value <---");
-
-		funcs.waitforseconds(2);
-		funcs.clickon_element(driver, save_btn);
-		LogClass.log("---> Click SAVE button <---");
-		LogClass.logExtent("---> Click SAVE button <---");
-		funcs.waitforseconds(5);
-
-	}
+	
 	
 	@FindBy(xpath="//button[@title='Submit']")private static WebElement nre_submit_btn;
 	public static CalcuQuote_NRE_Verification clicksubmitnre() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,nre_submit_btn );
-		LogClass.log("---> Click on NRE Submit button <---");
 		LogClass.logExtent("---> Click on NRE Submit button <---");
+		funcs.waitforseconds(3);
+		return new CalcuQuote_NRE_Verification(driver);
+	}
+
+	public static CalcuQuote_NRE_Verification create_NRE() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(6);
+		funcs.clickon_element(driver, NRE);
+		LogClass.logExtent("---> Click on NRE Tab. <---");
+		
+		funcs.clickon_element(driver, create_NRE);
+		LogClass.logExtent("---> Click create NRE Tab. <---");
+
+		String NRE_name_value = "Automation_" + CalcuQuote_TestData.randomAlpha(4);
+		CalcuQuote_NRE_Verification.nre_name =NRE_name_value;
+
+		funcs.waitforseconds(4);
+		funcs.senddata(driver, NRE_name, NRE_name_value);
+		LogClass.logExtent("---> Enter NRE Name <---");
+
+		//funcs.waitforseconds(2);
+		Select charge = new Select(charge_type);
+		charge.selectByIndex(1);
+		LogClass.logExtent("---> Select the Charge type :Standard <---");
+
+		//funcs.waitforseconds(2);
+		funcs.senddata(driver, default_value, "10");
+		LogClass.logExtent("---> Enter Default Value <---");
+
+		//funcs.waitforseconds(2);
+		funcs.clickon_element(driver, save_btn);
+		LogClass.logExtent("---> Click SAVE button <---");
+		
+		funcs.waitforseconds(1);
+
 		return new CalcuQuote_NRE_Verification(driver);
 	}
 }

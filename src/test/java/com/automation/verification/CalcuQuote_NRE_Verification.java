@@ -27,6 +27,9 @@ import com.automation.utility.funcs;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class CalcuQuote_NRE_Verification extends CalcuQuote_AbstractPage{
+	
+	public static String nre_name = null;
+	
 	public CalcuQuote_NRE_Verification(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -44,6 +47,34 @@ public class CalcuQuote_NRE_Verification extends CalcuQuote_AbstractPage{
 		catch(Exception e) {
 			return false;
 		}
+	}
+
+	public boolean NRE_Submit() {
+		// TODO Auto-generated method stub
+		//WebElement nre_submission = driver.findElement(By.xpath("//button[text()='OK']"));
+		return true;
+	}
+
+	public boolean NRE_created_verification() {
+		// TODO Auto-generated method stub
+		WebElement configuration_icon = driver.findElement(By.xpath("//span[text()='Configuration']//..//i"));
+		funcs.jsClick(driver, configuration_icon);
+		LogClass.logExtent("---> Click Configuration Icon <---");
+		funcs.waitforseconds(4);
+		WebElement misc_menu = driver.findElement(By.xpath("//p[text()='Company Details, NREs']//..//span"));
+		funcs.jsClick(driver, misc_menu);
+		LogClass.logExtent("---> Click Company Details, NREs menu <---");
+		funcs.waitforseconds(4);
+		List<WebElement> name = driver.findElements(By.xpath("//input[@type='text']"));
+		name.get(0).sendKeys(nre_name);
+		
+		WebElement isthere = driver.findElement(By.xpath("//div[text()=' "+nre_name+"']"));
+		LogClass.logExtent("---> Enter Created NRE name to verify <---");
+		
+		if(isthere.isDisplayed())
+			return true;
+		else 
+		    return false;
 	}
 
 }
