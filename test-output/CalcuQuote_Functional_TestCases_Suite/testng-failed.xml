@@ -6,14 +6,7 @@
   <parameter name="selenium.browser" value="chrome"/>
   <parameter name="selenium.url" value="https://qa.calcuquote.com/Staging2/"/>
   <listeners>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterListener"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterEmailBuildSummary"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterforEmail"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterBuildSummary"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestpassDetails"/>
     <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestFailureDetails"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestskipDetails"/>
-    <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestDetails"/>
     <listener class-name="com.automation.utility.CalcuQuote_TestListener"/>
   </listeners>
   <test thread-count="1" verbose="0" name="CalcuQuote_BOM_Module_TestCases(failed)" parallel="tests">
@@ -22,9 +15,9 @@
         <methods>
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
+          <include name="BOM_TestCase_01"/>
           <include name="setUp"/>
           <include name="zipfileupdate"/>
-          <include name="BOM_TestCase_02"/>
           <include name="sheetupdate"/>
         </methods>
       </class> <!-- com.automation.index.CalcuQuote_BOM_Index -->

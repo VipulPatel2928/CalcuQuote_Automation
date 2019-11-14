@@ -181,7 +181,7 @@ public class CalcuQuote_NRE_Indexpage extends CalcuQuote_AbstractPage{
 
 		}
 
-		funcs.waitforseconds(10);
+		funcs.waitforseconds(1);
 		return new CalcuQuote_NRE_Verification(driver);
 	}
 

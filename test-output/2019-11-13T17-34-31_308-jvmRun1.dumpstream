@@ -1,0 +1,129 @@
+# Created at 2019-11-13T17:35:56.918
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created at 2019-11-13T17:36:00.912
+Unexpected IOException with stream: BOM is not importedjava.lang.NullPointerException
+
+
+# Created at 2019-11-13T17:36:11.005
+Unexpected IOException: 8,1,com.automation.index.CalcuQuote_BOM_Index,BOM_TestCase_02(com.automation.index.CalcuQuote_BOM_Index),null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f\000A*** Element info: {Using=xpath\002C value=//span[text()='Or\002C if you prefer...']//..//i[1]},null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f\000A*** Element info: {Using=xpath\002C value=//span[text()='Or\002C if you prefer...']//..//i[1]},CalcuQuote_BOM_Index.BOM_TestCase_02:147 \00BB NoSuchWindow no such window: target...,org.openqa.selenium.NoSuchWindowException: \000Ano such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f\000A*** Element info: {Using=xpath\002C value=//span[text()='Or\002C if you prefer...']//..//i[1]}\000A\0009at com.automation.index.CalcuQuote_BOM_Index.BOM_TestCase_02(CalcuQuote_BOM_Index.java:147)\000A
+
+
+# Created at 2019-11-13T17:36:11.006
+Unexpected IOException with stream: I am in onTestFailure method BOM_TestCase_02 failed
+
+
+# Created at 2019-11-13T17:36:11.011
+Unexpected IOException: 8,1,com.automation.index.CalcuQuote_BOM_Index,BOM_TestCase_02(com.automation.index.CalcuQuote_BOM_Index),null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f,null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f,CalcuQuote_BOM_Index.BOM_TestCase_02 \00BB NoSuchWindow no such window: target win...,org.openqa.selenium.NoSuchWindowException: \000Ano such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=78.0.3904.97)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 0 milliseconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'TGS153'\002C ip: '192.168.0.153'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_221'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities {acceptInsecureCerts: false\002C acceptSslCerts: false\002C applicationCacheEnabled: false\002C browserConnectionEnabled: false\002C browserName: chrome\002C chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031...\002C userDataDir: C:\005CUsers\005Cadmin\005CAppData\005CLoca...}\002C cssSelectorsEnabled: true\002C databaseEnabled: false\002C goog:chromeOptions: {debuggerAddress: localhost:1313}\002C handlesAlerts: true\002C hasTouchScreen: false\002C javascriptEnabled: true\002C locationContextEnabled: true\002C mobileEmulationEnabled: false\002C nativeEvents: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: XP\002C platformName: XP\002C rotatable: false\002C setWindowRect: true\002C takesHeapSnapshot: true\002C takesScreenshot: true\002C unexpectedAlertBehaviour: \002C unhandledPromptBehavior: \002C version: 78.0.3904.97\002C webStorageEnabled: true}\000ASession ID: a2bb4da56701326dc9f15236dc01759f\000A
+
+
+# Created at 2019-11-13T17:36:11.012
+Unexpected IOException with stream: I am in onTestFailure method BOM_TestCase_02 failed
+
+
+# Created at 2019-11-13T17:36:11.042
+Unexpected IOException with stream: I am in onFinish method CalcuQuote_BOM_Module_TestCases
+
+
+# Created at 2019-11-13T17:36:11.252
+Unexpected IOException with stream: Calling ZipFile for the Extent Report.........
+
+
+# Created at 2019-11-13T17:36:11.259
+Unexpected IOException with stream: Regular file :C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\Extent_Report_new.html is zipped to archive :C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\Extent_Report_new.zip
+
+
+# Created at 2019-11-13T17:36:11.260
+Unexpected IOException with stream: ---Getting references to all files in: C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots
+
+
+# Created at 2019-11-13T17:36:11.260
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\111217250915BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.261
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1112173130325BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.261
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1113161825496BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.262
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1113163325271BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.262
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\111316494779BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.263
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1113170713669BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.264
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1113171805629BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.264
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\1113173033223BOM_TestCase_02.png
+
+
+# Created at 2019-11-13T17:36:11.264
+Unexpected IOException with stream:      file:C:\Users\admin\eclipse-workspace\CalcuQuote\test-output\screenshots\Extent_Report_new.html
+
+
+# Created at 2019-11-13T17:36:11.265
+Unexpected IOException with stream: ---Creating zip file
+
+
+# Created at 2019-11-13T17:36:11.266
+Unexpected IOException with stream: Writing '111217250915BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.270
+Unexpected IOException with stream: Writing '1112173130325BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.273
+Unexpected IOException with stream: Writing '1113161825496BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.277
+Unexpected IOException with stream: Writing '1113163325271BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.281
+Unexpected IOException with stream: Writing '111316494779BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.284
+Unexpected IOException with stream: Writing '1113170713669BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.288
+Unexpected IOException with stream: Writing '1113171805629BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.289
+Unexpected IOException with stream: Writing '1113173033223BOM_TestCase_02.png' to zip file
+
+
+# Created at 2019-11-13T17:36:11.292
+Unexpected IOException with stream: Writing 'Extent_Report_new.html' to zip file
+
+
+# Created at 2019-11-13T17:36:11.294
+Unexpected IOException with stream: ---Done
+
+
+# Created at 2019-11-13T17:36:11.332
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

@@ -42,7 +42,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 	}
 
 	//BOM Module TestCases , dependsOnMethods="RFQ_TestCase_01,BOM_TestCase_02"
-		@Test(priority = 0, enabled = true)
+		@Test(priority = 0, enabled = true , dependsOnMethods="BOM_TestCase_02")
 		public void BOM_TestCase_01() {
 
 			step = 1;
@@ -115,7 +115,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 		public void BOM_TestCase_02() {
 			step = 1;
 			String report_msg;// String for the log in the Report
-			report_msg = "CalcuQuote_BOM::To verify that user is able to Add line Item Manually.";
+			report_msg = "CalcuQuote_BOM::To verify that user is able to Add Manual line Item";
 			LogClass.logExtent(report_msg);
 
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
@@ -146,47 +146,92 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.addlineitemmanually();
 			
+			report_msg = "Step " + (step++) + ": Submit BOM";
+			LogClass.logExtent(report_msg);
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+			
+			if (bom_packageVerification.BOM_submit()) {
+				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_submission_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+			
 		}// End of BOM_TestCase_02
 		
+		public void BOM_TestCase_03() {
+
+			step = 1;
+			String report_msg;// String for the log in the Report
+			report_msg = "CalcuQuote_BOM::To verify [CQPS]Total Qty calculation with different combination of inputs ";
+			LogClass.logExtent(report_msg);
+
+			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+			LogClass.logExtent(report_msg);
+			
+			if (packageVerification.homepageverify()) {
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_Login_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+
+			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+			LogClass.logExtent(report_msg);
+			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+			
+			report_msg = "Step " + (step++) + ": Import BOM";
+			LogClass.logExtent(report_msg);
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+			
+			if (bom_packageVerification.BOM_imported()) {
+				LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_import_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+			report_msg = "Step " + (step++) + ": Submit BOM";
+			LogClass.logExtent(report_msg);
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+			
+			if (bom_packageVerification.BOM_submit()) {
+				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "BOM_submission_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+
+				
+		}// End of BOM_TestCase_01
 		
 		
-		//BOM Module TestCases  , dependsOnMethods="RFQ_TestCase_01"
-			@Test(priority = 0, enabled = true)
-			 public void BOM_TestCase_021() {
-				step = 1;
-				String report_msg;// String for the log in the Report
-				report_msg = "CalcuQuote_BOM::To verify that user is able to Add line Item Manually.";
-				LogClass.logExtent(report_msg);
-
-				report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
-				LogClass.logExtent(report_msg);
-				
-				if (packageVerification.homepageverify()) {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-					LogClass.AssertPassed();
-					Assert.assertTrue(true);
-				} else {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-					LogClass.AssertFailed();
-					LogClass.AssertFailed_Extent_Report();
-					LogClass.makeScreenshot(driver, "BOM_manual_line_item_Login_fail");
-					// softAssertion.assertTrue(false);
-					Assert.assertTrue(false);
-				}
-
-				report_msg = "Step " + (step++) + ": Enter Valid Credentials";
-				LogClass.logExtent(report_msg);
-				packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
-
-				report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
-				LogClass.logExtent(report_msg);
-				packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
-				
-				report_msg = "Step " + (step++) + ": Add Line Item Manually";
-				LogClass.logExtent(report_msg);
-				bom_packageVerification = CalcuQuote_BOM_Indexpage.addlineitemmanually();
-				
-				
-					
-			}// End of BOM_TestCase_02
 }

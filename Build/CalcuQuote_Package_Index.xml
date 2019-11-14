@@ -23,22 +23,7 @@
 
 	<listeners>
 		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterListener" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterEmailBuildSummary" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterforEmail" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterBuildSummary" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterTestpassDetails" />
-		<listener
 			class-name="com.automation.utility.CalcuQuote_CustomReporterTestFailureDetails" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterTestskipDetails" />
-		<listener
-			class-name="com.automation.utility.CalcuQuote_CustomReporterTestDetails" />
-
 		<listener
 			class-name="com.automation.utility.CalcuQuote_TestListener" />
 		<!-- <listener class-name="com.automation.utility.CalcuQuote_AnnotationTransformer" 
@@ -72,26 +57,26 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
-	 -->
+	</test> -->
+	
 	
 	<!-- Methods for BOM -->	
-<!-- 	<test
+	<test
 		name="CalcuQuote_BOM_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_BOM_Index">
 				<methods>	 	
-				    <include name="BOM_TestCase_01" />
+				 <!--    <include name="BOM_TestCase_01" /> -->
 	                <include name="BOM_TestCase_02" />	                			
 				</methods>
 	
 			</class>
 		</classes>
-	</test>	 -->
+	</test>	
 	
 	
 	<!-- Methods for Labor -->	
-<!-- 	<test
+	<!-- <test
 		name="CalcuQuote_Labor_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Labor_Index">
@@ -104,7 +89,7 @@
 	
 	
 	<!-- Methods for Material Costing -->	
-	<!-- <test
+<!-- 	<test
 		name="CalcuQuote_Material_Costing_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
@@ -113,11 +98,11 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
-	 -->
+	</test> -->
+	
 	
 	<!-- Methods for NRE -->	
-	<test
+	<!-- <test
 		name="CalcuQuote_NRE_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_NRE_Index">
@@ -127,7 +112,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 </suite>
  
