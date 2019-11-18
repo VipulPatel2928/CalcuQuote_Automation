@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
     <line>
       <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
@@ -7,17 +7,23 @@
     <line>
       <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
     </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
+    <line>
+      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+    </line>
   </reporter-output>
-  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="100755" started-at="2019-11-14T09:47:54Z" finished-at="2019-11-14T09:49:35Z">
+  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="291172" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:57:06Z">
     <groups>
     </groups>
-    <test name="CalcuQuote_BOM_Module_TestCases" duration-ms="100755" started-at="2019-11-14T09:47:54Z" finished-at="2019-11-14T09:49:35Z">
+    <test name="CalcuQuote_BOM_Module_TestCases" duration-ms="291172" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:57:06Z">
       <class name="com.automation.index.CalcuQuote_BOM_Index">
-        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="sheetupdate" is-config="true" duration-ms="9" started-at="2019-11-14T09:47:54Z" finished-at="2019-11-14T09:47:54Z">
+        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="sheetupdate" is-config="true" duration-ms="16" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sheetupdate -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="539" started-at="2019-11-14T09:47:54Z" finished-at="2019-11-14T09:47:55Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="738" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:15Z">
           <params>
             <param index="0">
               <value>
@@ -28,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="setUp" is-config="true" duration-ms="11945" started-at="2019-11-14T09:47:55Z" finished-at="2019-11-14T09:48:07Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="setUp" is-config="true" duration-ms="18260" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_BOM_Index.BOM_TestCase_02()]]>
+                <![CDATA[public void com.automation.index.CalcuQuote_BOM_Index.BOM_TestCase_03()]]>
               </value>
             </param>
             <param index="1">
@@ -44,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BOM_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="BOM_TestCase_02" duration-ms="77519" started-at="2019-11-14T09:48:07Z" finished-at="2019-11-14T09:49:24Z">
+        <test-method status="PASS" signature="BOM_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="BOM_TestCase_03" duration-ms="261266" started-at="2019-11-18T06:52:34Z" finished-at="2019-11-18T06:56:55Z">
           <reporter-output>
             <line>
               <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
@@ -52,20 +58,26 @@
             <line>
               <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
             </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
+            <line>
+              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- BOM_TestCase_02 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="tearDown" is-config="true" duration-ms="10742" started-at="2019-11-14T09:49:24Z" finished-at="2019-11-14T09:49:35Z">
+        </test-method> <!-- BOM_TestCase_03 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="tearDown" is-config="true" duration-ms="10886" started-at="2019-11-18T06:56:55Z" finished-at="2019-11-18T06:57:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BOM_TestCase_02 status=SUCCESS method=CalcuQuote_BOM_Index.BOM_TestCase_02()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51] output=<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]]>
+                <![CDATA[[TestResult name=BOM_TestCase_03 status=SUCCESS method=CalcuQuote_BOM_Index.BOM_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51] output=<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="90" started-at="2019-11-14T09:49:35Z" finished-at="2019-11-14T09:49:36Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="583" started-at="2019-11-18T06:57:06Z" finished-at="2019-11-18T06:57:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->

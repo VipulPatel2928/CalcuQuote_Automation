@@ -42,7 +42,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 	}
 
 	//BOM Module TestCases , dependsOnMethods="RFQ_TestCase_01,BOM_TestCase_02"
-		@Test(priority = 0, enabled = true , dependsOnMethods="BOM_TestCase_02")
+		@Test(priority = 0, enabled = true , dependsOnMethods= {"BOM_TestCase_02","BOM_TestCase_03"})
 		public void BOM_TestCase_01() {
 
 			step = 1;
@@ -76,6 +76,8 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			report_msg = "Step " + (step++) + ": Import BOM";
 			LogClass.logExtent(report_msg);
+			
+			CalcuQuote_BOM_Indexpage.filepath="Resources/35LineBOM.xlsx" ;
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
 			
 			if (bom_packageVerification.BOM_imported()) {
@@ -148,7 +150,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			report_msg = "Step " + (step++) + ": Submit BOM";
 			LogClass.logExtent(report_msg);
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM_manual();
 			
 			if (bom_packageVerification.BOM_submit()) {
 				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
@@ -163,8 +165,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 				Assert.assertTrue(false);
 			}
 			
-		}// End of BOM_TestCase_02
-		
+		}// End of BOM_TestCase_02 
+	
+		//,dependsOnMethods="BOM_TestCase_02"
+		@Test(priority = 0, enabled = true )
 		public void BOM_TestCase_03() {
 
 			step = 1;
@@ -198,6 +202,8 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			report_msg = "Step " + (step++) + ": Import BOM";
 			LogClass.logExtent(report_msg);
+			
+			CalcuQuote_BOM_Indexpage.filepath="Resources/Total_Qty_Calculation.xlsx" ;
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
 			
 			if (bom_packageVerification.BOM_imported()) {
@@ -219,6 +225,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			if (bom_packageVerification.BOM_submit()) {
 				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+				driver.navigate().refresh(); //Refresh the page need for this script
 				LogClass.AssertPassed();
 				Assert.assertTrue(true);
 			} else {
@@ -229,9 +236,27 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 				// softAssertion.assertTrue(false);
 				Assert.assertTrue(false);
 			}
-
-				
-		}// End of BOM_TestCase_01
+		
+			report_msg = "Step " + (step++) + ": Navigate to Material Costing to check calculation for the Total Quantity.";
+			LogClass.logExtent(report_msg);
+			material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.materialcosting_totalQty();
+			
+			if (material_costing_packageVerification.total_qty_verification()) {
+				LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
+				LogClass.AssertPassed();
+				Assert.assertTrue(true);
+			} else {
+				LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");
+				LogClass.AssertFailed();
+				LogClass.AssertFailed_Extent_Report();
+				LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+				// softAssertion.assertTrue(false);
+				Assert.assertTrue(false);
+			}
+			
+			
+			
+		}// End of BOM_TestCase_03
 		
 		
 }

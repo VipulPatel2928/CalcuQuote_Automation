@@ -26,6 +26,12 @@ public class CalcuQuote_TestData {
 		getExcelSheet(0).getRow(row).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
 		return getExcelSheet(0).getRow(row).getCell(1).getStringCellValue();
 	}
+	
+	public static String _totalqty(int row,int column) {
+		//System.out.println("Call Quantity.......");
+		getExcelSheet_total_Qty(0).getRow(row).getCell(column).setCellType(Cell.CELL_TYPE_STRING);
+		return getExcelSheet_total_Qty(0).getRow(row).getCell(column).getStringCellValue();
+	}
 
 	public static Sheet getExcelSheet(int sheetIndex) {
 		String dataFilePath = "Resources/Credential.xlsx";
@@ -44,6 +50,27 @@ public class CalcuQuote_TestData {
 		}
 		return firstSheet;
 	}
+	
+	
+	public static Sheet getExcelSheet_total_Qty(int sheetIndex) {
+		//System.out.println("Call getExcelSheet total Qty function to read excel file");
+		String dataFilePath = "Resources/Total_Qty_Calculation.xlsx";
+		File datafile = new File(dataFilePath);
+		String fullpath = datafile.getAbsolutePath();
+		Sheet firstSheet = null;
+
+		try {
+			//System.out.println("full path " + datafile.getAbsolutePath() + " con " + datafile.getCanonicalPath());
+			FileInputStream inputStream = new FileInputStream(new File(fullpath));
+			Workbook workbook = new XSSFWorkbook(inputStream);
+			firstSheet = workbook.getSheetAt(sheetIndex);
+			workbook.close();
+			inputStream.close();
+		} catch (Exception e) {
+		}
+		return firstSheet;
+	}
+	
 
 	public static Sheet upload(int sheetIndex) {
 		String dataFilePath = "Resources/firstname.txt";

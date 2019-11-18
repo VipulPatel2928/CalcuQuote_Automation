@@ -66,10 +66,10 @@
 		<classes>
 			<class name="com.automation.index.CalcuQuote_BOM_Index">
 				<methods>	 	
-				 <!--    <include name="BOM_TestCase_01" /> -->
-	                <include name="BOM_TestCase_02" />	                			
+				   <!--  <include name="BOM_TestCase_01" /> -->
+	             <!--    <include name="BOM_TestCase_02" />	 --> 
+	                <include name="BOM_TestCase_03" />	             			
 				</methods>
-	
 			</class>
 		</classes>
 	</test>	
@@ -89,7 +89,7 @@
 	
 	
 	<!-- Methods for Material Costing -->	
-<!-- 	<test
+	<!-- <test
 		name="CalcuQuote_Material_Costing_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
@@ -98,8 +98,8 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
-	
+	</test>
+	 -->
 	
 	<!-- Methods for NRE -->	
 	<!-- <test

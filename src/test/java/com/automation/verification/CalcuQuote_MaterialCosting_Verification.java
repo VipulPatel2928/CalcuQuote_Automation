@@ -65,4 +65,54 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			return true;
 		// TODO Auto-generated method stub
 	}
+
+	public boolean total_qty_verification() {
+		// TODO Auto-generated method stub
+		int flag =0;
+		String req_Qty = CalcuQuote_TestData.numberofquantity(8);
+		int Req_Qty= Integer.parseInt(req_Qty);
+		System.out.println("Req_Qty :"+Req_Qty);
+		//double d = Double.parseDouble("25.000");
+		double Qty_Brd_Var =0;
+		int Lead_Qty_Var=0;
+		double Attr_Rate_Var=0;
+		for(int i=1;i<=6;i++) {
+				//String lead_qty = CalcuQuote_TestData._totalqty(i, j);
+				String qty_brd = CalcuQuote_TestData._totalqty(i, 3);
+				Qty_Brd_Var=Double.parseDouble(qty_brd);
+				System.out.println("Qty_Brd_Var :"+Qty_Brd_Var);
+				String lead_qty = CalcuQuote_TestData._totalqty(i, 6);
+				Lead_Qty_Var = Integer.parseInt(lead_qty);
+				System.out.println("Lead Qty :"+Lead_Qty_Var);
+				String attr_rate = CalcuQuote_TestData._totalqty(i, 8);
+				Attr_Rate_Var=Double.parseDouble(attr_rate);
+				System.out.println("Attr_Rate_Var :"+Attr_Rate_Var);	
+			double calculation= (Req_Qty*Qty_Brd_Var*((Attr_Rate_Var/100)+1)) +Lead_Qty_Var;
+			
+			String cal= Double.toString(calculation);
+			if(cal.length()>11) {
+			int dot= cal.indexOf(".");
+			String final_calculation=cal.substring(0, dot)+cal.substring(dot, dot+7);
+			calculation=Double.parseDouble(final_calculation);}
+			//LogClass.logExtent("---> Total Qty as per Calculation : "+calculation);
+			double CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[i-1]);
+			if(calculation==CQPS_total) {
+				LogClass.logExtent("---> Total Quantity is Matched <---");
+			LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);}
+			else {
+				LogClass.logExtent("---> Total Quantity is not Matched <---");
+				LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				flag++;
+			}
+		}
+		
+		if(flag!=0) {
+			LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			return false;			
+		}
+		else
+		return true;
+	}
 }

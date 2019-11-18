@@ -37,6 +37,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public static String filepath =null;
 	@FindBy(xpath="//span[contains(text(),'Or, if you prefer...')]//..//i[2]")private static WebElement import_bom;
 	@FindBy(xpath="//a[@title='Import BOM']")private static WebElement act_import_bom;
 	@FindBy(xpath="//input[@id='upfile']")private static WebElement choose_file;
@@ -57,7 +58,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, import_bom);
 		funcs.waitforseconds(4);
-		String filepath="Resources/35LineBOM.xlsx";
+		//String filepath="Resources/35LineBOM.xlsx";
 		funcs.uploadthefile(driver, choose_file, 5, filepath);
 		funcs.waitforseconds(2);
 		LogClass.logExtent("---> File Selected for Import <---");
@@ -73,7 +74,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	@FindBy(xpath="//button[text()='Submit']//i")private static WebElement restart_submit;
 	public static CalcuQuote_BOM_Verification clicksubmitBOM() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(4);
 		funcs.clickon_element(driver, bom_submit_btn);
 		LogClass.logExtent("---> Click on BOM Submit Button <---");
 		funcs.waitforseconds(1);
@@ -176,5 +177,15 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		
 		return new CalcuQuote_BOM_Verification(driver);
+	}
+
+
+	public static CalcuQuote_BOM_Verification clicksubmitBOM_manual() {
+		// TODO Auto-generated method stub
+			// TODO Auto-generated method stub
+			funcs.waitforseconds(2);
+			funcs.clickon_element(driver, bom_submit_btn);
+			LogClass.logExtent("---> Click on BOM Submit Button <---");
+			return new CalcuQuote_BOM_Verification(driver);	
 	}
 }
