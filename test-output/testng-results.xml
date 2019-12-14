@@ -1,87 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
     <line>
       <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
     </line>
     <line>
-      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+      <![CDATA[<br><b>Please look to the screenshot - </b>]]>
     </line>
     <line>
-      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<br><Strong><font color=#FF0000>--Failed</font></strong></br>]]>
     </line>
     <line>
-      <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<a href='screenshots/1214151217802Material_Costing_TestCase_03.png' target='_new'>1214151217802Material_Costing_TestCase_03.png</a></br>]]>
+    </line>
+    <line>
+      <![CDATA[<br></br><h3>Failure Reason:</h3>]]>
+    </line>
+    <line>
+      <![CDATA[<br></br>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (b5cb15a42d9577e731719e25b953e3d4)] -&gt; xpath: //button[@id=&apos;btnSubmit&apos;]] (tried for 5 second(s) with 500 milliseconds interval)]]>
     </line>
   </reporter-output>
-  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="291172" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:57:06Z">
+  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="188776" started-at="2019-12-14T09:39:14Z" finished-at="2019-12-14T09:42:23Z">
     <groups>
     </groups>
-    <test name="CalcuQuote_BOM_Module_TestCases" duration-ms="291172" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:57:06Z">
-      <class name="com.automation.index.CalcuQuote_BOM_Index">
-        <test-method status="PASS" signature="sheetupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="sheetupdate" is-config="true" duration-ms="16" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sheetupdate -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="738" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:15Z">
+    <test name="CalcuQuote_Material_Costing_Module_TestCases" duration-ms="188776" started-at="2019-12-14T09:39:14Z" finished-at="2019-12-14T09:42:23Z">
+      <class name="com.automation.index.CalcuQuote_Material_Costing_Index">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="647" started-at="2019-12-14T09:39:13Z" finished-at="2019-12-14T09:39:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@28ac3dc3]]>
+                <![CDATA[org.testng.TestRunner@6a370f4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="setUp" is-config="true" duration-ms="18260" started-at="2019-11-18T06:52:15Z" finished-at="2019-11-18T06:52:34Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="129" started-at="2019-12-14T09:39:14Z" finished-at="2019-12-14T09:39:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.CalcuQuote_BOM_Index.BOM_TestCase_03()]]>
+                <![CDATA[org.testng.TestRunner@6a370f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="setUp" is-config="true" duration-ms="16996" started-at="2019-12-14T09:39:14Z" finished-at="2019-12-14T09:39:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_03()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@28ac3dc3]]>
+                <![CDATA[org.testng.TestRunner@6a370f4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BOM_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="BOM_TestCase_03" duration-ms="261266" started-at="2019-11-18T06:52:34Z" finished-at="2019-11-18T06:56:55Z">
+        <test-method status="FAIL" signature="Material_Costing_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="Material_Costing_TestCase_03" duration-ms="165720" started-at="2019-12-14T09:39:31Z" finished-at="2019-12-14T09:42:17Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (b5cb15a42d9577e731719e25b953e3d4)] -> xpath: //button[@id='btnSubmit']] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:2832}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.79, webStorageEnabled: true}
+Session ID: b5cb15a42d9577e731719e25b953e3d4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (b5cb15a42d9577e731719e25b953e3d4)] -> xpath: //button[@id='btnSubmit']] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:2832}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.79, webStorageEnabled: true}
+Session ID: b5cb15a42d9577e731719e25b953e3d4
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+at com.automation.utility.funcs.waitforelementclickable(funcs.java:38)
+at com.automation.utility.funcs.clickon_element(funcs.java:106)
+at com.automation.indexpage.CalcuQuote_BOM_Indexpage.SMT_clicksubmitBOM_manual(CalcuQuote_BOM_Indexpage.java:209)
+at com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_03(CalcuQuote_Material_Costing_Index.java:305)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
               <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
             </line>
             <line>
-              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+              <![CDATA[<br><b>Please look to the screenshot - </b>]]>
             </line>
             <line>
-              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<br><Strong><font color=#FF0000>--Failed</font></strong></br>]]>
             </line>
             <line>
-              <![CDATA[<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<a href='screenshots/1214151217802Material_Costing_TestCase_03.png' target='_new'>1214151217802Material_Costing_TestCase_03.png</a></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br></br><h3>Failure Reason:</h3>]]>
+            </line>
+            <line>
+              <![CDATA[<br></br>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (b5cb15a42d9577e731719e25b953e3d4)] -&gt; xpath: //button[@id=&apos;btnSubmit&apos;]] (tried for 5 second(s) with 500 milliseconds interval)]]>
             </line>
           </reporter-output>
-        </test-method> <!-- BOM_TestCase_03 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="tearDown" is-config="true" duration-ms="10886" started-at="2019-11-18T06:56:55Z" finished-at="2019-11-18T06:57:06Z">
+        </test-method> <!-- Material_Costing_TestCase_03 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="tearDown" is-config="true" duration-ms="5416" started-at="2019-12-14T09:42:17Z" finished-at="2019-12-14T09:42:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BOM_TestCase_03 status=SUCCESS method=CalcuQuote_BOM_Index.BOM_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51] output=<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]]>
+                <![CDATA[[TestResult name=Material_Costing_TestCase_03 status=FAILURE method=CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_03()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51] output=<strong> <h3 style="color:DarkGreen">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_BOM_Index@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="583" started-at="2019-11-18T06:57:06Z" finished-at="2019-11-18T06:57:07Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="216" started-at="2019-12-14T09:42:23Z" finished-at="2019-12-14T09:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->
-      </class> <!-- com.automation.index.CalcuQuote_BOM_Index -->
-    </test> <!-- CalcuQuote_BOM_Module_TestCases -->
+      </class> <!-- com.automation.index.CalcuQuote_Material_Costing_Index -->
+    </test> <!-- CalcuQuote_Material_Costing_Module_TestCases -->
   </suite> <!-- CalcuQuote_Functional_TestCases_Suite -->
 </testng-results>

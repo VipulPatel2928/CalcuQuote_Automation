@@ -137,10 +137,14 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 	public static final String URL1 = "https://www.youtube.com/";
 	
 	@BeforeSuite()
-	public void sheetupdate() {
-		System.out.println("Excel Sheet Updated for the Latest Result.........");
-		//RentCount_TestData.getnumberofrow();  this function has inside function to update the Excel Sheet
-	}
+	
+	
+	/*
+	 * public void sheetupdate() {
+	 * System.out.println("Excel Sheet Updated for the Latest Result.........");
+	 * //RentCount_TestData.getnumberofrow(); this function has inside function to
+	 * update the Excel Sheet }
+	 */
 	
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) {
@@ -160,7 +164,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 	}
 
 	@BeforeMethod(alwaysRun = true)
-	
+
 	public void setUp(Method method, ITestContext testContext) throws Exception {
 		
 		System.out.println("Set up Start =====");
@@ -174,7 +178,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 				theDir.mkdir();
 				result = true;
 			} catch (SecurityException se) {
-				// handle it
+				
 			}
 			if (result) {
 				System.out.println("DIR created");
@@ -197,13 +201,12 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 			System.setProperty("webdriver.gecko.driver", "Resources/geckodriver_0_22_64BIT.exe");
 			
 			final FirefoxOptions options = new FirefoxOptions();
-		//	options.addArguments("-profile", "./firefoxprofile"); // Added for CSRF Issue
+		
 			
 			profile.setPreference("geo.enabled", false);
 			profile.setPreference("geo.provider.use_corelocation", false);
 			profile.setPreference("geo.prompt.testing", false);
 			profile.setPreference("geo.prompt.testing.allow", false);
-		//	profile.setPreference("csrf_protection", false);
 
 			capability = DesiredCapabilities.firefox();
 			capability.setCapability(FirefoxDriver.PROFILE, profile);	
@@ -246,109 +249,11 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 			browserName = capability.getVersion();
 			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			// driver = new RemoteWebDriver(new
-			// URL("http://172.16.150.12:4444/wd/hub"), capability);
 			driver = new ChromeDriver(capability);
-			/* driver.manage().window().setSize(new Dimension(1920,1080)); */
 			driver.manage().window().maximize();
 			System.out.println("=========" + "Chorme Driver " + "==========");
-			// driver.setFileDetector(new LocalFileDetector());
 		}
-
-		else if (targetBrowser.contains("ie11")) {
-			
-			capability = DesiredCapabilities.internetExplorer();
-			System.setProperty("webdriver.ie.driver", "Resources/IEDriverServer_2_53_1.exe");
-			capability.setBrowserName("internet explorer");
-			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			//capability.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-			capability.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-			capability.setJavascriptEnabled(true);
-			//capability.setCapability(CapabilityType.BROWSER_NAME, "IE");
-			browserName = capability.getVersion();
-			osName = Platform.getCurrent().name();
-			browserVersion = capability.getVersion();
-			//driver = new RemoteWebDriver(remote_grid, capability);
-			driver = new InternetExplorerDriver(capability);
-			driver.manage().deleteAllCookies();
-
-		}
-			
-else if (targetBrowser.contains("browserstack")) {
-			
-	DesiredCapabilities caps = new DesiredCapabilities();
-	  caps.setCapability("browser", "Chrome");
-	  caps.setCapability("browser_version", "70.0");
-	  caps.setCapability("os", "Windows");
-	  caps.setCapability("os_version", "10");
-	  caps.setCapability("resolution", "1024x768");
-	  caps.setCapability("browserstack.selenium_version", "2.53.1");
-	//  caps.setCapability("browserstack.local", "true");
-	  		
-	  driver = new RemoteWebDriver(new URL(URL1), caps);
-	  driver.get(testUrl);
-	  		
-		}
-
-		else if (targetBrowser.contains("m-headless")) {
-
-			FirefoxProfile profile = new FirefoxProfile();
-			   profile.setPreference("geo.enabled", false);
-			   profile.setPreference("geo.provider.use_corelocation", false);
-			   profile.setPreference("geo.prompt.testing", false);
-			   profile.setPreference("geo.prompt.testing.allow", false);
-			 
-			   File file = new File("Resources/geckodriver_0_22.exe");
-   
-			   FirefoxBinary binary=new FirefoxBinary();
-			   binary.addCommandLineOptions("--headless");
-   
-			   System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
-	   
-			   FirefoxOptions options=new FirefoxOptions();
-			   options.setBinary(binary);
-			   options.setCapability(FirefoxDriver.PROFILE, profile);
-			   options.addArguments("--window-size=1920x1080");
-			   driver=new FirefoxDriver(options);
-			  
-			   System.out.println("=========" + "Firefox Headless Driver " + "==========");
-			  }
-
-		else if (targetBrowser.contains("Android_Chrome")) {
-			
-			DesiredCapabilities cap= new DesiredCapabilities();
-			URL remote_grid1 = null ;
-			try {
-			remote_grid1 = new URL("http://" + "localhost" + ":" + "4723" + "/wd/hub");
-			} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			}
-			cap=new DesiredCapabilities();
-			//File apkFile = new File("app/Notepad.apk");
-			//File apkFile = new File("app/Facebook.apk");
-		    //File apkFile = new File("app/redBus Online Bus Ticket Booking Hotel Booking_v6.6.5_apkpure.com.apk");
-		    //cap.setCapability("app",apkFile.getAbsolutePath());
-			cap.setCapability("platformVersion", "6.0");
-			cap.setCapability("platformName", "Android");
-			cap.setCapability("deviceName", "HKE6GZ7D");
-			cap.setCapability("browserName", "Chrome");
-			//cap.setCapability("chromedriverExecutableDir", "C:\\Users\\admin\\eclipse-workspace\\3DBroadCastSales_v1.0\\Resources\\chromedriver.exe");
-			/*cap.setCapability("appPackage", "com.app.workpulse.task");
-			cap.setCapability("appActivity", "com.workpulse.task.SplashActivity");*/
-			cap.setCapability("autoGrantPermissions", true);
-			cap.setCapability("noReset", false);//change by vipul
-			cap.setCapability("newCommandTimeout", 600);
-			cap.setCapability("unicodeKeyboard", true);
-			cap.setCapability("resetKeyboard", true);
-			cap.setCapability("chromedriverUseSystemExecutable", true);
-			//androidDriver = Factory.createAndroidDriver(remote_grid, cap);
-		    //driver = new AndroidDriver<MobileElement>(remote_grid1, cap);
-			driver = new RemoteWebDriver(remote_grid1, cap);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			
-		}	
-
+	
 		suiteName = testContext.getSuite().getName();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.manage().window().maximize(); //--> Firefox
@@ -382,15 +287,9 @@ else if (targetBrowser.contains("browserstack")) {
 		shopcq_packageVerification = new CalcuQuote_ShopCQ_Verification(driver);
 		
 		searchcq_packageIndexpage = new CalcuQuote_SearchCQ_Indexpage(driver);
-		searchcq_packageVerification = new CalcuQuote_SearchCQ_Verification(driver);
-		
-		
-		
-		
-		
-		
-			
+		searchcq_packageVerification = new CalcuQuote_SearchCQ_Verification(driver);		
 	}
+
 
 	/**
 	 * Log For Failure Test Exception.

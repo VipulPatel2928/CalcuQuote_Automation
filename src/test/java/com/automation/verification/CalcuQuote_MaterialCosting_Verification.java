@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
@@ -27,6 +29,10 @@ import com.automation.utility.CalcuQuote_TestData;
 import com.automation.utility.funcs;
 import com.relevantcodes.extentreports.LogStatus;
 public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_AbstractPage {
+	
+	public static String qty_brd  =null;
+	public static String lead_qty=null;
+	public static String attr_rate=null;
 	public CalcuQuote_MaterialCosting_Verification(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -69,14 +75,16 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 	public boolean total_qty_verification() {
 		// TODO Auto-generated method stub
 		int flag =0;
+		double temp_calculation=0;
 		String req_Qty = CalcuQuote_TestData.numberofquantity(8);
 		int Req_Qty= Integer.parseInt(req_Qty);
 		System.out.println("Req_Qty :"+Req_Qty);
-		//double d = Double.parseDouble("25.000");
+		
 		double Qty_Brd_Var =0;
 		int Lead_Qty_Var=0;
 		double Attr_Rate_Var=0;
-		for(int i=1;i<=6;i++) {
+		
+		for(int i=1;i<=11;i++) {
 				//String lead_qty = CalcuQuote_TestData._totalqty(i, j);
 				String qty_brd = CalcuQuote_TestData._totalqty(i, 3);
 				Qty_Brd_Var=Double.parseDouble(qty_brd);
@@ -89,15 +97,47 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 				System.out.println("Attr_Rate_Var :"+Attr_Rate_Var);	
 			double calculation= (Req_Qty*Qty_Brd_Var*((Attr_Rate_Var/100)+1)) +Lead_Qty_Var;
 			
-			String cal= Double.toString(calculation);
-			if(cal.length()>11) {
-			int dot= cal.indexOf(".");
-			String final_calculation=cal.substring(0, dot)+cal.substring(dot, dot+7);
-			calculation=Double.parseDouble(final_calculation);}
+			DecimalFormat df = new DecimalFormat("#.######");
+			df.setRoundingMode(RoundingMode.DOWN);
+			String calculation_str=df.format(calculation);
+			calculation=Double.parseDouble(calculation_str);
+			double CQPS_total=0;
 			//LogClass.logExtent("---> Total Qty as per Calculation : "+calculation);
-			double CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[i-1]);
+			if(i<7) {
+			CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[i-1]);
+			}
+			if(i==7) {
+				temp_calculation = calculation;
+				System.out.println("Temp calculation ===> Consolidate Line 7 ===>::"+temp_calculation);
+				continue;
+			}
+			
+			if(i==9 || i==10) {
+			
+					temp_calculation = temp_calculation + calculation;
+					System.out.println("Temp calculation ===> Consolidate Line 9 and 10 ===>::"+temp_calculation);
+					continue;	
+			}
+			System.out.println("i ="+i);
+			
+			if(i==8) {
+				calculation = temp_calculation + calculation;
+				temp_calculation = 0;
+				CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[6]);
+				System.out.println("calculation ===> Consolidate Line 7 and 8 :"+calculation);
+				System.out.println("CQPS total ===> Consolidate Line 7 and 8 :"+CQPS_total);
+			}
+	
+			if(i==11) {
+				calculation = temp_calculation + calculation;
+				temp_calculation = 0;
+				CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[7]);
+				System.out.println("calculation ===> Consolidate Line 9 ,10 and 11 :"+calculation);
+				System.out.println("CQPS total ===> Consolidate Line 9 ,10 and 11 :"+CQPS_total);
+			}
+			
 			if(calculation==CQPS_total) {
-				LogClass.logExtent("---> Total Quantity is Matched <---");
+			LogClass.logExtent("---> Total Quantity is Matched <---");
 			LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
 			LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);}
 			else {
@@ -115,4 +155,59 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		else
 		return true;
 	}
+
+	public boolean SMT_total_qty_verification() {
+		// TODO Auto-generated method stub
+		int flag =0;
+		double temp_calculation=0;
+		String req_Qty = CalcuQuote_TestData.numberofquantity(8);
+		int Req_Qty= Integer.parseInt(req_Qty);
+		System.out.println("Req_Qty :"+Req_Qty);
+		//double d = Double.parseDouble("25.000");
+		
+		double Qty_Brd_Var =0;
+		int Lead_Qty_Var=0;
+		double Attr_Rate_Var=0;
+		
+				//String lead_qty = CalcuQuote_TestData._totalqty(i, j);
+				//String qty_brd = CalcuQuote_TestData._totalqty(1, 3);
+				Qty_Brd_Var=Double.parseDouble(qty_brd);
+				System.out.println("Qty_Brd_Var :"+Qty_Brd_Var);
+				//String lead_qty = CalcuQuote_TestData._totalqty(1, 6);
+				Lead_Qty_Var = Integer.parseInt(lead_qty);
+				System.out.println("Lead Qty :"+Lead_Qty_Var);
+				//String attr_rate = CalcuQuote_TestData._totalqty(1, 8);
+				Attr_Rate_Var=Double.parseDouble(attr_rate);
+				System.out.println("Attr_Rate_Var :"+Attr_Rate_Var);	
+			double calculation= (Req_Qty*Qty_Brd_Var*((Attr_Rate_Var/100)+1)) +Lead_Qty_Var;
+			
+			DecimalFormat df = new DecimalFormat("#.######");
+			df.setRoundingMode(RoundingMode.DOWN);
+			String calculation_str=df.format(calculation);
+			calculation=Double.parseDouble(calculation_str);
+			double CQPS_total=0;
+			//LogClass.logExtent("---> Total Qty as per Calculation : "+calculation);
+			
+			CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[0]);
+			
+			if(calculation==CQPS_total) {
+			LogClass.logExtent("---> Total Quantity is Matched <---");
+			LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);}
+			else {
+				LogClass.logExtent("---> Total Quantity is not Matched <---");
+				LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				flag++;
+			}
+		
+		
+		if(flag!=0) {
+			LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			return false;			
+		}
+		else
+		return true;
+	}
+	
 }

@@ -41,8 +41,8 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		System.out.println("GetTest Method called");
 	}
 
-//Login Module Test Cases
-	@Test(priority = 0, enabled = true, dependsOnMethods = { "Signin_TestCase_02" })
+//Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
+	@Test(priority = 0, enabled = true)
 	public void Signin_TestCase_01() {
 
 		step = 1;

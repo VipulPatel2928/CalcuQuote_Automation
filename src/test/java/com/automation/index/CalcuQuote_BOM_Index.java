@@ -41,15 +41,17 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 		System.out.println("GetTest Method called");
 	}
 
-	//BOM Module TestCases , dependsOnMethods="RFQ_TestCase_01,BOM_TestCase_02"
-		@Test(priority = 0, enabled = true , dependsOnMethods= {"BOM_TestCase_02","BOM_TestCase_03"})
+	//BOM Module TestCases , dependsOnMethods="BOM_TestCase_02"
+		@Test(priority = 0, enabled = true)
 		public void BOM_TestCase_01() {
 
 			step = 1;
 			String report_msg;// String for the log in the Report
+			
+			
 			report_msg = "CalcuQuote_BOM::To verify that user is able to Import BOM and Submit.";
 			LogClass.logExtent(report_msg);
-
+			
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			
@@ -69,7 +71,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
-
+			 
 			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
@@ -117,9 +119,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 		public void BOM_TestCase_02() {
 			step = 1;
 			String report_msg;// String for the log in the Report
+		
 			report_msg = "CalcuQuote_BOM::To verify that user is able to Add Manual line Item";
 			LogClass.logExtent(report_msg);
-
+		
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			
@@ -139,7 +142,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
-
+			
 			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
@@ -195,7 +198,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
-
+			
 			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
@@ -225,7 +228,6 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			if (bom_packageVerification.BOM_submit()) {
 				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-				driver.navigate().refresh(); //Refresh the page need for this script
 				LogClass.AssertPassed();
 				Assert.assertTrue(true);
 			} else {
@@ -253,9 +255,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 				// softAssertion.assertTrue(false);
 				Assert.assertTrue(false);
 			}
-			
-			
-			
+				
 		}// End of BOM_TestCase_03
 		
 		

@@ -111,10 +111,10 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 
 		funcs.waitforseconds(8);
-		//funcs.clickon_element(driver, rfq_list);
-		//LogClass.logExtent("---> Click on RFQ List icon <---");
+		funcs.clickon_element(driver, rfq_list);
+		LogClass.logExtent("---> Click on RFQ List icon <---");
 
-		//funcs.waitforseconds(5);
+		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, new_rfq_btn);
 		LogClass.logExtent("---> Click on new RFQ button <---");
 

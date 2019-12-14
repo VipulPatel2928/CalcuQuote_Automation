@@ -110,7 +110,7 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, rfq_list);
 		LogClass.logExtent("---> Click on RFQ List icon <---");
-		/*
+		
 		String fileName = "lib/Assembly_number";
 		ArrayList<String> line = funcs.ReadTextFile(fileName, 1);
 		System.out.println("Assembly no read from the text file:"+line.get(0));
@@ -119,9 +119,8 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		assembly_no.get(3).clear();
 		assembly_no.get(3).sendKeys(line.get(0));
 		//funcs.senddata(driver, assembly_no.get(3), line.get(0));		
-		LogClass.log("---> Enter Assembly No. <---");
 		LogClass.logExtent("---> Enter Assembly No. <---");
-        */
+        
 		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, assembly_id);
 		LogClass.logExtent("---> Click on Assembly Id. <---");		

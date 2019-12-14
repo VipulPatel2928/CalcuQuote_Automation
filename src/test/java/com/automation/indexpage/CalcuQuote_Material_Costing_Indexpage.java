@@ -38,9 +38,9 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static String[] Total_Qty_per_line = new String[6];
+	public static String[] Total_Qty_per_line = new String[8];
 	
-	@FindBy(xpath="//ul//li[5]//a[contains(text(),' Material Costing')]")private static WebElement material_costing_tab;
+	@FindBy(xpath="//ul//li[4]//a[contains(text(),' Material Costing')]")private static WebElement material_costing_tab;
 	@FindBy(xpath="//button[@id='btnUpdatePricing']")private static WebElement update_pricing;
 	@FindBy(xpath="//button[text()='Submit']")private static WebElement MC_POPup_submit_btn;
 	@FindBy(xpath="//button[@ng-click='stopAutoPricing()']")private static WebElement stopautopricing;
@@ -64,7 +64,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.clickon_element(driver,update_pricing );
 		LogClass.logExtent("---> Click on Update Pricing Tab <---");
 		
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(1);
 		funcs.clickon_element(driver,MC_POPup_submit_btn );
 		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
 		
@@ -76,6 +76,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		 * LogClass.log("---> Click on Auto Select Button <---");
 		 * LogClass.logExtent("---> Click on Auto Select Button <---");
 		 */
+		funcs.waitforseconds(5);
 		
 		String totalQuantity = CalcuQuote_TestData.numberofquantity(7);
 		int totalQ = Integer.parseInt(totalQuantity);
@@ -90,9 +91,9 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		System.out.println("pricing available="+pricing_available.size());
 		funcs.clickon_element(driver,pricing_available.get(0) );
 		
-		for(int i=0;i<=4;i++) {
+		for(int i=0;i<=3;i++) {
 			//System.out.println("i="+i);
-			//funcs.clickon_element(driver,pricing_available.get(i) );
+			//funcs.clickon_element(driver,pricing_available.get(i) ); 
 			funcs.waitforseconds(3);
 			funcs.clickon_element(driver,select_line.get(1) );
 			//funcs.clickon_element(driver,apply_to_all_quantity );
@@ -107,7 +108,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		
 		LogClass.logExtent("---> Pricing Selection for each line item finished <---");
 		
-		funcs.waitforseconds(10);
+		funcs.waitforseconds(1);
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 
@@ -119,10 +120,10 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.clickon_element(driver,material_costing_submit_btn );
 		LogClass.logExtent("---> Click on Material Costing Submit button <---");
 		
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(2);
 		funcs.clickon_element(driver,material_submit_ok_btn );
 		LogClass.logExtent("---> Click on OK button <---");
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(1);
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 	
@@ -142,29 +143,35 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		LogClass.logExtent("---> Click on pricing data unavailable <---");
 		
 		funcs.waitforseconds(4);
-		//String totalQuantity = CalcuQuote_TestData.numberofquantity(7);
-		//int totalQ = Integer.parseInt(totalQuantity);
-		//totalQ=totalQ*6;
-	//String[] Total_Qty_per_line = new String[6];
-		//Total_Qty_per_line[0]=total_qty.getAttribute("value");
-		//System.out.println("Total Qty:"+Total_Qty_per_line[0]);
-		//int p =0;
-		//p++;
-	//	LogClass.logExtent("---> Total Qty as per CQPS <---");
-		for(int i=0;i<=5;i++) {
-			//funcs.waitforseconds(3);
-			//funcs.clickon_element(driver,select_line.get(1) );
-			//funcs.clickon_element(driver,apply_to_all_quantity );
-			//funcs.waitforseconds(4);
+		for(int i=0;i<=7;i++) {
 			funcs.waitforseconds(2);
 			Total_Qty_per_line[i] = total_qty.getAttribute("value");
 		    System.out.println("Total Qty:" + Total_Qty_per_line[i]);
-		//	LogClass.logExtent("---> Total Qty :"+Total_Qty_per_line[i]);
 			funcs.clickon_element(driver, cqps_next_btn);
-			funcs.waitforseconds(1);
+			funcs.waitforseconds(2);
 		}
 		
+		//funcs.waitforseconds(5);
+		return new CalcuQuote_MaterialCosting_Verification(driver);	
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification SMT_materialcosting_totalQty() {
+		// TODO Auto-generated method stub
+		driver.navigate().refresh();
 		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_tab );
+		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		
+		funcs.waitforseconds(4);
+		funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
+		LogClass.logExtent("---> Click on pricing data unavailable <---");
+		
+		funcs.waitforseconds(4);					
+		Total_Qty_per_line[0] = total_qty.getAttribute("value");
+		System.out.println("Total Qty:" + Total_Qty_per_line[0]);
+		//funcs.clickon_element(driver, cqps_next_btn);
+		
+		//funcs.waitforseconds(5);
 		return new CalcuQuote_MaterialCosting_Verification(driver);	
 	}
 

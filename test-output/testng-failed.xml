@@ -9,18 +9,17 @@
     <listener class-name="com.automation.utility.CalcuQuote_CustomReporterTestFailureDetails"/>
     <listener class-name="com.automation.utility.CalcuQuote_TestListener"/>
   </listeners>
-  <test thread-count="1" verbose="0" name="CalcuQuote_BOM_Module_TestCases(failed)" parallel="tests">
+  <test thread-count="1" verbose="0" name="CalcuQuote_Material_Costing_Module_TestCases(failed)" parallel="tests">
     <classes>
-      <class name="com.automation.index.CalcuQuote_BOM_Index">
+      <class name="com.automation.index.CalcuQuote_Material_Costing_Index">
         <methods>
           <include name="fetchSuiteConfiguration"/>
-          <include name="BOM_TestCase_03"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="Material_Costing_TestCase_03"/>
           <include name="zipfileupdate"/>
-          <include name="sheetupdate"/>
         </methods>
-      </class> <!-- com.automation.index.CalcuQuote_BOM_Index -->
+      </class> <!-- com.automation.index.CalcuQuote_Material_Costing_Index -->
     </classes>
-  </test> <!-- CalcuQuote_BOM_Module_TestCases(failed) -->
+  </test> <!-- CalcuQuote_Material_Costing_Module_TestCases(failed) -->
 </suite> <!-- Failed suite [CalcuQuote_Functional_TestCases_Suite] -->
