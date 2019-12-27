@@ -56,12 +56,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");			
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -83,12 +81,12 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
 			
 			if (bom_packageVerification.BOM_imported()) {
-				LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+				LogClass.VerificationPass_Extent_Report("-----> Verified BOM Imported Successfully <-----");			
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
+				LogClass.VerificationFailed_Extent_Report("-----> Verified BOM is not imported Successfully <-----");		
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_import_fail");
 				// softAssertion.assertTrue(false);
@@ -100,12 +98,12 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
 			
 			if (bom_packageVerification.BOM_submit()) {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");		
+				LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");	
+				LogClass.VerificationFailed_Extent_Report("-----> Verified Submit BOM is in progress msg not displayed <-----");
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_submission_fail");
 				// softAssertion.assertTrue(false);
@@ -127,12 +125,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");				
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_manual_line_item_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -156,12 +152,12 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM_manual();
 			
 			if (bom_packageVerification.BOM_submit()) {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");	
+				LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");	
+				LogClass.VerificationFailed_Extent_Report("-----> Verified Submit BOM is in progress msg not displayed <-----");
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_submission_fail");
 				// softAssertion.assertTrue(false);
@@ -170,6 +166,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 		}// End of BOM_TestCase_02 
 	
+		/*
 		//,dependsOnMethods="BOM_TestCase_02"
 		@Test(priority = 0, enabled = true )
 		public void BOM_TestCase_03() {
@@ -257,6 +254,6 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			}
 				
 		}// End of BOM_TestCase_03
-		
+		*/
 		
 }

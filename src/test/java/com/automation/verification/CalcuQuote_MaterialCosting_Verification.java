@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import com.automation.index.CalcuQuote_Material_Costing_Index;
+import com.automation.indexpage.CalcuQuote_BOM_Indexpage;
 import com.automation.indexpage.CalcuQuote_Material_Costing_Indexpage;
 import com.automation.indexpage.CalcuQuote_RFQ_Indexpage;
 import com.automation.init.CalcuQuote_AbstractPage;
@@ -33,6 +34,7 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 	public static String qty_brd  =null;
 	public static String lead_qty=null;
 	public static String attr_rate=null;
+	public static double previous_total_Qty = 0;
 	public CalcuQuote_MaterialCosting_Verification(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -137,19 +139,26 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			}
 			
 			if(calculation==CQPS_total) {
-			LogClass.logExtent("---> Total Quantity is Matched <---");
-			LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
-			LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);}
+			//LogClass.logExtent("---> Total Quantity is Matched <---");
+			LogClass.VerificationPass_Extent_Report("---> Total Quantity is Matched <---");
+			//LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per Calculation : "+calculation);
+			//LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);
+			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per CQPS : "+CQPS_total);}
 			else {
-				LogClass.logExtent("---> Total Quantity is not Matched <---");
-				LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
-				LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				//LogClass.logExtent("---> Total Quantity is not Matched <---");
+				LogClass.VerificationFailed_Extent_Report("---> Total Quantity is not Matched <---");
+				//LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per Calculation : "+calculation);
+				//LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per CQPS : "+CQPS_total);
 				flag++;
 			}
 		}
 		
 		if(flag!=0) {
-			LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			//LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			LogClass.VerificationFailed_Extent_Report("---> NOs of Total Quantity not matched :" + flag);
 			return false;			
 		}
 		else
@@ -190,24 +199,63 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			
 			CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[0]);
 			
+		   if (previous_total_Qty > 0 && previous_total_Qty!=calculation) {			  
+			    LogClass.VerificationPass_Extent_Report("---> Total Qty Changed <---");
+			    LogClass.VerificationPass_Extent_Report("---> Previous Part Class Total Qty : "+previous_total_Qty);
+			    LogClass.VerificationPass_Extent_Report("---> Current Part Class Total Qty  : "+CQPS_total);
+				//LogClass.logExtent("---> Previous Part Class Total Qty : "+previous_total_Qty);
+				//LogClass.logExtent("---> Current Part Class Total Qty  : "+CQPS_total);
+		   }
+		   if (previous_total_Qty==calculation) {
+			    LogClass.VerificationPass_Extent_Report("---> Total Qty is Not Changed <---");
+			    LogClass.VerificationPass_Extent_Report("---> Previous Part Class Total Qty : "+previous_total_Qty);
+			    LogClass.VerificationPass_Extent_Report("---> Current Part Class Total Qty  : "+CQPS_total);
+		   }
+			
 			if(calculation==CQPS_total) {
-			LogClass.logExtent("---> Total Quantity is Matched <---");
-			LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
-			LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);}
+			//LogClass.logExtent("---> Total Quantity is Matched <---");
+			//LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per Calculation : "+calculation);
+			//LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);
+			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per CQPS : "+CQPS_total);
+			}
 			else {
-				LogClass.logExtent("---> Total Quantity is not Matched <---");
-				LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
+				//LogClass.logExtent("---> Total Quantity is not Matched <---");
+				//LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per Calculation : "+calculation);
 				LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per CQPS : "+CQPS_total);
 				flag++;
 			}
 		
 		
 		if(flag!=0) {
-			LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			//LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
+			LogClass.VerificationFailed_Extent_Report("---> NOs of Total Quantity not matched :" + flag);
 			return false;			
 		}
 		else
 		return true;
+	}
+
+	public boolean price_clear_Verification() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(6);
+		WebElement pricing_Unavailable = driver.findElement(By.xpath("//a[@uib-tooltip='Pricing Data Unavailable  ']"));
+		if(pricing_Unavailable.isDisplayed())
+			return true;
+		else 
+			return false;
+	}
+
+	public boolean price_available_Verification() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(6);
+		WebElement pricing_available = driver.findElement(By.xpath("//a[@uib-tooltip='Pricing Available  ']"));
+		if(pricing_available.isDisplayed())
+			return true;
+		else 
+			return false;
 	}
 	
 }

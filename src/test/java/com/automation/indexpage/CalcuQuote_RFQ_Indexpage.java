@@ -53,7 +53,7 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 	private static WebElement order_type;
 	@FindBy(xpath = "//input[@id='CustomerId']")
 	private static WebElement customer_name;
-	@FindBy(xpath = "//a[@title='Tata']")
+	@FindBy(xpath = "//a[@title='VP0911']")
 	private static WebElement select_customer;
 	@FindBy(xpath = "//button[@type='submit']")
 	private static WebElement submit_btn;

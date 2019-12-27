@@ -155,23 +155,72 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		return new CalcuQuote_MaterialCosting_Verification(driver);	
 	}
 
+	@FindBy(xpath="//input[@id=\"DigiKey\"]//..//i")private static WebElement digikey_uncheck;
+	
 	public static CalcuQuote_MaterialCosting_Verification SMT_materialcosting_totalQty() {
 		// TODO Auto-generated method stub
+		/*
 		driver.navigate().refresh();
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_tab );
 		LogClass.logExtent("---> Click on Material Costing Tab <---");
 		
+		*/
+		/*
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
 		LogClass.logExtent("---> Click on pricing data unavailable <---");
+		*/
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,update_pricing );
+		LogClass.logExtent("---> Click on Update Pricing Tab <---");
 		
-		funcs.waitforseconds(4);					
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver,digikey_uncheck );
+		LogClass.logExtent("---> Click on Digikey Uncheck <---");
+		
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver,MC_POPup_submit_btn );
+		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
+		
+		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
+		
+		funcs.clickon_element(driver,pricing_available.get(0) );
+		LogClass.logExtent("---> Click on pricing available <---");
+		
+		funcs.waitforseconds(10);					
 		Total_Qty_per_line[0] = total_qty.getAttribute("value");
 		System.out.println("Total Qty:" + Total_Qty_per_line[0]);
 		//funcs.clickon_element(driver, cqps_next_btn);
-		
+		/*
 		//funcs.waitforseconds(5);
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_tab );
+		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		*/
+		return new CalcuQuote_MaterialCosting_Verification(driver);	
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification navigatematerial_costing() {
+		// TODO Auto-generated method stub
+		driver.navigate().refresh();
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_tab );
+		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		return new CalcuQuote_MaterialCosting_Verification(driver);	
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification SMT_materialcosting_totalQty_1() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		
+		funcs.clickon_element(driver,pricing_available.get(0) );
+		LogClass.logExtent("---> Click on pricing available <---");
+		
+		funcs.waitforseconds(8);					
+		Total_Qty_per_line[0] = total_qty.getAttribute("value");
+		System.out.println("Total Qty:" + Total_Qty_per_line[0]);
+		
 		return new CalcuQuote_MaterialCosting_Verification(driver);	
 	}
 

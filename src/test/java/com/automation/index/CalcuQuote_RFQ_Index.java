@@ -52,12 +52,10 @@ public class CalcuQuote_RFQ_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
+				LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");				
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
+				LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "RFQ_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -73,12 +71,12 @@ public class CalcuQuote_RFQ_Index extends CalcuQuote_SeleniumInit{
 			rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
 
 			if (rfq_packageVerification.rfqsubmitted()) {
-				LogClass.logExtent("-----> Verified RFQ Submitted Successfully <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified RFQ Submitted Successfully <-----");
+				LogClass.VerificationPass_Extent_Report("-----> Verified RFQ Submitted Successfully <-----");			
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified RFQ is not Submitted Successfully <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified RFQ is not Submitted Successfully <-----");
+				LogClass.VerificationFailed_Extent_Report("-----> Verified RFQ is not Submitted Successfully <-----");		
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "RFQ_Submission_fail");
 				// softAssertion.assertTrue(false);

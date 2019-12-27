@@ -52,12 +52,10 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");		
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -80,12 +78,10 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 
 			if (nre_packageVerification.CalcuQuote_NRE_calculation_verification()) {
-				LogClass.logExtent("-----> Verified NRE Calculation Successfully <-----");
-				LogClass.AssertPassed();
+				LogClass.VerificationPass_Extent_Report("-----> Verified NRE Calculation Successfully <-----");				
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> NOT Verified NRE Calculation Successfully <-----");
-				LogClass.AssertFailed();
+				LogClass.VerificationFailed_Extent_Report("-----> NOT Verified NRE Calculation Successfully <-----");			
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_calculation_fail");
 				// softAssertion.assertTrue(false); Assert.assertTrue(false);
@@ -96,12 +92,12 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			nre_packageVerification = CalcuQuote_NRE_Indexpage.clicksubmitnre();
 			
 			if (nre_packageVerification.NRE_Submit()) {
-				LogClass.logExtent("-----> Verified NRE Expenses added to the Quote <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified NRE Expenses added to the Quote <-----");
+				LogClass.VerificationPass_Extent_Report("-----> Verified NRE Expenses added to the Quote <-----");				
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified NRE Expenses is not added to the Quote <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified NRE Expenses is not added to the Quote <-----");
+				LogClass.VerificationFailed_Extent_Report("-----> Verified NRE Expenses is not added to the Quote <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_submission_fail");
 				// softAssertion.assertTrue(false); Assert.assertTrue(false);
@@ -120,12 +116,10 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");	
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
+				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");		
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -148,12 +142,12 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 
 			if (nre_packageVerification.NRE_created_verification()) {
-				LogClass.logExtent("-----> Verified NRE created Successfully <-----");
-				LogClass.AssertPassed();
+				//LogClass.logExtent("-----> Verified NRE created Successfully <-----");
+				LogClass.VerificationPass_Extent_Report("-----> Verified NRE created Successfully <-----");			
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified NRE is not created Successfully <-----");
-				LogClass.AssertFailed();
+				//LogClass.logExtent("-----> Verified NRE is not created Successfully <-----");
+				LogClass.VerificationFailed_Extent_Report("-----> Verified NRE is not created Successfully <-----");
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_Creation_fail");
 				// softAssertion.assertTrue(false); Assert.assertTrue(false);

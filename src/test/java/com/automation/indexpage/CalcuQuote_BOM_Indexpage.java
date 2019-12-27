@@ -38,8 +38,10 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated constructor stub
 	}
 	public static int SMT_flag=1;
+	//public static int total_qty_reset_flag=0;
 	public static String filepath =null;
-	public static String[] part_class = {"number:303","number:301","number:299","number:328","number:329","number:330"};
+	public static String[] part_class = {"number:303","number:301","number:299"};
+	//,"number:299","number:328","number:329","number:330"};
 	@FindBy(xpath="//span[contains(text(),'Or, if you prefer...')]//..//i[2]")private static WebElement import_bom;
 	@FindBy(xpath="//a[@title='Import BOM']")private static WebElement act_import_bom;
 	@FindBy(xpath="//input[@id='upfile']")private static WebElement choose_file;
@@ -169,7 +171,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		//Actions act = new Actions(driver);
 		//act.doubleClick(click_mpn).build().perform();
 		//funcs.clickon_element(driver, click_mpn);
-		funcs.senddata(driver, enter_mpn, "5014_Automation");
+		funcs.senddata(driver, enter_mpn, "5014");
 		LogClass.logExtent("---> Enter MPN <---");
 		
 		funcs.waitforseconds(1);
@@ -178,7 +180,8 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		LogClass.logExtent("---> Click On Part Class Field <---");
 		funcs.waitforseconds(1);
 		Select part_class = new Select(select_part_class);
-		part_class.selectByIndex(4);
+		//part_class.selectByIndex(4);
+		part_class.selectByValue("number:303");
 		LogClass.logExtent("---> Select Part Class <---");
 		
 		
@@ -221,32 +224,96 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 @FindBy(xpath="//a[@ui-sref='Assembly.Bom']")private static WebElement bom_tab;
 @FindBy(xpath="//span[text()='Assembly Number :']")private static WebElement assembly_no;
 @FindBy(xpath="//div[@role='gridcell']//..//div")private static List<WebElement> lead_qty_nd_attr_rate_data;
+//@FindBy(xpath="//div[contains(text(),'Changing the Lead, Attrition or Minimum Purchase ')]")private static WebElement clear_prices_diff_total_Qty_flag;
+@FindBy(xpath="//button[text()=' Yes, update the values']")private static WebElement yes_update_btn;
 
 	public static CalcuQuote_BOM_Verification edit_part_class_manually() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(4);
+		//total_qty_reset_flag=0;
 		funcs.clickon_element(driver, bom_tab);
 		LogClass.logExtent("---> Click On BOM tab <---");
 			
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(6);
 		//funcs.clickon_element(driver, click_part_class);
 		funcs.jsClick(driver, click_part_class);
 		LogClass.logExtent("---> Click On Part Class Field <---");
-		LogClass.logExtent("---> Select Part Class <---"+click_part_class.getText());
+		//LogClass.logExtent("---> Select Part Class <---"+click_part_class.getText());
+		
+		////div[contains(text(),'SMT')]
 		
 		funcs.waitforseconds(1);
 		Select part_class = new Select(select_part_class);
 		
-		part_class.selectByIndex(5);
+		//part_class.selectByIndex(5);
 		part_class.selectByValue(CalcuQuote_Material_Costing_Index.part_class_name);
 		
-		
+		funcs.waitforseconds(1);
+		funcs.jsClick(driver, click_part_class);
+		//LogClass.logExtent("---> Click On Part Class Field <---");
+		LogClass.logExtent("---> Part Class Changed <---");
 		
 		funcs.waitforseconds(1);		
 		funcs.clickon_element(driver, click_qty_on_brd);
 		LogClass.logExtent("---> Click on Qty on Brd Text Field <---");
 		
+		funcs.waitforseconds(2);
+		
+		
+	    funcs.clickon_element(driver, yes_update_btn);
+		LogClass.logExtent("---> Click On Yes,update the values <---");
+				//total_qty_reset_flag=1;
+		
+		funcs.waitforseconds(2);
+		CalcuQuote_MaterialCosting_Verification.lead_qty=lead_qty_nd_attr_rate_data.get(18).getText();
+		System.out.println("Lead Qty:"+lead_qty_nd_attr_rate_data.get(18).getText());
+		//System.out.println("Lead Qty:"+lead_qty_nd_attr_rate_data.get(19).getText());	
+		CalcuQuote_MaterialCosting_Verification.attr_rate=lead_qty_nd_attr_rate_data.get(20).getText();
+		System.out.println("Attr Rate:"+lead_qty_nd_attr_rate_data.get(20).getText());
+		//System.out.println("Attr Rate:"+lead_qty_nd_attr_rate_data.get(21).getText());	
+		
+		return new CalcuQuote_BOM_Verification(driver);
+	}
+
+
+	public static CalcuQuote_BOM_Verification edit_part_class_manually_1() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(4);
+		//total_qty_reset_flag=0;
+		funcs.clickon_element(driver, bom_tab);
+		LogClass.logExtent("---> Click On BOM tab <---");
+			
+		funcs.waitforseconds(6);
+		//funcs.clickon_element(driver, click_part_class);
+		funcs.jsClick(driver, click_part_class);
+		LogClass.logExtent("---> Click On Part Class Field <---");
+		//LogClass.logExtent("---> Select Part Class <---"+click_part_class.getText());
+		
+		////div[contains(text(),'SMT')]
+		
 		funcs.waitforseconds(1);
+		Select part_class = new Select(select_part_class);
+		
+		//part_class.selectByIndex(5);
+		part_class.selectByValue(CalcuQuote_Material_Costing_Index.part_class_name);
+		
+		funcs.waitforseconds(1);
+		funcs.jsClick(driver, click_part_class);
+		//LogClass.logExtent("---> Click On Part Class Field <---");
+		LogClass.logExtent("---> Part Class Changed <---");
+		
+		funcs.waitforseconds(1);		
+		funcs.clickon_element(driver, click_qty_on_brd);
+		LogClass.logExtent("---> Click on Qty on Brd Text Field <---");
+		
+		funcs.waitforseconds(2);
+		
+		
+	   // funcs.clickon_element(driver, yes_update_btn);
+	   //LogClass.logExtent("---> Click On Yes,update the values <---");
+			
+		
+		funcs.waitforseconds(2);
 		CalcuQuote_MaterialCosting_Verification.lead_qty=lead_qty_nd_attr_rate_data.get(18).getText();
 		System.out.println("Lead Qty:"+lead_qty_nd_attr_rate_data.get(18).getText());
 		//System.out.println("Lead Qty:"+lead_qty_nd_attr_rate_data.get(19).getText());	

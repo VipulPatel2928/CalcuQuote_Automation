@@ -116,9 +116,29 @@ public class LogClass {
 	
 	// Function for the UnSuccessful verification
 		public static void AssertFailed_Extent_Report() {
-			System.out.println();
+			//System.out.println();
 			//Reporter.log("<strong> <h3 style=\"color:DarkRed\"> &#10008; <i> UNSUCCESSFUL </i></h3> </strong>");
-			CalcuQuote_Login_Index.extent_report_log.log(LogStatus.FAIL, "<strong> <p style=\"color:DarkRed\"> &#10008; <i> UNSUCCESSFUL </i></p> </strong>");
+			CalcuQuote_Login_Index.extent_report_log.log(LogStatus.FAIL, "<strong> <p style=\"color:DarkRed\"> &#10008; <b><i> UNSUCCESSFUL </i><b></p> </strong>");
+		}
+		
+		public static void VerificationFailed_Extent_Report(String msg) {
+			//System.out.println();
+			//Reporter.log("<strong> <h3 style=\"color:DarkRed\"> &#10008; <i> UNSUCCESSFUL </i></h3> </strong>");
+			CalcuQuote_Login_Index.extent_report_log.log(LogStatus.INFO, "<strong> <p style=\"color:DarkRed\"> &#10008; <b><i>" +msg+ "</i><b></p> </strong>");
+		}
+		
+		public static void AssertPass_Extent_Report() {
+			//System.out.println();
+			//Reporter.log("<strong> <h3 style=\"color:DarkRed\"> &#10008; <i> UNSUCCESSFUL </i></h3> </strong>");
+			CalcuQuote_Login_Index.extent_report_log.log(LogStatus.PASS, "<strong> <p style=\"color:DarkGreen\"> &#10004; <b><i> SUCCESSFUL </i><b></p> </strong>");
+			//<strong> <h3 style=\"color:DarkGreen\">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> 
+		}
+		
+		public static void VerificationPass_Extent_Report(String msg) {
+			//System.out.println();
+			//Reporter.log("<strong> <h3 style=\"color:DarkRed\"> &#10008; <i> UNSUCCESSFUL </i></h3> </strong>");
+			CalcuQuote_Login_Index.extent_report_log.log(LogStatus.INFO, "<strong> <p style=\"color:DarkGreen\"> &#10004; <b><i> " +msg+ " </i><b></p> </strong>");
+			//<strong> <h3 style=\"color:DarkGreen\">  &#10004; <i>  SUCCESSFUL </i></h3> </strong> 
 		}
 	
 }

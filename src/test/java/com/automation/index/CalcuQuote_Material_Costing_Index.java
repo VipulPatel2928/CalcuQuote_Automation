@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.automation.utility.LogClass;
 import com.automation.utility.funcs;
+import com.automation.verification.CalcuQuote_MaterialCosting_Verification;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.automation.init.CalcuQuote_SeleniumInit;
@@ -47,7 +48,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				step = 1;
 				String report_msg;// String for the log in the Report
 			
-				report_msg = "CalcuQuote_Material_Costing::To verify that user is able to Update Pricing and Assign the price using CQPS";
+				report_msg = "CQ_Material_Costing::To verify that user is able to Update Pricing and Assign the price using CQPS";
 				LogClass.logExtent(report_msg);
 
 				report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
@@ -55,11 +56,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (packageVerification.homepageverify()) {
 					LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");					
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
 					// softAssertion.assertTrue(false);
@@ -87,11 +87,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (bom_packageVerification.BOM_imported()) {
 					LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_import_fail");
 					// softAssertion.assertTrue(false);
@@ -104,11 +103,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (bom_packageVerification.BOM_submit()) {
 					LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_submission_fail");
 					// softAssertion.assertTrue(false);
@@ -125,11 +123,11 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 			  if (material_costing_packageVerification.price_update_and_auto_selected_verification()) 
 			  {
 			  LogClass.logExtent("-----> Verified prices assigned Successfully <-----"); 
-			  LogClass.AssertPassed(); Assert.assertTrue(true);
+			  //LogClass.AssertPass_Extent_Report();
+			  Assert.assertTrue(true);
 			  } 
 			  else { 
-				  LogClass.logExtent("-----> Verified All prices are not assigned Successfully <-----"); 
-				  LogClass.AssertFailed(); 
+				  LogClass.logExtent("-----> Verified All prices are not assigned Successfully <-----"); 			
 				  LogClass.AssertFailed_Extent_Report();
 			      LogClass.makeScreenshot(driver, "Price_update_auto_select_fail");
 			      //softAssertion.assertTrue(false); 
@@ -144,11 +142,11 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 			  if (material_costing_packageVerification.MC_submission())
 			  {
 			  LogClass.logExtent("-----> Verified Material Cost added to the Quote <-----"); 
-			  LogClass.AssertPassed(); Assert.assertTrue(true);
+			  //LogClass.AssertPass_Extent_Report();
+			  Assert.assertTrue(true);
 			  } 
 			  else { 
-				  LogClass.logExtent("-----> Verified Material Cost not added to the Quote <-----"); 
-				  LogClass.AssertFailed(); 
+				  LogClass.logExtent("-----> Verified Material Cost not added to the Quote <-----"); 			
 				  LogClass.AssertFailed_Extent_Report();
 			      LogClass.makeScreenshot(driver, "MC_submission_fail");
 			      //softAssertion.assertTrue(false); 
@@ -163,7 +161,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 
 				step = 1;
 				String report_msg;// String for the log in the Report
-				report_msg = "CalcuQuote_BOM::To verify [CQPS]Total Qty calculation with different combination of inputs ";
+				report_msg = "CQ_Material_Costing::To verify [CQPS]Total Qty calculation with different combination of inputs ";
 				LogClass.logExtent(report_msg);
 
 				report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
@@ -171,11 +169,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (packageVerification.homepageverify()) {
 					LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_Login_fail");
 					// softAssertion.assertTrue(false);
@@ -204,11 +201,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (bom_packageVerification.BOM_imported()) {
 					LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_import_fail");
 					// softAssertion.assertTrue(false);
@@ -221,11 +217,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (bom_packageVerification.BOM_submit()) {
 					LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");				
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_submission_fail");
 					// softAssertion.assertTrue(false);
@@ -238,11 +233,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (material_costing_packageVerification.total_qty_verification()) {
 					LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");			
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
 					// softAssertion.assertTrue(false);
@@ -253,10 +247,10 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 			
 			@Test(priority = 0, enabled = true )
 			public void Material_Costing_TestCase_03() {
-
+                int assersion_flag=0; 
 				step = 1;
 				String report_msg;// String for the log in the Report
-				report_msg = "CalcuQuote_BOM::To verify [CQPS]Total Qty calculation with different Part Class[ex. SMT Active, SMT BGA, SMT Passive etc]";
+				report_msg = "CQ_Material_Costing::To verify user get clear pricing message and prices get clear while changing Part Class affect the Lead Qty and Attr Rate";
 				LogClass.logExtent(report_msg);
 
 				report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
@@ -264,13 +258,12 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (packageVerification.homepageverify()) {
 					LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-					LogClass.AssertFailed();
+					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
 					LogClass.AssertFailed_Extent_Report();
-					LogClass.makeScreenshot(driver, "BOM_Login_fail");
+					LogClass.makeScreenshot(driver, "Login_fail");
 					// softAssertion.assertTrue(false);
 					Assert.assertTrue(false);
 				}
@@ -293,9 +286,34 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				LogClass.logExtent(report_msg);
 				bom_packageVerification = CalcuQuote_BOM_Indexpage.addlineitemmanually();
 				
-				for(int i=0;i<=5;i++) {
-					
-				part_class_name = CalcuQuote_BOM_Indexpage.part_class[i];
+				report_msg = "Step " + (step++) + ": Submit BOM";
+				LogClass.logExtent(report_msg);
+				bom_packageVerification = CalcuQuote_BOM_Indexpage.SMT_clicksubmitBOM_manual();
+				
+				if (bom_packageVerification.BOM_submit()) {
+					LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
+				} else {
+					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");				
+					LogClass.AssertFailed_Extent_Report();
+					LogClass.makeScreenshot(driver, "BOM_submission_fail");
+					// softAssertion.assertTrue(false);
+					Assert.assertTrue(false);
+				}
+				
+				report_msg = "Step " + (step++) + ": Navigate to Material Costing";
+				LogClass.logExtent(report_msg);
+				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+				
+				report_msg = "Step " + (step++) + ": Update Pricing and Reading Total Quantity from CQPS.";
+				LogClass.logExtent(report_msg);
+				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.SMT_materialcosting_totalQty();
+				
+				CalcuQuote_MaterialCosting_Verification.previous_total_Qty=Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[0]);
+				//for(int i=0;i<=1;i++) {
+				
+				part_class_name = CalcuQuote_BOM_Indexpage.part_class[1];
 				report_msg = "Step " + (step++) + ": Edit Part Class Manually";
 				LogClass.logExtent(report_msg);
 				bom_packageVerification = CalcuQuote_BOM_Indexpage.edit_part_class_manually();
@@ -306,34 +324,110 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				
 				if (bom_packageVerification.BOM_submit()) {
 					LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-					LogClass.AssertPassed();
+					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
 					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-					LogClass.AssertFailed();
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "BOM_submission_fail");
 					// softAssertion.assertTrue(false);
 					Assert.assertTrue(false);
 				}
+				
+				report_msg = "Step " + (step++) + ": Navigate to Material Costing";
+				LogClass.logExtent(report_msg);
+				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+				
 			
-				report_msg = "Step " + (step++) + ": Navigate to Material Costing to check calculation for the Total Quantity.";
+				if (material_costing_packageVerification.price_clear_Verification()) {
+					//LogClass.logExtent("-----> Verified Prices are cleared <-----");
+			        LogClass.VerificationPass_Extent_Report("-----> Verified Prices are cleared <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
+				} else {
+					//LogClass.logExtent("-----> Verified Prices are not cleared <-----");		
+					LogClass.VerificationFailed_Extent_Report("-----> Verified Prices are not cleared <-----");
+					LogClass.AssertFailed_Extent_Report();
+					LogClass.makeScreenshot(driver, "price_clear_verification_fail");
+					//Assert.assertTrue(false);
+				}
+				
+				report_msg = "Step " + (step++) + ": Update Pricing and Reading Total Quantity from CQPS.";
 				LogClass.logExtent(report_msg);
 				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.SMT_materialcosting_totalQty();
 				
 				if (material_costing_packageVerification.SMT_total_qty_verification()) {
-					LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
-					LogClass.AssertPassed();
-					//Assert.assertTrue(true);
+					//LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
+					LogClass.VerificationPass_Extent_Report("-----> Verified Total Qty Calculations is correct <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");
-					LogClass.AssertFailed();
+					//LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");					
+					LogClass.VerificationFailed_Extent_Report("-----> Verified Total Qty Calculations is not correct <-----");
 					LogClass.AssertFailed_Extent_Report();
-					LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+					//LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
 					//Assert.assertTrue(false);
 				}
 					
-				}//End of for loop		
+				CalcuQuote_MaterialCosting_Verification.previous_total_Qty=Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[0]);
+				
+				part_class_name = CalcuQuote_BOM_Indexpage.part_class[2];
+				report_msg = "Step " + (step++) + ": Edit Part Class Manually";
+				LogClass.logExtent(report_msg);
+				bom_packageVerification = CalcuQuote_BOM_Indexpage.edit_part_class_manually_1();
+				
+				report_msg = "Step " + (step++) + ": Submit BOM";
+				LogClass.logExtent(report_msg);
+				bom_packageVerification = CalcuQuote_BOM_Indexpage.SMT_clicksubmitBOM_manual();
+				
+				if (bom_packageVerification.BOM_submit()) {
+					LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
+				} else {
+					LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
+					LogClass.AssertFailed_Extent_Report();
+					LogClass.makeScreenshot(driver, "BOM_submission_fail");
+					// softAssertion.assertTrue(false);
+					Assert.assertTrue(false);
+				}
+				
+				report_msg = "Step " + (step++) + ": Navigate to Material Costing";
+				LogClass.logExtent(report_msg);
+				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+				
+			
+				if (material_costing_packageVerification.price_available_Verification()) {
+					//LogClass.logExtent("-----> Verified Prices are available <-----");
+					LogClass.VerificationPass_Extent_Report("-----> Verified Prices are available <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
+				} else {
+					//LogClass.logExtent("-----> Verified Prices are not available <-----");
+					LogClass.VerificationFailed_Extent_Report("-----> Verified Prices are not available <-----");
+					LogClass.AssertFailed_Extent_Report();
+					LogClass.makeScreenshot(driver, "price_available_verification_fail");
+					Assert.assertTrue(false);
+				}
+				
+				report_msg = "Step " + (step++) + ": Update Pricing and Reading Total Quantity from CQPS.";
+				LogClass.logExtent(report_msg);
+				material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.SMT_materialcosting_totalQty_1();
+			
+				if (material_costing_packageVerification.SMT_total_qty_verification()) {
+					//LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
+					LogClass.VerificationPass_Extent_Report("-----> Verified Total Qty Calculations is correct <-----");
+					//LogClass.AssertPass_Extent_Report();
+					Assert.assertTrue(true);
+				} else {
+					//LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");
+					LogClass.VerificationFailed_Extent_Report("-----> Verified Total Qty Calculations is not correct <-----");
+					LogClass.AssertFailed_Extent_Report();
+					//LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+					Assert.assertTrue(false);
+				}
+					
+			//	}//End of for loop		
 				
 			}// Material_Costing_TestCase_03
 			
