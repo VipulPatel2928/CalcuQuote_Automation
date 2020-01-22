@@ -76,6 +76,35 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		return new CalcuQuote_BOM_Verification(driver);
 	}
 	
+	public static CalcuQuote_BOM_Verification ImportBOMorg() {
+		// TODO Auto-generated method stub
+		
+		//Remove the comment of all lines if you want the script to delete the BOM before 
+		/*funcs.clickon_element(driver,actions_menu); 
+		LogClass.logExtent("---> Click On Action Menu <---");
+		funcs.clickon_element(driver, delete_bom);	
+		LogClass.logExtent("---> Click On Delete BOM <---");
+		funcs.clickon_element(driver, delete_btn);
+		LogClass.logExtent("---> Click On Delete button<---");
+		funcs.waitforseconds(2);
+		driver.navigate().refresh();*/
+		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver, import_bom);
+		funcs.waitforseconds(4);
+		//String filepath="Resources/35LineBOM.xlsx";
+		funcs.uploadthefile(driver, choose_file, 5, filepath);
+		funcs.waitforseconds(2);
+		LogClass.logExtent("---> File Selected for Import <---");
+		
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver, import_bom_after_choose_file);
+		LogClass.logExtent("---> BOM imported <---");
+		funcs.waitforseconds(6);
+		return new CalcuQuote_BOM_Verification(driver);
+	}
+	
+	
 	@FindBy(xpath="//button[@id='btnSubmit']")private static WebElement bom_submit_btn;
 	@FindBy(xpath="//button[text()='Submit']//i")private static WebElement restart_submit;
 	public static CalcuQuote_BOM_Verification clicksubmitBOM() {
@@ -321,6 +350,15 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		System.out.println("Attr Rate:"+lead_qty_nd_attr_rate_data.get(20).getText());
 		//System.out.println("Attr Rate:"+lead_qty_nd_attr_rate_data.get(21).getText());	
 		
+		return new CalcuQuote_BOM_Verification(driver);
+	}
+
+	
+	@FindBy(xpath="//span[contains(@title,'BOM')]")private static WebElement importbom_check;
+	public static CalcuQuote_BOM_Verification already_ImportBOM() {
+		// TODO Auto-generated method stub
+		String status = importbom_check.getAttribute("title");
+		System.out.println("Bom is imported or not:"+status);
 		return new CalcuQuote_BOM_Verification(driver);
 	}
 }

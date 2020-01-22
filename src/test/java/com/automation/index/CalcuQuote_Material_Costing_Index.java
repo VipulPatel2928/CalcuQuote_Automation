@@ -30,15 +30,14 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 	public static ExtentTest extent_report_log;// for the log in extent report
 	public static String part_class_name;
 	// soft assertion
-	SoftAssert softAssertion = new SoftAssert();
+	//SoftAssert softAssertion = new SoftAssert();
 
 	// System.out.println("softAssert Method Was Started");
 	// softAssertion.assertTrue(false);
 	// System.out.println("softAssert Method Was Executed");
 	// Below method bring the object for the log in the report
 	public static void getTest(ExtentTest test) {
-		// TODO Auto-generated method stub
-		// test_package = test;
+		// TODO Auto-generated method stub		
 		extent_report_log = test;
 		System.out.println("GetTest Method called");
 	}
@@ -426,11 +425,234 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 					//LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
 					Assert.assertTrue(false);
 				}
-					
-			//	}//End of for loop		
-				
+									
 			}// Material_Costing_TestCase_03
 			
-			
-	
+	@Test(priority = 0, enabled = true)
+	public void Material_Costing_TestCase_04() throws InterruptedException {
+		step = 1;
+		String report_msg;// String for the log in the Report
+
+		report_msg = "CQ_Material_Costing::Automation Script for MC: Quick Add Unit Cost.";
+		LogClass.logExtent(report_msg);
+
+		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+		LogClass.logExtent(report_msg);
+
+		if (packageVerification.homepageverify()) {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+
+		report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+
+		// Use this code if you want create the RFQ as per script need
+		// report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
+		// LogClass.logExtent(report_msg);
+		// rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
+
+		report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+
+		report_msg = "Step " + (step++) + ": Import BOM";
+		LogClass.logExtent(report_msg);
+
+		CalcuQuote_BOM_Indexpage.filepath = "Resources/35LineBOM.xlsx";
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+
+		if (bom_packageVerification.BOM_imported()) {
+			LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_import_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+
+		report_msg = "Step " + (step++) + ": Submit BOM";
+		LogClass.logExtent(report_msg);
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+
+		if (bom_packageVerification.BOM_submit()) {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_submission_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+
+		driver.navigate().refresh();
+		funcs.waitforseconds(5);
+
+		report_msg = "Step " + (step++) + ": Navigate to Material Costing Page";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+
+		report_msg = "Step " + (step++) + ": Click Pricing Data Unavailable";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage
+				.right_click_pricing_data_unavailable();
+
+		report_msg = "Step " + (step++)
+				+ ": Checking Validation message for the mandatory fields on Enter Price Screen";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.generate_msg_Enter_price_srn();
+
+		report_msg = "Step " + (step++) + ": Checking See More functionality";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.see_more();
+
+        CalcuQuote_Material_Costing_Indexpage.unit_price_var ="0.292929";
+		report_msg = "Step " + (step++) + ": Enter all mandatory fields of Quick Price and save ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.Enter_Price();
+
+		report_msg = "Step " + (step++)+ ": Dispaly Unit price on Material Costing Screen and Verify with entered Unit price.";
+		LogClass.logExtent(report_msg);
+		
+		if (material_costing_packageVerification.unit_price_verification()) {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
+			// <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Unit price is assigned to line item <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
+			// <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Unit price is not assigned to line item <-----");
+			LogClass.AssertFailed_Extent_Report();
+			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+			Assert.assertTrue(false);
+		}
+
+		 CalcuQuote_Material_Costing_Indexpage.unit_price_var ="0.111111";
+		report_msg = "Step " + (step++)+ ": Measuring Process Time from Quick Add Price to Save ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.measure_time();
+		
+		if (material_costing_packageVerification.time_verification()) {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
+			// <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Open Quick Add Price screen to Save price process is finished in expected benchmark time <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
+			// <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Open Quick Add Price screen to Save price process is not finished in expected benchmark time <-----");
+			LogClass.AssertFailed_Extent_Report();
+			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+			//Assert.assertTrue(false);
+		}
+		
+		if (material_costing_packageVerification.unit_price_verification()) {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
+			// <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Unit price is assigned to line item <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
+			// <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Unit price is not assigned to line item <-----");
+			LogClass.AssertFailed_Extent_Report();
+			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+			Assert.assertTrue(false);
+		}
+		
+		
+		report_msg = "Step " + (step++) + ": Click Pricing Data Unavailable";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage
+				.right_click_pricing_data_unavailable();
+
+		report_msg = "Step " + (step++) + ": Select Supplier ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.select_supplier();
+
+		report_msg = "Step " + (step++) + ": Enter all mandatory fields of Quick Price and save ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.Enter_Price_in_GBP();
+
+		report_msg = "Step " + (step++) + ": Choose GBP as Currency ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.choose_currency();
+
+		report_msg = "Step " + (step++) + ": Click Save btn ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.savebtn_quick_price();
+
+		if (material_costing_packageVerification.gbp_unit_price_verification()) {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
+			// <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Unit price is assigned to line item <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
+			// <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Unit price is not assigned to line item <-----");
+			LogClass.AssertFailed_Extent_Report();
+			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+			Assert.assertTrue(false);
+		}
+
+		report_msg = "Step " + (step++) + ": Click Review Tab ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.click_review_tab();
+		
+		report_msg = "Step " + (step++) + ": Click Leading Cost Drivers ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.click_leading_cost_tab();
+		
+		report_msg = "Step " + (step++) + ": Navigate to Quick Add Price Screen. ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigate_to_add_price_screen();
+
+		report_msg = "Step " + (step++) + ": Select Supplier ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.select_supplier();
+		
+		CalcuQuote_Material_Costing_Indexpage.unit_price_var ="0.999999";
+		report_msg = "Step " + (step++) + ": Enter all mandatory fields of Quick Price and save ";
+		LogClass.logExtent(report_msg);
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.Enter_Price();
+		
+		report_msg = "Step " + (step++)+ ": Dispaly Unit price on Material Costing Review Screen and Verify with entered Unit price.";
+		LogClass.logExtent(report_msg);
+		
+		if (material_costing_packageVerification.unit_price_verification_leading_cost()) {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
+			// <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Unit price is assigned to line item <-----");
+			// LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
+			// <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Unit price is not assigned to line item <-----");
+			LogClass.AssertFailed_Extent_Report();
+			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
+			Assert.assertTrue(false);
+		}
+		
+	}// End of Material_Costing_TestCase_04
+				
 }

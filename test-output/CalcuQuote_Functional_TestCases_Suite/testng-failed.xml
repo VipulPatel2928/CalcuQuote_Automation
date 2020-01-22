@@ -16,8 +16,8 @@
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="Material_Costing_TestCase_03"/>
           <include name="zipfileupdate"/>
+          <include name="Material_Costing_TestCase_04"/>
         </methods>
       </class> <!-- com.automation.index.CalcuQuote_Material_Costing_Index -->
     </classes>

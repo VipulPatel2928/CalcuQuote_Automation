@@ -114,17 +114,17 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		String fileName = "lib/Assembly_number";
 		ArrayList<String> line = funcs.ReadTextFile(fileName, 1);
 		System.out.println("Assembly no read from the text file:"+line.get(0));
-		funcs.waitforseconds(10);
+		funcs.waitforseconds(6);
 		//funcs.senddata(driver, assembly_no.get(3), "3009_BidCQ");
 		assembly_no.get(3).clear();
 		assembly_no.get(3).sendKeys(line.get(0));
 		//funcs.senddata(driver, assembly_no.get(3), line.get(0));		
 		LogClass.logExtent("---> Enter Assembly No. <---");
-        
-		funcs.waitforseconds(8);
+		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, assembly_id);
 		LogClass.logExtent("---> Click on Assembly Id. <---");		
 		funcs.waitforseconds(2);//increase or decrease the wait as per requirements
+		
 		/*
 		 * funcs.waitforseconds(12); funcs.clickon_element(driver, NRE);
 		 * LogClass.log("---> Click on NRE Tab. <---");
@@ -133,6 +133,7 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		return new CalcuQuote_Login_Verification(driver);
 	}
 
+	
 	/*
 	
 	@FindBy(xpath = "//a[text()='NRE']")

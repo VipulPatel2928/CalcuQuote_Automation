@@ -78,14 +78,12 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			
 			CalcuQuote_BOM_Indexpage.filepath="Resources/35LineBOM.xlsx" ;
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOMorg();
 			
-			if (bom_packageVerification.BOM_imported()) {
-				//LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			if (bom_packageVerification.BOM_imported()) {				
 				LogClass.VerificationPass_Extent_Report("-----> Verified BOM Imported Successfully <-----");			
 				Assert.assertTrue(true);
-			} else {
-				//LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
+			} else {			
 				LogClass.VerificationFailed_Extent_Report("-----> Verified BOM is not imported Successfully <-----");		
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_import_fail");
@@ -95,14 +93,12 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 
 			report_msg = "Step " + (step++) + ": Submit BOM";
 			LogClass.logExtent(report_msg);
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM_manual();
 			
-			if (bom_packageVerification.BOM_submit()) {
-				//LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");		
+			if (bom_packageVerification.BOM_submit()) {				
 				LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
 				Assert.assertTrue(true);
-			} else {
-				//LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");	
+			} else {			
 				LogClass.VerificationFailed_Extent_Report("-----> Verified Submit BOM is in progress msg not displayed <-----");
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_submission_fail");
@@ -151,12 +147,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM_manual();
 			
-			if (bom_packageVerification.BOM_submit()) {
-				//LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");	
+			if (bom_packageVerification.BOM_submit()) {				
 				LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
 				Assert.assertTrue(true);
-			} else {
-				//LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");	
+			} else {			
 				LogClass.VerificationFailed_Extent_Report("-----> Verified Submit BOM is in progress msg not displayed <-----");
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_submission_fail");

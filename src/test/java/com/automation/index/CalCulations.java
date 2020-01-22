@@ -30,6 +30,14 @@ System.out.println(df.format(cal));
 
 cal=2.0000001;
 System.out.println(df.format(cal));
+Double d  = 0.382409;
+System.out.println(d);
+Double t = 0.0000001;
+//System.out.println(df.format(t));
+d = d + t;
+d = d + 0.000001;
+//d = d - 0.0000001;
+System.out.println(d);
 
 	}
 

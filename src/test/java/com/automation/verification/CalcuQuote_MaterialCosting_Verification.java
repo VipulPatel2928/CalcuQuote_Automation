@@ -34,6 +34,10 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 	public static String qty_brd  =null;
 	public static String lead_qty=null;
 	public static String attr_rate=null;
+	public static String supplier_validation;
+	public static String unit_price_validation;
+	public static double quick_add_time = 0.0;
+	
 	public static double previous_total_Qty = 0;
 	public CalcuQuote_MaterialCosting_Verification(WebDriver driver) {
 		super(driver);
@@ -257,5 +261,132 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		else 
 			return false;
 	}
+
+	public boolean unit_price_verification() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		WebElement unit_price_menu = driver.findElement(By.xpath("//span[contains(text(),'100')]//..//..//div[2]//i"));
+		funcs.clickon_element(driver, unit_price_menu);
+		System.out.println("Click on Request Quantity menu");
+		funcs.waitforseconds(2);
+		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
+		funcs.clickon_element(driver, unit_price);
+		System.out.println("Click on Unit Price");
+		funcs.waitforseconds(3);
+		WebElement Mc_unit_price = driver.findElement(By.xpath("//a[contains(text(),'"+CalcuQuote_Material_Costing_Indexpage.unit_price_var+"')]"));
+		System.out.println(Mc_unit_price.getText());
+		if(Mc_unit_price.getText().equalsIgnoreCase("$ "+CalcuQuote_Material_Costing_Indexpage.unit_price_var))
+		return true;
+		else
+		return false;
+	}
+
+	public boolean gbp_unit_price_verification() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		WebElement quote_details = driver.findElement(By.xpath("//i[@title='Quote Details']"));
+		funcs.clickon_element(driver, quote_details);
+		System.out.println("Click on Quote Details");
+		funcs.waitforseconds(2);
+		WebElement Goto_RFQ_btn = driver.findElement(By.xpath("//button[@title='Goto RFQ']"));
+		funcs.clickon_element(driver, Goto_RFQ_btn);
+		System.out.println("Click on Go to RFQ button");
+		funcs.waitforseconds(4);
+		WebElement currency = driver.findElement(By.xpath("//span[@ng-click='openCurrencyConversionRatesPopup()']"));
+		funcs.clickon_element(driver, currency);
+		List<WebElement> header = driver.findElements(By.xpath("//thead//tr//th"));
+		int i =0;
+		for(WebElement e : header) {
+			if(e.getText().equalsIgnoreCase("GBP"))
+				break;
+			i++;
+		}
+		
+		List<WebElement> currency_value = driver.findElements(By.xpath("//tbody//tr//td//label"));
+		System.out.println("GBP to USD Conversion"+currency_value.get(i-1).getText());
+		//System.out.println("Original Value 0.765571");
+		
+		String str = currency_value.get(i-1).getText();
+		Double d = Double.parseDouble(str);
+		d=1/d;
+		d= d*0.888888;
+		System.out.println("Price after calculation :"+d);
+		DecimalFormat df = new DecimalFormat("#.######");
+		DecimalFormat df1 = new DecimalFormat("#.#######");
+		df.setRoundingMode(RoundingMode.DOWN);
+		df1.setRoundingMode(RoundingMode.DOWN);
+	    str = df.format(d);
+	    String str1 = df1.format(d);
+	    char c = str1.charAt(str1.length()-1);
+	    int sthdigit = Integer.parseInt(String.valueOf(c));
+	    System.out.println("Character at 7 places after decimal point: "+c);
+	    d = Double.parseDouble(str);
+	    System.out.println("Price after rounding calculation :"+d);
+	    double t = 0.0000001;
+	    if(sthdigit>=5) {
+	    	d =  d + t;
+	    	d = d + 0.000001;
+	    System.out.println("Price after rounding calculation and adding 0.000001 if 7th digit greater then or equal 5 :"+d);
+	    } 
+	    str = df.format(d);
+	    
+	    System.out.println("Final Value :"+str);
+	    
+	    funcs.waitforseconds(1);
+		WebElement close_currency_popup = driver.findElement(By.xpath("//span[text()='×']"));
+		funcs.clickon_element(driver, close_currency_popup);
+		
+		funcs.waitforseconds(1);
+		driver.navigate().back();
+		
+		WebElement unit_price_menu = driver.findElement(By.xpath("//span[text()='100']//..//..//div[2]//i"));
+		funcs.clickon_element(driver, unit_price_menu);
+		System.out.println("Click on Request Quantity menu");
+	    
+		funcs.waitforseconds(2);
+		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
+		funcs.clickon_element(driver, unit_price);
+		System.out.println("Click on Unit Price");
+	    
+		funcs.waitforseconds(3);
+		WebElement Mc_unit_price = driver.findElement(By.xpath("//a[contains(text(),'   $ "+str+"')]"));
+		if(Mc_unit_price.isDisplayed()) {
+			LogClass.VerificationPass_Extent_Report("Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
+			LogClass.VerificationPass_Extent_Report("Price from Material Costing Screen : "+Mc_unit_price.getText());
+		return true;
+		}
+		else {
+			LogClass.VerificationFailed_Extent_Report("Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
+			LogClass.VerificationFailed_Extent_Report("Price from Material Costing Screen : "+Mc_unit_price.getText());
+		return false;}
+	}
+
+	public boolean unit_price_verification_leading_cost() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		WebElement unit_price_menu = driver.findElement(By.xpath("//span[contains(text(),'100')]//..//..//div[2]//i"));
+		funcs.clickon_element(driver, unit_price_menu);
+		System.out.println("Click on Request Quantity menu");
+		funcs.waitforseconds(2);
+		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
+		funcs.clickon_element(driver, unit_price);
+		System.out.println("Click on Unit Price");
+		funcs.waitforseconds(3);
+		List<WebElement> Mc_unit_price = driver.findElements(By.xpath("//span[contains(@uib-tooltip,\"Pricing Selected\")]//a//span"));
+		System.out.println(Mc_unit_price.get(0).getText());
+		if(Mc_unit_price.get(0).getText().equalsIgnoreCase("$ "+CalcuQuote_Material_Costing_Indexpage.unit_price_var))
+		return true;
+		else
+		return false;
+	}
+
+	public boolean time_verification() {
+		// TODO Auto-generated method stub
+		if(quick_add_time>5.000000)
+		return false;
+		else
+	    return true;
+	}
+
 	
 }

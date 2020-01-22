@@ -129,12 +129,12 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 	
 	//For Extent Report
 	
-	private static ExtentReports extent;
-    private static ThreadLocal parentTest = new ThreadLocal();
-    private static ThreadLocal test = new ThreadLocal();
+	//private static ExtentReports extent;
+    //private static ThreadLocal parentTest = new ThreadLocal();
+    //private static ThreadLocal test = new ThreadLocal();
 	////For Extent Report End
 		
-	public static final String URL1 = "https://www.youtube.com/";
+	
 	
 	@BeforeSuite()
 	
@@ -393,6 +393,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 		String OUTPUT_FILE = datafile1.getAbsolutePath();
 	    CalcuQuote_Common.zipFile(new File(INPUT_FILE), OUTPUT_FILE); //This function Zip the single file
 	    //End for the Extent Report Zip use 
+	    
 	    //C:\Users\User\eclipse-workspace\RentCount_UK\Resources\[3DBroadCastSales]-Script_Result.xlsx
 	    
 	    
@@ -418,38 +419,6 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 		Reporter.log("<br></br>" + msg);
 	}
 	
-	public void android_implement() {
-		// TODO Auto-generated method stub
-		DesiredCapabilities cap= new DesiredCapabilities();
-		URL remote_grid1 = null ;
-		try {
-		remote_grid1 = new URL("http://" + "localhost" + ":" + "4723" + "/wd/hub");
-		} catch (MalformedURLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
-		cap=new DesiredCapabilities();
-	//	File apkFile = new File("app/redBus Online Bus Ticket Booking Hotel Booking_v6.6.5_apkpure.com.apk");
-
-	//	cap.setCapability("app",apkFile.getAbsolutePath());
-		cap.setCapability(CapabilityType.BROWSER_NAME, "Chrome"); // Impl AndroidDriver
-		cap.setCapability("platformVersion", "6.0");
-		cap.setCapability("platformName", "Android");
-		cap.setCapability("deviceName", "TA09407DYT");
-		cap.setCapability("autoGrantPermissions", true);
-		cap.setCapability("noReset", false);//change by vipul
-		cap.setCapability("newCommandTimeout", 600);
-		cap.setCapability("unicodeKeyboard", true);
-		cap.setCapability("resetKeyboard", true);
-		cap.setCapability("forceMjsonwp", true);
-
-		driver1 = new RemoteWebDriver(remote_grid1, cap);
-	//	packageIndexpage_mobile = new PackageIndexpage_mobile(driver1);
-	//	packageVerification_mobile = new PackageVerification_mobile(driver1);
-		driver1.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-				
-	}
-
 	public WebDriver getDriver() {
 		// TODO Auto-generated method stub
 		return driver;
