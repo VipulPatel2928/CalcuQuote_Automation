@@ -53,7 +53,7 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 	private static WebElement order_type;
 	@FindBy(xpath = "//input[@id='CustomerId']")
 	private static WebElement customer_name;
-	@FindBy(xpath = "//a[@title='VP0911']")
+	@FindBy(xpath = "//a[@title='Tata']")
 	private static WebElement select_customer;
 	@FindBy(xpath = "//button[@type='submit']")
 	private static WebElement submit_btn;
@@ -61,7 +61,6 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 	private static WebElement add_assembly;
 	@FindBy(xpath = "//input[@name='assemblyNumber']")
 	private static WebElement assemblynumber;
-
 	@FindBy(xpath = "//input[@id='quantity_0_0']")
 	private static WebElement quantity_0;
 	@FindBy(xpath = "//button[@title='Add Quantity']")
@@ -138,7 +137,7 @@ public class CalcuQuote_RFQ_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.senddata(driver, customer_name, customername);
 		LogClass.logExtent("---> Enter Customer name <---");
 
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, select_customer);
 		LogClass.logExtent("---> Click On Customer name <---");
 

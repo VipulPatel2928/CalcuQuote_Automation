@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="CalcuQuote_Functional_TestCases_Suite" duration-ms="339702" started-at="2020-01-21T07:43:03Z" finished-at="2020-01-21T07:48:43Z">
+  <suite name="Failed suite [Failed suite [CalcuQuote_Functional_TestCases_Suite]]" duration-ms="446208" started-at="2020-01-24T06:23:14Z" finished-at="2020-01-24T06:30:41Z">
     <groups>
     </groups>
-    <test name="CalcuQuote_Material_Costing_Module_TestCases" duration-ms="339702" started-at="2020-01-21T07:43:03Z" finished-at="2020-01-21T07:48:43Z">
+    <test name="CalcuQuote_Material_Costing_Module_TestCases(failed)(failed)" duration-ms="446208" started-at="2020-01-24T06:23:14Z" finished-at="2020-01-24T06:30:41Z">
       <class name="com.automation.index.CalcuQuote_Material_Costing_Index">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="856" started-at="2020-01-21T07:43:02Z" finished-at="2020-01-21T07:43:03Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="fetchSuiteConfiguration" is-config="true" duration-ms="624" started-at="2020-01-24T06:23:14Z" finished-at="2020-01-24T06:23:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@19d481b]]>
+                <![CDATA[org.testng.TestRunner@7c24b813]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="309" started-at="2020-01-21T07:43:03Z" finished-at="2020-01-21T07:43:03Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="fetchSuiteConfiguration" is-config="true" duration-ms="96" started-at="2020-01-24T06:23:14Z" finished-at="2020-01-24T06:23:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@19d481b]]>
+                <![CDATA[org.testng.TestRunner@7c24b813]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="setUp" is-config="true" duration-ms="16842" started-at="2020-01-21T07:43:03Z" finished-at="2020-01-21T07:43:20Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="setUp" is-config="true" duration-ms="17493" started-at="2020-01-24T06:23:15Z" finished-at="2020-01-24T06:23:32Z">
           <params>
             <param index="0">
               <value>
@@ -38,33 +38,33 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@19d481b]]>
+                <![CDATA[org.testng.TestRunner@7c24b813]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Material_Costing_TestCase_04()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="Material_Costing_TestCase_04" duration-ms="311357" started-at="2020-01-21T07:43:20Z" finished-at="2020-01-21T07:48:32Z">
+        <test-method status="PASS" signature="Material_Costing_TestCase_04()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="Material_Costing_TestCase_04" duration-ms="413519" started-at="2020-01-24T06:23:32Z" finished-at="2020-01-24T06:30:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Material_Costing_TestCase_04 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="tearDown" is-config="true" duration-ms="11169" started-at="2020-01-21T07:48:32Z" finished-at="2020-01-21T07:48:43Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="tearDown" is-config="true" duration-ms="15076" started-at="2020-01-24T06:30:26Z" finished-at="2020-01-24T06:30:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Material_Costing_TestCase_04 status=SUCCESS method=CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_04()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51] output={null}]]]>
+                <![CDATA[[TestResult name=Material_Costing_TestCase_04 status=SUCCESS method=CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_04()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="19" started-at="2020-01-21T07:48:43Z" finished-at="2020-01-21T07:48:43Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.CalcuQuote_Material_Costing_Index@13eb8acf]" name="zipfileupdate" is-config="true" duration-ms="25" started-at="2020-01-24T06:30:41Z" finished-at="2020-01-24T06:30:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->
       </class> <!-- com.automation.index.CalcuQuote_Material_Costing_Index -->
-    </test> <!-- CalcuQuote_Material_Costing_Module_TestCases -->
-  </suite> <!-- CalcuQuote_Functional_TestCases_Suite -->
+    </test> <!-- CalcuQuote_Material_Costing_Module_TestCases(failed)(failed) -->
+  </suite> <!-- Failed suite [Failed suite [CalcuQuote_Functional_TestCases_Suite]] -->
 </testng-results>

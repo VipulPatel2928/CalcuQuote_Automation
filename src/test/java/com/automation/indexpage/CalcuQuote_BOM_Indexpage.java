@@ -50,7 +50,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	
 	public static CalcuQuote_BOM_Verification ImportBOM() {
 		// TODO Auto-generated method stub
-		
+		funcs.waitforseconds(5);
 		//Remove the comment of all lines if you want the script to delete the BOM before 
 		funcs.clickon_element(driver,actions_menu); 
 		LogClass.logExtent("---> Click On Action Menu <---");
@@ -116,7 +116,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(2);
 		
 		//Remove the comment if you want to use the existing BOM. 
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(4);
 		funcs.clickon_element(driver, restart_submit);
 		LogClass.logExtent("---> Click on BOM Submit Button <---");
 		
@@ -148,7 +148,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	
 	
 	public static CalcuQuote_BOM_Verification addlineitemmanually() {
-		
+		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,actions_menu); 
 		LogClass.logExtent("---> Click On Action Menu <---");
 		funcs.clickon_element(driver, delete_bom);	
@@ -159,14 +159,14 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		driver.navigate().refresh();
 		
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(2);
+		funcs.waitforseconds(6);
 		funcs.clickon_element(driver, plus_icon_manual_add);
 		LogClass.logExtent("---> Click On + Icon <---");
 		
 		
 		//funcs.clickon_element(driver, click_line_no);
 		//LogClass.logExtent("---> Click on Line No Text Field <---");
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		funcs.senddata(driver, enter_line_no, "1");
 		LogClass.logExtent("---> Enter Line No <---");
 		
@@ -258,7 +258,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 
 	public static CalcuQuote_BOM_Verification edit_part_class_manually() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(5);
 		//total_qty_reset_flag=0;
 		funcs.clickon_element(driver, bom_tab);
 		LogClass.logExtent("---> Click On BOM tab <---");
@@ -307,7 +307,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 
 	public static CalcuQuote_BOM_Verification edit_part_class_manually_1() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(5);
 		//total_qty_reset_flag=0;
 		funcs.clickon_element(driver, bom_tab);
 		LogClass.logExtent("---> Click On BOM tab <---");

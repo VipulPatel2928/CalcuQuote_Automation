@@ -249,7 +249,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 			browserName = capability.getVersion();
 			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			driver = new ChromeDriver(capability);
+			driver = new ChromeDriver(capability);			
 			driver.manage().window().maximize();
 			System.out.println("=========" + "Chorme Driver " + "==========");
 		}

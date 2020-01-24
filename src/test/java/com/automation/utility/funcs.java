@@ -39,6 +39,10 @@ public class funcs {
 		jsClick(driver, element);
 	}
 
+	public static void waitforelementclickable_withjsclick1(WebDriver driver, WebElement element) {
+		new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(element));
+		jsClick_with_highlight(driver, element);
+	}
 	public static void waitforseconds(int secs) {
 		try {
 			Thread.sleep(secs * 1000);
@@ -62,7 +66,16 @@ public class funcs {
 
 	//Clicks on visible or not visible element.
 	public static void jsClick(WebDriver driver, WebElement element) {
-		highlightElement(driver, element);
+		highlightElement(driver, element); //Remove the comment if you want to highlight the element.
+		System.out.println("============Apply NOw:::::::::Test::::::"+element.getText());
+		((JavascriptExecutor) driver).executeScript(
+				"return arguments[0].click();", element);
+		// this.waitForAjax("0");
+	}
+	
+	
+	public static void jsClick_with_highlight(WebDriver driver, WebElement element) {
+		//highlightElement(driver, element); //Remove the comment if you want to highlight the element.
 		System.out.println("============Apply NOw:::::::::Test::::::"+element.getText());
 		((JavascriptExecutor) driver).executeScript(
 				"return arguments[0].click();", element);
@@ -104,6 +117,11 @@ public class funcs {
 	
 	public static void clickon_element(WebDriver driver,WebElement element) {
 		waitforelementclickable(driver, element);
+		//element.click();
+	} 
+	
+	public static void clickon_element_wid(WebDriver driver,WebElement element) {
+		waitforelementclickable_withjsclick1(driver, element);
 		//element.click();
 	} 
 	

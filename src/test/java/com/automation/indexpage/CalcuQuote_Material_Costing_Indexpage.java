@@ -243,10 +243,12 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	@FindBy(xpath="//a[text()='Quick Add Price']")private static WebElement quick_add_price;
 	public static CalcuQuote_MaterialCosting_Verification right_click_pricing_data_unavailable() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(6);
 		//funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
 		//LogClass.logExtent("---> Click on pricing data unavailable <---");
 		//Actions act = new Actions(driver);
+		act.moveToElement(pricing_data_unavailable.get(0)).build().perform();
+		funcs.waitforseconds(1);
 		act.contextClick(pricing_data_unavailable.get(0)).build().perform();;
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver,quick_add_price );
@@ -263,7 +265,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	public static CalcuQuote_MaterialCosting_Verification generate_msg_Enter_price_srn() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
-		funcs.clickon_element(driver,save_btn );		
+		funcs.clickon_element_wid(driver,save_btn );		
 		System.out.println("supplier validation message:==>"+supplier_vlaidation.getText());
 		
 		if(supplier_vlaidation.isDisplayed())
@@ -275,7 +277,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.waitforseconds(3);
 		funcs.jsClick(driver,select_supplier );
 		
-		funcs.clickon_element(driver,save_btn );		
+		funcs.clickon_element_wid(driver,save_btn );		
 		System.out.println("unit price validation message:"+unit_price_valid_msg.getText());
 		if(unit_price_valid_msg.isDisplayed())
 			LogClass.VerificationPass_Extent_Report("Verified Validation msg:==>" +unit_price_valid_msg.getText());
@@ -303,14 +305,14 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 	
 		funcs.waitforseconds(2);
-		funcs.clickon_element(driver, see_more);
+		funcs.clickon_element_wid(driver, see_more);
 		funcs.waitforseconds(1);
 		//funcs.scrollBy_vertical(driver, 5000);
 		act.moveToElement(save_btn).build().perform();
 		if(quote_label.isDisplayed()&&package_label.isDisplayed()&&product_URL_label.isDisplayed()&&UOM_Label.isDisplayed()&&custom_reeling_label.isDisplayed()&&on_order_quantity_label.isDisplayed()&&on_order_ETA.isDisplayed()&&RoHS_label.isDisplayed()&&NCNR.isDisplayed()&&Notes.isDisplayed()&&mandatory_field.isDisplayed())
 			LogClass.VerificationPass_Extent_Report("Verified All Labels in See More section are displayed");
 		funcs.waitforseconds(2);
-		funcs.clickon_element(driver, see_less);
+		funcs.clickon_element_wid(driver, see_less);
 		if(see_more.isDisplayed())
 			LogClass.VerificationPass_Extent_Report("Verified See Less button functionality");
 		act.moveToElement(supplier_name).build().perform();
@@ -322,10 +324,10 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	public static CalcuQuote_MaterialCosting_Verification Enter_Price() throws InterruptedException {
 		// TODO Auto-generated method stub
 		unit_price.sendKeys(unit_price_var);
-		funcs.clickon_element(driver,save_btn );
+		funcs.clickon_element_wid(driver,save_btn );
 		long startTime = System.currentTimeMillis();
 		System.out.println("Start Time :"+startTime);
-		Thread.sleep(600);
+		Thread.sleep(500);
 		if(successfully_msg.isDisplayed()) {
 			LogClass.VerificationPass_Extent_Report("Message appear on the Screen :: "+successfully_msg.getText());
 			long endTime = System.currentTimeMillis();
@@ -334,9 +336,11 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 			timeElapsed = timeElapsed/1000;
 			System.out.println("TimeElapsed :"+timeElapsed);
 			if(timeElapsed>1.000000) 
-				LogClass.VerificationFailed_Extent_Report("Fail --> Longer then expected time (time in seconds) : "+(timeElapsed));
+				{LogClass.VerificationFailed_Extent_Report("Fail --> Longer then expected time (time in seconds) : "+(timeElapsed));
+				LogClass.AssertFailed_Extent_Report();}
 			else
-				LogClass.VerificationPass_Extent_Report("Pass --> As per expected time (time in seconds) : "+(timeElapsed));
+				{LogClass.VerificationPass_Extent_Report("Pass --> As per expected time (time in seconds) : "+(timeElapsed));
+				LogClass.AssertPass_Extent_Report();}
 		}
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
@@ -401,15 +405,17 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 
 	public static CalcuQuote_MaterialCosting_Verification measure_time() throws InterruptedException {
 		// TODO Auto-generated method stub
+		funcs.waitforseconds(3);
 		long startTime = System.currentTimeMillis();
 		System.out.println("Start Time :"+startTime);
-		act.contextClick(pricing_data_unavailable.get(0)).build().perform();;
-		//funcs.waitforseconds(1);
-		funcs.clickon_element(driver,quick_add_price );
-		supplier_name.sendKeys("TTI");
+		act.contextClick(pricing_data_unavailable.get(0)).build().perform();
+		Thread.sleep(500);
+		funcs.clickon_element_wid(driver,quick_add_price );		
+		funcs.waitforseconds(2);
+		supplier_name.sendKeys("TTI");		
 		funcs.jsClick(driver,select_supplier );
 		unit_price.sendKeys(unit_price_var);
-		funcs.clickon_element(driver,save_btn );
+		funcs.clickon_element_wid(driver,save_btn );
 		//Double timeElapsed = (double) (endTime - startTime);
 		//timeElapsed = timeElapsed/1000;
 		//System.out.println("TimeElapsed :"+timeElapsed);
@@ -420,7 +426,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 			System.out.println("End Time :"+endTime);
 			Double timeElapsed = (double) (endTime - startTime);
 			timeElapsed = timeElapsed/1000;
-			CalcuQuote_MaterialCosting_Verification.quick_add_time =timeElapsed;
+			CalcuQuote_MaterialCosting_Verification.quick_add_time =timeElapsed-3.000000;
 			System.out.println("TimeElapsed :"+timeElapsed);			
 		}
 		return new CalcuQuote_MaterialCosting_Verification(driver);

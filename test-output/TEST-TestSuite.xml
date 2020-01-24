@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="341.752" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="397.391" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_221\bin"/>
-    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire6180604947109447967\surefirebooter1212586082727668625.jar C:\Users\admin\AppData\Local\Temp\surefire6180604947109447967 2020-01-21T13-13-01_118-jvmRun1 surefire77421244408060005tmp surefire_03004736546993249726tmp"/>
+    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire4509276207744519366\surefirebooter3345609269003334678.jar C:\Users\admin\AppData\Local\Temp\surefire4509276207744519366 2020-01-24T11-24-08_589-jvmRun1 surefire1097660323844368623tmp surefire_02044046312631355548tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\admin\eclipse-workspace\CalcuQuote\target\test-classes;C:\Users\admin\eclipse-workspace\CalcuQuote\target\classes;C:\Users\admin\.m2\repository\org\testng\testng\6.14.2\testng-6.14.2.jar;C:\Users\admin\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\admin\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-java\3.13.0\selenium-java-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.13.0\selenium-edge-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.13.0\selenium-ie-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.13.0\selenium-opera-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.13.0\selenium-safari-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-support\3.13.0\selenium-support-3.13.0.jar;C:\Users\admin\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar;C:\Users\admin\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\admin\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\admin\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\admin\.m2\repository\com\google\code\gson\gson\2.8.4\gson-2.8.4.jar;C:\Users\admin\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\admin\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\admin\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\admin\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\admin\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\admin\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\admin\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\admin\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\admin\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\admin\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-server\3.13.0\selenium-server-3.13.0.jar;C:\Users\admin\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\admin\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\admin\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\admin\.m2\repository\commons-net\commons-net\3.6\commons-net-3.6.jar;C:\Users\admin\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.30\htmlunit-2.30.jar;C:\Users\admin\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.28\htmlunit-core-js-2.28.jar;C:\Users\admin\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.0.0\htmlunit-cssparser-1.0.0.jar;C:\Users\admin\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.30\neko-htmlunit-2.30.jar;C:\Users\admin\.m2\repository\org\apache\httpcomponents\httpmime\4.5.5\httpmime-4.5.5.jar;C:\Users\admin\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.7.v20171121\jetty-repacked-9.4.7.v20171121.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\jetty-client\9.4.7.v20170914\jetty-client-9.4.7.v20170914.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\jetty-http\9.4.8.v20171121\jetty-http-9.4.8.v20171121.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\jetty-io\9.4.8.v20171121\jetty-io-9.4.8.v20171121.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\jetty-util\9.4.8.v20171121\jetty-util-9.4.8.v20171121.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.7.v20170914\jetty-xml-9.4.7.v20170914.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.30.0\htmlunit-driver-2.30.0.jar;C:\Users\admin\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.7.v20170914\websocket-api-9.4.7.v20170914.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.7.v20170914\websocket-client-9.4.7.v20170914.jar;C:\Users\admin\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.7.v20170914\websocket-common-9.4.7.v20170914.jar;C:\Users\admin\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\admin\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\admin\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\admin\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\admin\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.13.0\selenium-chrome-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-api\3.13.0\selenium-api-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.13.0\selenium-firefox-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-htmlunit-driver\2.51.0\selenium-htmlunit-driver-2.51.0.jar;C:\Users\admin\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\admin\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.13.0\selenium-remote-driver-3.13.0.jar;C:\Users\admin\.m2\repository\org\apache\poi\poi\3.13\poi-3.13.jar;C:\Users\admin\.m2\repository\org\apache\poi\poi-ooxml\3.13\poi-ooxml-3.13.jar;C:\Users\admin\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.13\poi-ooxml-schemas-3.13.jar;C:\Users\admin\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\admin\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\admin\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Users\admin\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\admin\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\admin\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\admin\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\admin\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\admin\.m2\repository\com\relevantcodes\extentreports\2.41.2\extentreports-2.41.2.jar;C:\Users\admin\.m2\repository\org\xerial\sqlite-jdbc\3.8.11.1\sqlite-jdbc-3.8.11.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\admin"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire6180604947109447967\surefirebooter1212586082727668625.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire4509276207744519366\surefirebooter3345609269003334678.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_221\lib\resources.jar;C:\Program Files\Java\jre1.8.0_221\lib\rt.jar;C:\Program Files\Java\jre1.8.0_221\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_221\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_221\lib\jce.jar;C:\Program Files\Java\jre1.8.0_221\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_221\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_221\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,5 +60,165 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="Material_Costing_TestCase_04" classname="com.automation.index.CalcuQuote_Material_Costing_Index" time="311.357"/>
+  <testcase name="Material_Costing_TestCase_02" classname="com.automation.index.CalcuQuote_Material_Costing_Index" time="191.238">
+    <failure message="Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6c58e474142c000600591f63aa45a6ba)] -&gt; xpath: //button[text()=&apos;Submit&apos;]//i] (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;&#10;System info: host: &apos;TGS153&apos;, ip: &apos;192.168.0.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:1093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.130, webStorageEnabled: true}&#10;Session ID: 6c58e474142c000600591f63aa45a6ba" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6c58e474142c000600591f63aa45a6ba)] -> xpath: //button[text()='Submit']//i] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:1093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: 6c58e474142c000600591f63aa45a6ba
+	at com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_02(CalcuQuote_Material_Costing_Index.java:215)
+</failure>
+    <system-out><![CDATA[[TestNG] [WARN] Could not find reporter class : listenReport.Reporter
+[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+...
+... TestNG 6.14.2 by Cédric Beust (cedric@beust.com)
+...
+
+User profile name :Vipul Patel
+Test Name :CalcuQuote_Material_Costing_Module_TestCases
+Browser Name:chrome
+ Before Test 
+I am in onStart method CalcuQuote_Material_Costing_Module_TestCases
+User profile name :Vipul Patel
+Test Name :CalcuQuote_Material_Costing_Module_TestCases
+Browser Name:chrome
+ Before Test 
+Set up Start =====
+creating directory: 
+DIR created
+=========Chorme Driver ==========
+User profile name :Vipul Patel
+I am in onTestStart method Material_Costing_TestCase_02 start
+GetTest Method called
+CQ_Material_Costing::To verify [CQPS]Total Qty calculation with different combination of inputs 
+Step 1:Open : https://qa.calcuquote.com/Staging2/
+Url Display on windowhttps://qalogin.calcuquote.com/identity/login?signin=4b09d5e68ccac4fda1c65e838304f6c2
+-----> Verified CalcuQuote home page is open <-----
+Step 2: Enter Valid Credentials
+---> Enter Username <---
+---> Enter Password <---
+============Apply NOw:::::::::Test::::::Login
+---> Click on Login Button <---
+Step 3: Select one of the existing RFQ
+============Apply NOw:::::::::Test::::::
+---> Click on RFQ List icon <---
+Assembly no read from the text file:Automation_rBD
+---> Enter Assembly No. <---
+============Apply NOw:::::::::Test::::::18405
+---> Click on Assembly Id. <---
+Step 4: Import BOM
+============Apply NOw:::::::::Test::::::
+---> Click On Action Menu <---
+============Apply NOw:::::::::Test::::::Delete BOM
+---> Click On Delete BOM <---
+============Apply NOw:::::::::Test::::::Delete
+---> Click On Delete button<---
+============Apply NOw:::::::::Test::::::
+---> File Selected for Import <---
+============Apply NOw:::::::::Test::::::Import
+---> BOM imported <---
+-----> Verified BOM Imported Successfully <-----
+Step 5: Submit BOM
+============Apply NOw:::::::::Test::::::Submit
+---> Click on BOM Submit Button <---
+]]></system-out>
+    <system-err><![CDATA[File Path ==================C:\Users\admin\eclipse-workspace\CalcuQuote\Resources\chromedriver_2_41.exe
+Jan 24, 2020 11:24:10 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e) on port 40495
+Only local connections are allowed.
+[1579845254.999][WARNING]: Timed out connecting to Chrome, retrying...
+Jan 24, 2020 11:24:17 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[1579845259.051][WARNING]: Timed out connecting to Chrome, retrying...
+]]></system-err>
+  </testcase>
+  <testcase name="Material_Costing_TestCase_04" classname="com.automation.index.CalcuQuote_Material_Costing_Index" time="162.756">
+    <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;&#10;System info: host: &apos;TGS153&apos;, ip: &apos;192.168.0.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: RemoteWebDriver
+	at com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_04(CalcuQuote_Material_Costing_Index.java:510)
+</failure>
+    <system-out><![CDATA[I am in onTestFailure method Material_Costing_TestCase_02 failed
+
+======================++++   >>  
+TEST FAILED - Material_Costing_TestCase_02
+
+ERROR MESSAGE: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6c58e474142c000600591f63aa45a6ba)] -> xpath: //button[text()='Submit']//i] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:1093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: 6c58e474142c000600591f63aa45a6ba
+
+
+<br><Strong><font color=#FF0000>--Failed</font></strong>
+<a href='screenshots/0124112739262Material_Costing_TestCase_02.png' target='_new'>0124112739262Material_Costing_TestCase_02.png</a>
+<h3>Failure Reason:</h3>
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6c58e474142c000600591f63aa45a6ba)] -&gt; xpath: //button[text()=&apos;Submit&apos;]//i] (tried for 5 second(s) with 500 milliseconds interval)
+Set up Start =====
+creating directory: 
+DIR created
+=========Chorme Driver ==========
+User profile name :Vipul Patel
+I am in onTestStart method Material_Costing_TestCase_04 start
+GetTest Method called
+CQ_Material_Costing::Automation Script for MC: Quick Add Unit Cost.
+Step 1:Open : https://qa.calcuquote.com/Staging2/
+Url Display on windowhttps://qalogin.calcuquote.com/identity/login?signin=6aeba7b2896f3af32439da3640d31dbb
+-----> Verified CalcuQuote home page is open <-----
+Step 2: Enter Valid Credentials
+---> Enter Username <---
+---> Enter Password <---
+============Apply NOw:::::::::Test::::::Login
+---> Click on Login Button <---
+Step 3: Select one of the existing RFQ
+============Apply NOw:::::::::Test::::::
+---> Click on RFQ List icon <---
+Assembly no read from the text file:Automation_rBD
+---> Enter Assembly No. <---
+============Apply NOw:::::::::Test::::::18405
+---> Click on Assembly Id. <---
+Step 4: Import BOM
+============Apply NOw:::::::::Test::::::
+---> Click On Action Menu <---
+============Apply NOw:::::::::Test::::::Delete BOM
+---> Click On Delete BOM <---
+============Apply NOw:::::::::Test::::::Delete
+---> Click On Delete button<---
+============Apply NOw:::::::::Test::::::
+---> File Selected for Import <---
+============Apply NOw:::::::::Test::::::Import
+---> BOM imported <---
+-----> Verified BOM Imported Successfully <-----
+Step 5: Submit BOM
+============Apply NOw:::::::::Test::::::Submit
+---> Click on BOM Submit Button <---
+============Apply NOw:::::::::Test::::::
+---> Click on BOM Submit Button <---
+============Apply NOw:::::::::Test::::::
+-----> Verified Submit BOM is in progress <-----
+Step 6: Navigate to Material Costing Page
+============Apply NOw:::::::::Test::::::Material Costing
+---> Click on Material Costing Tab <---
+Step 7: Click Pricing Data Unavailable
+]]></system-out>
+    <system-err><![CDATA[----------->         null
+Jan 24, 2020 11:27:39 AM org.openqa.selenium.remote.Augmenter extractRemoteWebDriver
+WARNING: Augmenter should be applied to the instances of @Augmentable classes or previously augmented instances only (instance class was: class org.openqa.selenium.chrome.ChromeDriver)
+File Path ==================C:\Users\admin\eclipse-workspace\CalcuQuote\Resources\chromedriver_2_41.exe
+Jan 24, 2020 11:27:40 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e) on port 10627
+Only local connections are allowed.
+[1579845463.952][WARNING]: Timed out connecting to Chrome, retrying...
+Jan 24, 2020 11:27:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[1579845467.985][WARNING]: Timed out connecting to Chrome, retrying...
+]]></system-err>
+  </testcase>
 </testsuite>

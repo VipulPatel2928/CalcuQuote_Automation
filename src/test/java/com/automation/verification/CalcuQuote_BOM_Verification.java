@@ -50,11 +50,11 @@ public class CalcuQuote_BOM_Verification extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(4);
 		WebElement bom_submit_msg = driver.findElement(By.xpath("//div[contains(text(),'Submit BOM is in progress. Please do not change anything until we notify you \"BOM is Submitted successfully\".')]"));
-		if(bom_submit_msg.isDisplayed()) {
-		//funcs.waitforseconds(2);	
-		WebElement ok_btn = driver.findElement(By.xpath("//button[text()='OK']"));
-		funcs.jsClick(driver, ok_btn);
-			return true;}
+		if (bom_submit_msg.isDisplayed()) {		
+			WebElement ok_btn = driver.findElement(By.xpath("//button[text()='OK']"));
+			funcs.jsClick(driver, ok_btn);
+			return true;
+		}
 		else
 		return false;
 	}

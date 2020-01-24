@@ -145,7 +145,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			
 			report_msg = "Step " + (step++) + ": Submit BOM";
 			LogClass.logExtent(report_msg);
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM_manual();
+			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
 			
 			if (bom_packageVerification.BOM_submit()) {				
 				LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
@@ -157,97 +157,6 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 				// softAssertion.assertTrue(false);
 				Assert.assertTrue(false);
 			}
-			
-		}// End of BOM_TestCase_02 
-	
-		/*
-		//,dependsOnMethods="BOM_TestCase_02"
-		@Test(priority = 0, enabled = true )
-		public void BOM_TestCase_03() {
-
-			step = 1;
-			String report_msg;// String for the log in the Report
-			report_msg = "CalcuQuote_BOM::To verify [CQPS]Total Qty calculation with different combination of inputs ";
-			LogClass.logExtent(report_msg);
-
-			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
-			LogClass.logExtent(report_msg);
-			
-			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-				LogClass.AssertPassed();
-				Assert.assertTrue(true);
-			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-				LogClass.AssertFailed();
-				LogClass.AssertFailed_Extent_Report();
-				LogClass.makeScreenshot(driver, "BOM_Login_fail");
-				// softAssertion.assertTrue(false);
-				Assert.assertTrue(false);
-			}
-
-			report_msg = "Step " + (step++) + ": Enter Valid Credentials";
-			LogClass.logExtent(report_msg);
-			packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
-			
-			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
-			LogClass.logExtent(report_msg);
-			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
-			
-			report_msg = "Step " + (step++) + ": Import BOM";
-			LogClass.logExtent(report_msg);
-			
-			CalcuQuote_BOM_Indexpage.filepath="Resources/Total_Qty_Calculation.xlsx" ;
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
-			
-			if (bom_packageVerification.BOM_imported()) {
-				LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
-				LogClass.AssertPassed();
-				Assert.assertTrue(true);
-			} else {
-				LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");
-				LogClass.AssertFailed();
-				LogClass.AssertFailed_Extent_Report();
-				LogClass.makeScreenshot(driver, "BOM_import_fail");
-				// softAssertion.assertTrue(false);
-				Assert.assertTrue(false);
-			}
-
-			report_msg = "Step " + (step++) + ": Submit BOM";
-			LogClass.logExtent(report_msg);
-			bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
-			
-			if (bom_packageVerification.BOM_submit()) {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
-				LogClass.AssertPassed();
-				Assert.assertTrue(true);
-			} else {
-				LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");
-				LogClass.AssertFailed();
-				LogClass.AssertFailed_Extent_Report();
-				LogClass.makeScreenshot(driver, "BOM_submission_fail");
-				// softAssertion.assertTrue(false);
-				Assert.assertTrue(false);
-			}
-		
-			report_msg = "Step " + (step++) + ": Navigate to Material Costing to check calculation for the Total Quantity.";
-			LogClass.logExtent(report_msg);
-			material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.materialcosting_totalQty();
-			
-			if (material_costing_packageVerification.total_qty_verification()) {
-				LogClass.logExtent("-----> Verified Total Qty Calculations are correct <-----");
-				LogClass.AssertPassed();
-				Assert.assertTrue(true);
-			} else {
-				LogClass.logExtent("-----> Verified Total Qty Calculations are not correct <-----");
-				LogClass.AssertFailed();
-				LogClass.AssertFailed_Extent_Report();
-				LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
-				// softAssertion.assertTrue(false);
-				Assert.assertTrue(false);
-			}
-				
-		}// End of BOM_TestCase_03
-		*/
-		
+			funcs.waitforseconds(5);
+		}// End of BOM_TestCase_02 		
 }

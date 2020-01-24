@@ -175,7 +175,7 @@ public class CalcuQuote_TestData {
 		CalcuQuote_SeleniumInit.username = getExcelSheet(0).getRow(1).getCell(1).getStringCellValue();
 		CalcuQuote_SeleniumInit.password = getExcelSheet(0).getRow(2).getCell(1).getStringCellValue();
 		CalcuQuote_SeleniumInit.userprofilename = getExcelSheet(0).getRow(3).getCell(1).getStringCellValue();
-		System.out.println("User prifile name :" + CalcuQuote_SeleniumInit.userprofilename);
+		System.out.println("User profile name :" + CalcuQuote_SeleniumInit.userprofilename);
 		return getExcelSheet(0).getRow(0).getCell(1).getStringCellValue();
 	}
 

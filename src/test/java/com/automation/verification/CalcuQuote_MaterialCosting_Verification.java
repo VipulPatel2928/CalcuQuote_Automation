@@ -264,11 +264,11 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 
 	public boolean unit_price_verification() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(8);
 		WebElement unit_price_menu = driver.findElement(By.xpath("//span[contains(text(),'100')]//..//..//div[2]//i"));
 		funcs.clickon_element(driver, unit_price_menu);
 		System.out.println("Click on Request Quantity menu");
-		funcs.waitforseconds(2);
+		funcs.waitforseconds(3);
 		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
 		funcs.clickon_element(driver, unit_price);
 		System.out.println("Click on Unit Price");
@@ -283,11 +283,11 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 
 	public boolean gbp_unit_price_verification() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(8);
 		WebElement quote_details = driver.findElement(By.xpath("//i[@title='Quote Details']"));
 		funcs.clickon_element(driver, quote_details);
 		System.out.println("Click on Quote Details");
-		funcs.waitforseconds(2);
+		funcs.waitforseconds(3);
 		WebElement Goto_RFQ_btn = driver.findElement(By.xpath("//button[@title='Goto RFQ']"));
 		funcs.clickon_element(driver, Goto_RFQ_btn);
 		System.out.println("Click on Go to RFQ button");
@@ -329,7 +329,11 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 	    System.out.println("Price after rounding calculation and adding 0.000001 if 7th digit greater then or equal 5 :"+d);
 	    } 
 	    str = df.format(d);
-	    
+	    System.out.println("Final Value :"+str);
+	    DecimalFormat df2 = new DecimalFormat("#.####");
+	    df2.setRoundingMode(RoundingMode.DOWN);
+	    str = df2.format(d);
+	    System.out.println("Final Value with 4 digits after decimal points :"+str);
 	    System.out.println("Final Value :"+str);
 	    
 	    funcs.waitforseconds(1);
@@ -339,11 +343,12 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		funcs.waitforseconds(1);
 		driver.navigate().back();
 		
+		funcs.waitforseconds(5);
 		WebElement unit_price_menu = driver.findElement(By.xpath("//span[text()='100']//..//..//div[2]//i"));
 		funcs.clickon_element(driver, unit_price_menu);
 		System.out.println("Click on Request Quantity menu");
 	    
-		funcs.waitforseconds(2);
+		funcs.waitforseconds(3);
 		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
 		funcs.clickon_element(driver, unit_price);
 		System.out.println("Click on Unit Price");
@@ -363,11 +368,11 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 
 	public boolean unit_price_verification_leading_cost() {
 		// TODO Auto-generated method stub
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(8);
 		WebElement unit_price_menu = driver.findElement(By.xpath("//span[contains(text(),'100')]//..//..//div[2]//i"));
 		funcs.clickon_element(driver, unit_price_menu);
 		System.out.println("Click on Request Quantity menu");
-		funcs.waitforseconds(2);
+		funcs.waitforseconds(3);
 		WebElement unit_price = driver.findElement(By.xpath("//button[text()=' Unit Price']"));
 		funcs.clickon_element(driver, unit_price);
 		System.out.println("Click on Unit Price");
@@ -382,7 +387,7 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 
 	public boolean time_verification() {
 		// TODO Auto-generated method stub
-		if(quick_add_time>5.000000)
+		if(quick_add_time>5.500000)
 		return false;
 		else
 	    return true;

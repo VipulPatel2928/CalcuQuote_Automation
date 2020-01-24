@@ -120,7 +120,7 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		assembly_no.get(3).sendKeys(line.get(0));
 		//funcs.senddata(driver, assembly_no.get(3), line.get(0));		
 		LogClass.logExtent("---> Enter Assembly No. <---");
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(6);
 		funcs.clickon_element(driver, assembly_id);
 		LogClass.logExtent("---> Click on Assembly Id. <---");		
 		funcs.waitforseconds(2);//increase or decrease the wait as per requirements

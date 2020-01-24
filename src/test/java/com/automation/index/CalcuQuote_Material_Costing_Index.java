@@ -456,9 +456,9 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
 
 		// Use this code if you want create the RFQ as per script need
-		// report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
-		// LogClass.logExtent(report_msg);
-		// rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
+		//report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
+		//LogClass.logExtent(report_msg);
+		//rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
 
 		report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
 		LogClass.logExtent(report_msg);
@@ -507,8 +507,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 
 		report_msg = "Step " + (step++) + ": Click Pricing Data Unavailable";
 		LogClass.logExtent(report_msg);
-		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage
-				.right_click_pricing_data_unavailable();
+		material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.right_click_pricing_data_unavailable();
 
 		report_msg = "Step " + (step++)
 				+ ": Checking Validation message for the mandatory fields on Enter Price Screen";
@@ -550,13 +549,13 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 		if (material_costing_packageVerification.time_verification()) {
 			// LogClass.logExtent("-----> Verified Total Qty Calculations are correct
 			// <-----");
-			LogClass.VerificationPass_Extent_Report("-----> Open Quick Add Price screen to Save price process is finished in expected benchmark time <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Open Quick Add Price screen to Save price process is finished in expected benchmark time <-----"+CalcuQuote_MaterialCosting_Verification.quick_add_time);
 			// LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
 			// LogClass.logExtent("-----> Verified Total Qty Calculations are not correct
 			// <-----");
-			LogClass.VerificationFailed_Extent_Report("-----> Open Quick Add Price screen to Save price process is not finished in expected benchmark time <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Open Quick Add Price screen to Save price process is not finished in expected benchmark time <-----"+CalcuQuote_MaterialCosting_Verification.quick_add_time);
 			LogClass.AssertFailed_Extent_Report();
 			// LogClass.makeScreenshot(driver, "Total_Qty_verification_fail");
 			//Assert.assertTrue(false);

@@ -59,19 +59,18 @@
 		</classes>
 	</test> -->
 	<!-- Methods for BOM -->	
-<!-- 	<test
+	<!-- <test
 		name="CalcuQuote_BOM_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_BOM_Index">
 				<methods>	 	
 				    <include name="BOM_TestCase_01" />
 	               <include name="BOM_TestCase_02" />	 
-	                <include name="BOM_TestCase_03" />	             			
 				</methods>
 			</class>
 		</classes>
-	</test>	 -->
-	
+	</test>	
+	 -->
 	
 	<!-- Methods for Labor -->	
 	<!-- <test
@@ -83,8 +82,8 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
-	 -->
+	</test> -->
+	
 	
 	<!-- Methods for Material Costing -->	
 	<test
@@ -93,8 +92,8 @@
 			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
 				<methods>							
 	               <!--  <include name="Material_Costing_TestCase_01" />		 -->
-	              <!--    <include name="Material_Costing_TestCase_02" />	 -->
-	              <!--    <include name="Material_Costing_TestCase_03" />	 -->
+	                 <include name="Material_Costing_TestCase_02" />	
+	                <!--  <include name="Material_Costing_TestCase_03" />	 -->
 	                  <include name="Material_Costing_TestCase_04" />	               	
 				</methods>
 			</class>
