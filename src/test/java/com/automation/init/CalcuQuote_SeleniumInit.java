@@ -82,7 +82,8 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 	public static String q3=null;
 	public static String q4=null;
 
-	public static WebDriver driver;
+	public static WebDriver driver=null;
+	//public static WebDriver driver=null;
 	public WebDriver driver1; // Mobile IMPL
 			
 	protected static String test_data_folder_path = null;
