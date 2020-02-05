@@ -1,22 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 397.391 s <<< FAILURE! - in TestSuite
-Material_Costing_TestCase_02(com.automation.index.CalcuQuote_Material_Costing_Index)  Time elapsed: 191.238 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6c58e474142c000600591f63aa45a6ba)] -> xpath: //button[text()='Submit']//i] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
-System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:1093}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.130, webStorageEnabled: true}
-Session ID: 6c58e474142c000600591f63aa45a6ba
-	at com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_02(CalcuQuote_Material_Costing_Index.java:215)
-
-Material_Costing_TestCase_04(com.automation.index.CalcuQuote_Material_Costing_Index)  Time elapsed: 162.756 s  <<< FAILURE!
-org.openqa.selenium.NoSuchSessionException: 
-Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
-System info: host: 'TGS153', ip: '192.168.0.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: driver.version: RemoteWebDriver
-	at com.automation.index.CalcuQuote_Material_Costing_Index.Material_Costing_TestCase_04(CalcuQuote_Material_Costing_Index.java:510)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 329.443 s - in TestSuite

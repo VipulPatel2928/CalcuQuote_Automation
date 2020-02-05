@@ -102,7 +102,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 			//funcs.clickon_element(driver,pricing_available.get(i) ); 
 			funcs.waitforseconds(3);
 			funcs.clickon_element(driver,select_line.get(1) );
-			//funcs.clickon_element(driver,apply_to_all_quantity );
+			funcs.clickon_element(driver,apply_to_all_quantity );
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver,cqps_next_btn );
 		}
@@ -136,6 +136,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	
 	@FindBy(xpath="//a[@uib-tooltip='Pricing Data Unavailable  ']")private static List<WebElement> pricing_data_unavailable;
 	@FindBy(xpath="//input[@ng-model='currentTotalQty']")private static WebElement total_qty;
+	@FindBy(xpath="//input[@ng-model='curruntItemNo']")private static WebElement line_no_cqps;
 	
 	public static CalcuQuote_MaterialCosting_Verification materialcosting_totalQty() {
 		// TODO Auto-generated method stub
@@ -147,14 +148,17 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
 		LogClass.logExtent("---> Click on pricing data unavailable <---");
-		
+		int no =0;
 		funcs.waitforseconds(4);
-		for(int i=0;i<=7;i++) {
+		for(int i=0;i<=3;i++) {
 			funcs.waitforseconds(2);
 			Total_Qty_per_line[i] = total_qty.getAttribute("value");
 		    System.out.println("Total Qty:" + Total_Qty_per_line[i]);
-			funcs.clickon_element(driver, cqps_next_btn);
-			funcs.waitforseconds(2);
+			//funcs.clickon_element(driver, cqps_next_btn); //use this for one request quantity
+		    no = 2 + i;
+		    line_no_cqps.clear();
+		    line_no_cqps.sendKeys(String.valueOf(no));
+			funcs.waitforseconds(4);
 		}
 		
 		//funcs.waitforseconds(5);
@@ -209,10 +213,10 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 
 	public static CalcuQuote_MaterialCosting_Verification navigatematerial_costing() {
 		// TODO Auto-generated method stub
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_tab );
-		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		LogClass.logExtent("==> Click on Material Costing Tab");
 		return new CalcuQuote_MaterialCosting_Verification(driver);	
 	}
 
@@ -431,5 +435,211 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		}
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
+	
+	@FindBy(xpath="//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope'] ")private static List<WebElement> select_line_item;
+	
+	public static void click_select_no_line_items(int no){
+		for(int i=1;i<=no;i++) {
+			funcs.clickon_element(driver, select_line_item.get(i));
+			funcs.waitforseconds(1);
+			LogClass.logExtent("==> Line Item Selected :" +i);
+		}
+	}
 
+	//@FindBy(xpath="//button[contains(text(),'Edit')]//span")private static WebElement edit_menu;
+	@FindBy(xpath="//button[contains(text(),'Edit')]")private static WebElement edit_menu;
+	public static void click_edit_menu() {
+		funcs.clickon_element(driver, edit_menu);
+		LogClass.logExtent("==> Clicked on Edit Menu");
+	}
+	
+	@FindBy(xpath="//a[text()='Manual Pricing']")private static WebElement manual_pricing;
+	public static void click_manual_pricing() {
+		funcs.clickon_element(driver, manual_pricing);
+		LogClass.logExtent("==> Clicked on Manual Pricing");
+	}
+	
+	@FindBy(xpath="//button[text()='No, I want to manually enter the price']")private static WebElement No_want_manually;
+	@FindBy(xpath="//button[text()='Cancel']//..//button[1]")private static WebElement ok_no_want_manually;
+	public static void click_no_want_manual() {
+		funcs.clickon_element(driver, No_want_manually);
+		LogClass.logExtent("==> Clicked on No,I want to manually enter the price");
+		funcs.clickon_element(driver, ok_no_want_manually);
+		LogClass.logExtent("==>Clicked on Ok button");
+	}
+
+	@FindBy(xpath="//button[text()='Yes, let CQ check for available prices']")private static WebElement yes_cq_prices;
+	public static void click_yes_let_cq_check_for_available_prices() {
+		funcs.clickon_element(driver, yes_cq_prices);
+		LogClass.logExtent("==> Clicked on Yes, let CQ check for available prices");
+	}
+	
+	@FindBy(xpath="//a[text()='Update Pricing']")private static WebElement edit_update_pricing;
+	public static void click_edit_update_pricing() {
+		funcs.clickon_element(driver, edit_update_pricing);
+		LogClass.logExtent("==> Clicked on Update Pricing");
+	}
+	
+	public static void click_pricing_data_unavailable() {
+		funcs.waitforseconds(4);
+		funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
+		LogClass.logExtent("==> Clicked on pricing data unavailable");
+	}
+	
+	@FindBy(xpath="//span[@uib-tooltip='Update Line Level Price']")private static WebElement update_line_level_price;
+	public static void click_update_line_level_price() {
+		funcs.waitforseconds(4);
+		funcs.clickon_element(driver,update_line_level_price );
+		LogClass.logExtent("==> Clicked on Update Line Level Price");
+	}
+	@FindBy(xpath="//span[@id='supplierpopoverlink']")private static WebElement click_cqps_add_new_supplier;
+	public static void click_cqps_add_new_supplier() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,click_cqps_add_new_supplier );
+		LogClass.logExtent("==> Clicked on New supplier price details");
+	}
+	public static void enter_supplier_name() {
+		funcs.waitforseconds(2);
+		supplier_name.sendKeys("TTI");	
+		LogClass.logExtent("==> Entered Supplier Name");
+		funcs.waitforseconds(2);		
+		funcs.jsClick(driver,select_supplier );
+		LogClass.logExtent("==> Supplier Selected");
+	}
+	public static void enter_unit_price() {
+		unit_price.sendKeys("0.292929");
+	}
+	public static void click_save_manual_price() {
+		funcs.clickon_element(driver,save_btn );
+	}
+	
+	@FindBy(xpath="//span[@class='fa fa-times close']")private static WebElement close_icon;
+	public static void click_close_cqps_screen() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,close_icon);
+		funcs.clickon_element(driver,ok_btn);
+	}
+	
+	@FindBy(xpath="//i[@class='fa fa-ellipsis-v']")private static List<WebElement> vertical_ellipsis;
+	public static void click_vertical_ellipsis(int no) {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,vertical_ellipsis.get(no));
+		LogClass.logExtent("==> Clicked Vertical Ellipsis");
+	}
+	
+	@FindBy(xpath="//a[text()='Suggest Alternate']")private static List<WebElement> suggest_alternate;
+	public static void click_suggest_alternate(int no) {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,suggest_alternate.get(no));
+		LogClass.logExtent("==> Clicked Suggest Alternate");
+	}
+	@FindBy(xpath="//button[text()='Add Alternate MPN']")private static WebElement add_alternate_mpn;
+	public static void click_add_alternate_mpn() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,add_alternate_mpn);
+		LogClass.logExtent("==> Clicked Add Alternate MPN");
+	}
+	@FindBy(xpath="//input[@type='text']")private static List<WebElement> mpn_alternate_screen;
+	public static void enter_mpn_alternate_screen() {
+		funcs.clickon_element(driver,mpn_alternate_screen.get(2));
+		mpn_alternate_screen.get(2).sendKeys("5114");
+		mpn_alternate_screen.get(2).sendKeys(Keys.ENTER);
+		LogClass.logExtent("==> Entered MPN");
+	}
+	@FindBy(xpath="//button[@ng-click='Cancel()']")private static WebElement close;
+	@FindBy(xpath="//button[text()='Yes']")private static WebElement yes;
+	public static void click_close_add_alternate_mpn_screen() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,close);
+		LogClass.logExtent("==> Clicked Close");
+		funcs.clickon_element(driver,yes);
+		LogClass.logExtent("==> Clicked Yes");
+	}
+	
+	public static CalcuQuote_MaterialCosting_Verification testcase_32667() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		click_select_no_line_items(2);
+		click_edit_menu();
+		click_manual_pricing();
+		click_no_want_manual();
+		return new CalcuQuote_MaterialCosting_Verification(driver);		
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification testcase_32660_1() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		click_select_no_line_items(2);
+		click_edit_menu();
+		click_edit_update_pricing();
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification testcase_32660_2() {
+		// TODO Auto-generated method stub
+		//click_select_no_line_items(2);
+		funcs.waitforseconds(2);
+		click_edit_menu();
+		click_manual_pricing();
+		click_yes_let_cq_check_for_available_prices();
+		funcs.clickon_element(driver, ok_no_want_manually);
+		LogClass.logExtent("==>Clicked on Ok button");
+		click_select_no_line_items(2);
+		click_edit_menu();
+		click_edit_update_pricing();
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification testcase_32743() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		click_edit_menu();
+		click_manual_pricing();
+		click_no_want_manual();
+		funcs.waitforseconds(2);
+		click_pricing_data_unavailable();
+		click_update_line_level_price();
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification testcase_32745() {
+		// TODO Auto-generated method stub
+		click_cqps_add_new_supplier();
+		enter_supplier_name();
+		enter_unit_price();
+		click_save_manual_price();
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	@FindBy(xpath="//div[text()='Selected alternate parts are successfully added.']")private static WebElement alt_added_successfully_msg;
+	@FindBy(xpath="//span[text()='Pending ']")private static WebElement pending_status;
+	@FindBy(xpath="//div[text()='Current selection contains update pricing exception lines.']")private static WebElement msg;
+	public static CalcuQuote_MaterialCosting_Verification testcase_32744() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(4);
+		click_vertical_ellipsis(0);
+		click_suggest_alternate(0);
+		funcs.waitforseconds(3);
+		click_add_alternate_mpn();
+		funcs.waitforseconds(2);
+		enter_mpn_alternate_screen();
+		funcs.waitforseconds(1);
+		if(alt_added_successfully_msg.isDisplayed() && pending_status.isDisplayed())
+			{LogClass.VerificationPass_Extent_Report("-----> Selected alternate parts are successfully added. <-----");	
+		    LogClass.VerificationPass_Extent_Report("-----> Verified Pending status <-----");}
+		else {
+			LogClass.VerificationFailed_Extent_Report("-----> Didn't get msg : Selected alternate parts are successfully added. <-----");
+			LogClass.VerificationFailed_Extent_Report("-----> Didn't Verified Pending status <-----");
+		}
+		click_close_add_alternate_mpn_screen();
+		funcs.waitforseconds(1);
+		if(msg.isDisplayed())
+		    LogClass.VerificationPass_Extent_Report("-----> Got msg : Current selection contains update pricing exception lines.<-----");		    
+	    else 
+		    LogClass.VerificationFailed_Extent_Report("-----> Didn't get msg : Current selection contains update pricing exception lines. <-----");		
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+	
+	
+	
 }

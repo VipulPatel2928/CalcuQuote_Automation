@@ -155,7 +155,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 			 
 			}//End of Material_Costing_TestCase_01
 				
-			@Test(priority = 0, enabled = true )
+			@Test(priority = 1, enabled = true )
 			public void Material_Costing_TestCase_02() {
 
 				step = 1;
@@ -653,5 +653,168 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 		}
 		
 	}// End of Material_Costing_TestCase_04
+	
+	@Test(priority = 0, enabled = true)
+	public void Material_Costing_TestCase_05() {
+		step = 1;
+		String report_msg;// String for the log in the Report
+	
+		report_msg = "CQ_Material_Costing::MC: Block API for Multiple Lines";
+		LogClass.logExtent(report_msg);
+
+		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+		LogClass.logExtent(report_msg);
+		
+		if (packageVerification.homepageverify()) {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+
+		report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+		
+		// Use this code if you want create the RFQ as per script need 
+		//report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
+		//LogClass.logExtent(report_msg);
+		//rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
+
+		report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+		
+		report_msg = "Step " + (step++) + ": Import BOM";
+		LogClass.logExtent(report_msg);
+		
+		CalcuQuote_BOM_Indexpage.filepath="Resources/35LineBOM.xlsx" ;
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+		
+		if (bom_packageVerification.BOM_imported()) {
+			LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_import_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+		report_msg = "Step " + (step++) + ": Submit BOM";
+		LogClass.logExtent(report_msg);
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+		
+		if (bom_packageVerification.BOM_submit()) {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_submission_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+	   driver.navigate().refresh();
+	   funcs.waitforseconds(5);
+	   
+       report_msg = "Step " + (step++) + ": Navigate to Material Costing Page";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+       
+       report_msg = "Step " + (step++) + ":Test Case 32667: Verify block api in Material review screen.";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32667();
+       
+       if (material_costing_packageVerification.verify_32667()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - Line items Marked As Manual Pricing <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - Line items Marked As Manual Pricing <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32667_fail");
+			Assert.assertTrue(false);
+		}
+       	 
+       report_msg = "Step " + (step++) + ":Test Case 32660: Verify Block API when do Mark as exception and remove mark as exception on Material costing screen.";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32660_1();
+       
+       if (material_costing_packageVerification.verify_32660_1()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - got msg : Current selection contains update pricing exception lines <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - didn't get msg : Current selection contains update pricing exception lines <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32660_1_fail");
+			Assert.assertTrue(false);
+		}
+       
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32660_2();
+       
+       if (material_costing_packageVerification.verify_32660_2()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - Select Pricing APIs' Pop Up opened <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - Select Pricing APIs' Pop Up didn't open <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32660_2_fail");
+			Assert.assertTrue(false);
+		}
+       
+       report_msg = "Step " + (step++) + ":Test Case 32743: Verify with updating price for block api line item.";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32743();
+       
+       if (material_costing_packageVerification.verify_32743()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - got msg : Current selection contains update pricing exception lines <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - didn't get msg : Current selection contains update pricing exception lines <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32743_fail");
+			Assert.assertTrue(false);
+		}
+      
+       report_msg = "Step " + (step++) + ":Test Case 32745: Verify to add manual price for block api line item.";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32745();
+       
+       if (material_costing_packageVerification.verify_32745()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - got msg : Pricing saved successfully. <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - didn't get msg : Pricing saved successfully. <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32745_fail");
+			Assert.assertTrue(false);
+		}
+       CalcuQuote_Material_Costing_Indexpage.click_close_cqps_screen();
+              
+       report_msg = "Step " + (step++) + ":Test Case 32744: Verify with adding alternate parts for block api line item.";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_32744();
+       
+       if (material_costing_packageVerification.verify_32744()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - Verified alternate MPN addded to Material Costing screen <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - didn't Verified alternate MPN addded to Material Costing screen <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "32744_fail");
+			Assert.assertTrue(false);
+		}
+              
+	}//End of Material_Costing_TestCase_05
+	
 				
 }

@@ -109,7 +109,7 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, rfq_list);
-		LogClass.logExtent("---> Click on RFQ List icon <---");
+		LogClass.logExtent("==> Click on RFQ List icon");
 		
 		String fileName = "lib/Assembly_number";
 		ArrayList<String> line = funcs.ReadTextFile(fileName, 1);
@@ -119,10 +119,10 @@ public class CalcuQuote_Login_Indexpage extends CalcuQuote_AbstractPage {
 		assembly_no.get(3).clear();
 		assembly_no.get(3).sendKeys(line.get(0));
 		//funcs.senddata(driver, assembly_no.get(3), line.get(0));		
-		LogClass.logExtent("---> Enter Assembly No. <---");
+		LogClass.logExtent("==> Enter Assembly No.");
 		funcs.waitforseconds(6);
 		funcs.clickon_element(driver, assembly_id);
-		LogClass.logExtent("---> Click on Assembly Id. <---");		
+		LogClass.logExtent("==> Click on Assembly Id.");		
 		funcs.waitforseconds(2);//increase or decrease the wait as per requirements
 		
 		/*

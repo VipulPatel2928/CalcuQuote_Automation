@@ -45,8 +45,7 @@
 			</class>
 		</classes>
 	</test>	 -->
-	
-	
+		
 	<!-- Methods for RFQ -->	
 	<!-- <test
 		name="CalcuQuote_RFQ_Module_TestCases">
@@ -58,8 +57,9 @@
 			</class>
 		</classes>
 	</test> -->
-	<!-- Methods for BOM -->	
-	<!-- <test
+	
+   <!-- 	Methods for BOM	 -->
+<!-- 	<test
 		name="CalcuQuote_BOM_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_BOM_Index">
@@ -69,9 +69,8 @@
 				</methods>
 			</class>
 		</classes>
-	</test>	
-	 -->
-	
+	</test>	 -->
+		
 	<!-- Methods for Labor -->	
 	<!-- <test
 		name="CalcuQuote_Labor_Module_TestCases">
@@ -83,24 +82,28 @@
 			</class>
 		</classes>
 	</test> -->
-	
-	
-	<!-- Methods for Material Costing -->	
+		
+	<!-- Methods for Material Costing -->			
 	<test
 		name="CalcuQuote_Material_Costing_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
-				<methods>							
-	               <!--  <include name="Material_Costing_TestCase_01" />		 -->
-	                 <include name="Material_Costing_TestCase_02" />	
-	                <!--  <include name="Material_Costing_TestCase_03" />	 -->
+			
+			  <!--   <methods>								                 
 	                  <include name="Material_Costing_TestCase_04" />	               	
+				</methods> -->
+				
+				<methods>							
+	             <!-- <include name="Material_Costing_TestCase_01" />		
+	                  <include name="Material_Costing_TestCase_02" />	
+	                  <include name="Material_Costing_TestCase_03" /> -->	
+	             <!-- <include name="Material_Costing_TestCase_04" /> -->          
+	                  <include name="Material_Costing_TestCase_05" />	                 	
 				</methods>
 			</class>
 		</classes>
 	</test>
-	
-	
+			
 	<!-- Methods for NRE -->	
 	<!-- <test
 		name="CalcuQuote_NRE_Module_TestCases">
@@ -112,7 +115,6 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
-	
+	</test>	 -->
 </suite>
  

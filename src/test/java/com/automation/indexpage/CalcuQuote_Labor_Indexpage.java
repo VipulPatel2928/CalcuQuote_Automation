@@ -43,6 +43,7 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 	@FindBy(xpath="//select[@id='sourcelabourdriver']//option")private static List<WebElement> labor_activities_options;
 	@FindBy(xpath="//button[@class='btn move btn-default']")private static WebElement arrow_labor_select;
 	@FindBy(xpath="//button[@ng-click='next()']")private static WebElement click_next_labor;
+	@FindBy(xpath="//button[text()='Clear']//..//..//input")private static List<WebElement> enter_labor_activity;
 	
 	public static CalcuQuote_Labor_Verification labor_activities() {
 		// TODO Auto-generated method stub
@@ -50,13 +51,15 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, labor_tab);
 		LogClass.logExtent("---> Click on Labor Tab <---");
-		
-		funcs.waitforseconds(6);		
+	
+		funcs.waitforseconds(6);	
+		funcs.senddata(driver, enter_labor_activity.get(0), "donotchange_mintime");
+		funcs.waitforseconds(1);
 		Select options = new Select(select_labor_activities);
 		int i = labor_activities_options.size();
-		for(int j=0;j<=i;j++) {
+		for(int j=0;j<i;j++) {
 			
-			if(j>4) break;
+			if(j>3) break;
 			options.selectByIndex(j);			
 			LogClass.logExtent("---> Labor Activity Selected <---");
 			
@@ -71,6 +74,10 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 			options.deselectByIndex(j);	
 		    funcs.waitforseconds(1);	
 		}
+		
+		//WebElement class_value = driver.findElement(By.xpath("//input[@id='txtMOHQty_0_0']"));
+		List<WebElement> class_value = driver.findElements(By.xpath("//input[contains(@id,'txtMOHQty')]"));
+		System.out.println("Class Value"+class_value.get(0).getAttribute("class"));
 		return new CalcuQuote_Labor_Verification(driver);
 	}
 

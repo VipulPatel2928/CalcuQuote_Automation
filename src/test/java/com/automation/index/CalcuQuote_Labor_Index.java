@@ -73,6 +73,44 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		LogClass.logExtent(report_msg);
 		packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
 		
+		
+		report_msg = "Step " + (step++) + ": Import BOM";
+		LogClass.logExtent(report_msg);
+		
+		CalcuQuote_BOM_Indexpage.filepath="Resources/35LineBOM.xlsx" ;
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+		
+		if (bom_packageVerification.BOM_imported()) {
+			LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_import_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+		report_msg = "Step " + (step++) + ": Submit BOM";
+		LogClass.logExtent(report_msg);
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+		
+		if (bom_packageVerification.BOM_submit()) {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_submission_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+	   driver.navigate().refresh();
+	   funcs.waitforseconds(5);
+				
 		report_msg = "Step " + (step++) + ": Select Labor Activity/Activities";
 		LogClass.logExtent(report_msg);
 		labor_packageVerification = CalcuQuote_Labor_Indexpage.labor_activities();

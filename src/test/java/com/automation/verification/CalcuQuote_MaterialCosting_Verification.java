@@ -393,5 +393,65 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 	    return true;
 	}
 
+	public boolean verify_32667() {
+		// TODO Auto-generated method stub
+		List<WebElement> marked_as_manual = driver.findElements(By.xpath("//i[@uib-tooltip='Manual Pricing']"));
+		if(marked_as_manual.size()==2)
+			return true;
+		else
+			return false;
+	}
+
+	public boolean verify_32660_1() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		WebElement msg = driver.findElement(By.xpath("//div[text()='Current selection contains update pricing exception lines.']"));
+		if(msg.isDisplayed())
+			return true;
+		else
+			return false;		
+	}
+
+	public boolean verify_32660_2() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		WebElement popup = driver.findElement(By.xpath(" //h3[text()='Select Pricing APIs']"));
+		if(popup.isDisplayed()) {
+			WebElement cancel = driver.findElement(By.xpath("//button[@ng-click='cancel()']"));
+			cancel.click();
+			return true;}
+		else
+			return false;	
+	}
+
+	public boolean verify_32743() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		WebElement msg = driver.findElement(By.xpath("//div[text()='Current selection contains update pricing exception lines.']"));
+		if(msg.isDisplayed())
+			return true;
+		else
+			return false;		
+	}
+
+	public boolean verify_32745() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		WebElement msg = driver.findElement(By.xpath("//div[text()='Pricing saved successfully.']"));
+		if(msg.isDisplayed())
+			return true;
+		else
+			return false;
+	}
+
+	public boolean verify_32744() {
+		// TODO Auto-generated method stub
+		WebElement alt_mpn = driver.findElement(By.xpath("//div[contains(text(),'NA | 5114')]"));
+		if(alt_mpn.isDisplayed())
+			return true;
+		else
+			return false;		
+	}
+
 	
 }
