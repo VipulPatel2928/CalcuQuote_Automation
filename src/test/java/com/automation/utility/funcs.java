@@ -1,5 +1,9 @@
 package com.automation.utility;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -14,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -24,6 +29,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.sun.glass.ui.Clipboard;
+
+
+import java.awt.Toolkit;
+import java.awt.datatransfer.*;
+import java.awt.datatransfer.DataFlavor;
 
 //This class have the Ready to Use functions which will give you highly re-usability of Code.
 
@@ -317,12 +329,80 @@ public class funcs {
 		waitforseconds(5);
 		System.out.println("===========" + System.getProperty("os.name"));
 		((JavascriptExecutor) driver).executeScript("window.open();");
-		waitforseconds(2);
+		//waitforseconds(2); //commented
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(tab));
-		waitforseconds(2);
+		//waitforseconds(2);//commented
 		driver.get(URL);
 		waitforseconds(5);
 	}
 	
+	public static void switchToNewtabWithUrl_ctrl_v(WebDriver driver, String URL, int tab) {
+		waitforseconds(5);
+		System.out.println("===========" + System.getProperty("os.name"));
+		((JavascriptExecutor) driver).executeScript("window.open();");
+		waitforseconds(2);
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(tab));
+		waitforseconds(2);
+		driver.findElement(By.xpath("//body")).sendKeys(Keys.CONTROL+"v");
+		driver.findElement(By.xpath("//body")).sendKeys(Keys.ENTER);
+		//driver.get(URL);
+		waitforseconds(5);
+	}
+	
+	public static void switchTowindow(WebDriver driver, int tab) {
+		//waitforseconds(5);		
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(tab));
+		//waitforseconds(1);
+		driver.navigate().refresh();		
+		waitforseconds(5);
+	}
+	
+	//code to copy clipboard text to variable
+	public static String getSysClipboardText() {
+        String ret = "";
+        java.awt.datatransfer.Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
+        Transferable clipTf = sysClip.getContents(null);
+        if (clipTf != null) {
+            if (clipTf.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                try {
+                    ret = (String) clipTf
+                            .getTransferData(DataFlavor.stringFlavor);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return ret;
+    }
+		
+	 public static String getClipboardContents() {
+	        String result = "";
+	        java.awt.datatransfer.Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+	        // odd: the Object param of getContents is not currently used
+	        Transferable contents = clipboard.getContents(null);
+	        boolean hasTransferableText = (contents != null)
+	                && contents.isDataFlavorSupported(DataFlavor.stringFlavor);
+	        if (hasTransferableText) {
+	            try {
+	                result = (String) contents
+	                        .getTransferData(DataFlavor.stringFlavor);
+	            } catch (UnsupportedFlavorException | IOException ex) {
+	                System.out.println(ex);
+	                ex.printStackTrace();
+	            }
+	        }
+	        return result;
+	    }
+	
+	 public static String getstringfromclipboard() throws UnsupportedFlavorException, IOException {
+		 Toolkit toolkit = Toolkit.getDefaultToolkit();
+			java.awt.datatransfer.Clipboard clipboard = toolkit.getSystemClipboard();
+			String result = (String) clipboard.getData(DataFlavor.stringFlavor);
+			System.out.println("String from Clipboard:" + result);
+			return result;
+	 }
+	 	 
 }//End of Ready To Use class

@@ -354,7 +354,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 				// Reporter.log(testResult.getThrowable().getMessage());
 				getShortException(ex.getFailedTests());
 				//LogClass.logStatus("Fail");
-				driver.close();
+				//driver.close();
 				driver.quit();
 
 			} else {
@@ -369,7 +369,7 @@ public class CalcuQuote_SeleniumInit extends CalcuQuote_ExtentManager {
 
 				System.out.println("here is test status--------------------" + testResult.getStatus());
 
-				driver.close();
+				//driver.close();
 				driver.quit();
 			}
 

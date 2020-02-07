@@ -453,5 +453,162 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			return false;		
 	}
 
+	public boolean verify_25844() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		int flag = 0;
+		List<WebElement> mpn = driver.findElements(By.xpath("//div[contains(text(),'511')]"));
+		
+		if(mpn.size()==3) 
+			LogClass.VerificationPass_Extent_Report("Alternate Parts is added and display on the page");		
+		else {
+			LogClass.VerificationFailed_Extent_Report("Alternate Parts is not added or display on the page");
+			flag++;}
+		
+		if(mpn.get(0).getAttribute("class").contains("blue-font") && mpn.get(1).getAttribute("class").contains("blue-font") &&mpn.get(2).getAttribute("class").contains("blue-font")) 
+		LogClass.VerificationPass_Extent_Report("Alternate Parts is added and font is blue");		
+		else {
+			LogClass.VerificationFailed_Extent_Report("Alternate Parts is added but font is not blue");
+			flag++;}
+		
+		List<WebElement> pending = driver.findElements(By.xpath("//span[contains(text(),'Pending')]"));
+
+		if(pending.size()==3) 
+			LogClass.VerificationPass_Extent_Report("Alternate Parts is added and status is pending");		
+		else {
+			LogClass.VerificationFailed_Extent_Report("Alternate Parts is added but status is not pending");
+			flag++;}
+		
+		System.out.println("color : "+pending.get(0).getAttribute("style"));
+		
+		if(pending.get(0).getAttribute("style").contains("rgb(26, 113, 210)") && pending.get(1).getAttribute("style").contains("rgb(26, 113, 210)")&&pending.get(2).getAttribute("style").contains("rgb(26, 113, 210)")) 
+			LogClass.VerificationPass_Extent_Report("Status is pending and font is blue");		
+			else {
+				LogClass.VerificationFailed_Extent_Report("Status is pending but font is not blue");
+				flag++;}		
+		if(flag>0)
+			return false;
+		else
+			return true;		
+	}
+
+	public boolean verify_25844_MC_screen() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(4);
+		int flag = 0;
+		WebElement alt_mpn = driver.findElement(By.xpath("//div[contains(text(),'NA | 5114')]"));
+		List<WebElement> pending_square = driver.findElements(By.xpath("//a[contains(@uib-tooltip,'Pending')]"));	
+		WebElement alt_bubble = driver.findElement(By.xpath("//span[@class=\"badge bg-color-darken pull-right dashbrdbadge ng-binding ng-scope\"]"));
+		
+		System.out.println("bubble number :"+alt_bubble.getText());
+				
+		if(alt_mpn.isDisplayed() && pending_square.size()>0 && alt_bubble.getText().contains("4"))
+			{LogClass.VerificationPass_Extent_Report("Alternate MPN is display on MC screen");
+			LogClass.VerificationPass_Extent_Report("Pricing Status is pending");
+			LogClass.VerificationPass_Extent_Report("Alternate bubble number :"+alt_bubble.getText());	
+			}
+		else
+			{
+			LogClass.VerificationFailed_Extent_Report("Alternate MPN is not display on MC screen or pricing Status is not pending");
+			flag++;
+			}
+		funcs.waitforseconds(4);
+		funcs.clickon_element(driver,pending_square.get(0));
+		//pending_square.get(0).click();
+		funcs.waitforseconds(6);
+		WebElement alt_part_pending_for_approval = driver.findElement(By.xpath("//span[contains(text(),'3 alternate parts pending for approval')]"));
+		String msg = alt_part_pending_for_approval.getText();
+		System.out.println("How many approval :"+msg);
+		if(alt_part_pending_for_approval.isDisplayed() && msg.contains("3")){
+			LogClass.VerificationPass_Extent_Report("Pass Verified :"+msg);
+		}
+		else {
+			LogClass.VerificationFailed_Extent_Report("Failed :Alteranate part pending for approval message is not display on cqps screen");
+			flag++;
+		}
+		
+		
+		
+		if(flag>0)
+			return false;
+		else
+			return true;
+	}
+
+	public boolean verify_25846() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(3);
+		int flag = 0;
+		WebElement mpn = driver.findElement(By.xpath("//div[contains(text(),'5114')]"));
+				
+		if(mpn.getAttribute("class").contains("green-font")) 
+		LogClass.VerificationPass_Extent_Report("Alternate Parts font is green");		
+		else {
+			LogClass.VerificationFailed_Extent_Report("Alternate Parts is not green");
+			flag++;}
+		
+		WebElement pending = driver.findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-scope']//span[contains(text(),'Approved')]"));		
+		
+		System.out.println("color : "+pending.getAttribute("style"));
+		
+		if(pending.getAttribute("style").contains("green")) 
+			LogClass.VerificationPass_Extent_Report("Status is Approved and font is green");		
+			else {
+				LogClass.VerificationFailed_Extent_Report("Status is Approved but font is not green");
+				flag++;}		
+		if(flag>0)
+			return false;
+		else
+			return true;		
+	}
+
+	/*
+	public boolean verify_25846_after_save() {
+		// TODO Auto-generated method stub
+		int flag=0;
+		funcs.waitforseconds(5);
+		WebElement toast_msg = driver.findElement(By.xpath("//div[contains(text(),'approved/rejected')]"));
+		if(toast_msg.isDisplayed())
+			LogClass.VerificationPass_Extent_Report("Pass- got msg :Alternate Part(s) have been approved/rejected successfully.");
+		else
+			{LogClass.VerificationFailed_Extent_Report("Failed - didn't get msg :Alternate Part(s) have been approved/rejected successfully.");
+			flag++;}
+		if(flag>0)
+			return false;
+		else
+			return true;
+	}
+*/
+	public boolean verify_25846_approved_rejected_msg() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(20);
+		return true;
+	}
+
+	public boolean verify_25844_MC_screen_after_approve() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		int flag = 0;		
+		List<WebElement> pending_square = driver.findElements(By.xpath("//a[contains(@uib-tooltip,'Pending')]"));	
+		//funcs.waitforseconds(4);
+		funcs.clickon_element(driver,pending_square.get(0));
+		//pending_square.get(0).click();
+		funcs.waitforseconds(5);
+		WebElement alt_part_pending_for_approval = driver.findElement(By.xpath("//span[contains(text(),'2 alternate parts pending for approval')]"));
+		String msg = alt_part_pending_for_approval.getText();
+		System.out.println("How many approval :"+msg);
+		if(alt_part_pending_for_approval.isDisplayed() && msg.contains("2")){
+			LogClass.VerificationPass_Extent_Report("Pass Verified :"+msg);
+		}
+		else {
+			LogClass.VerificationFailed_Extent_Report("Failed :Alteranate part pending for approval message is not display on cqps screen");
+			flag++;
+		}			
+		if(flag>0)
+			return false;
+		else
+			return true;
+	}
+
 	
-}
+}//End of class

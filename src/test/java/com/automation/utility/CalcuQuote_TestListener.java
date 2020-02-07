@@ -72,7 +72,9 @@ public class CalcuQuote_TestListener extends CalcuQuote_SeleniumInit implements 
 	 
 	        //Extentreports log and screenshot operations for failed tests.
 	        CalcuQuote_ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
-	                CalcuQuote_ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));      
+	                CalcuQuote_ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot)); 
+	        webDriver.quit();
+	        System.out.println("Browser closed");
 	        
 	    }
 	 

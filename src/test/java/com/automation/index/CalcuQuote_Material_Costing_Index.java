@@ -1,5 +1,8 @@
 package com.automation.index;
 
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -8,6 +11,7 @@ import com.automation.utility.funcs;
 import com.automation.verification.CalcuQuote_MaterialCosting_Verification;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.sun.glass.ui.Clipboard;
 import com.automation.init.CalcuQuote_SeleniumInit;
 
 import com.automation.indexpage.CalcuQuote_Login_Indexpage;
@@ -816,5 +820,147 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
               
 	}//End of Material_Costing_TestCase_05
 	
-				
+	@Test(priority = 0, enabled = true)
+	public void Material_Costing_TestCase_06() throws UnsupportedFlavorException, IOException {
+		step = 1;
+		String report_msg;// String for the log in the Report
+	
+		report_msg = "CQ_Material_Costing::Automation Script for BOMC: Highlight Alternates";
+		LogClass.logExtent(report_msg);
+
+		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
+		LogClass.logExtent(report_msg);
+		
+		if (packageVerification.homepageverify()) {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+
+		report_msg = "Step " + (step++) + ": Enter Valid Credentials";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.CalcuQuote_Valid_Credentials();
+		
+		// Use this code if you want create the RFQ as per script need 
+		//report_msg = "Step " + (step++) + ": RFQ with multiple quantities";
+		//LogClass.logExtent(report_msg);
+		//rfq_packageVerification = CalcuQuote_RFQ_Indexpage.RFQ();
+
+		report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
+		LogClass.logExtent(report_msg);
+		packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+		
+		report_msg = "Step " + (step++) + ": Import BOM";
+		LogClass.logExtent(report_msg);
+		
+		CalcuQuote_BOM_Indexpage.filepath="Resources/35LineBOM.xlsx" ;
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
+		
+		if (bom_packageVerification.BOM_imported()) {
+			LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_import_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+		report_msg = "Step " + (step++) + ": Submit BOM";
+		LogClass.logExtent(report_msg);
+		bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
+		
+		if (bom_packageVerification.BOM_submit()) {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+			//LogClass.AssertPass_Extent_Report();
+			Assert.assertTrue(true);
+		} else {
+			LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "BOM_submission_fail");
+			// softAssertion.assertTrue(false);
+			Assert.assertTrue(false);
+		}
+		
+	   driver.navigate().refresh();
+	   //funcs.waitforseconds(5);
+	   
+       report_msg = "Step " + (step++) + ": Navigate to Material Costing Page";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navigatematerial_costing();
+       
+       report_msg = "Step " + (step++) + ":Test Case 25844: Verify alternate added from Material Costing screen is display on approve alternate screen with pending and blue font";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_25844();
+       
+       if (material_costing_packageVerification.verify_25844()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - All verifications <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - One or more verification failed <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "25844_fail");
+			Assert.assertTrue(false);
+		}
+       	
+       report_msg = "Step " + (step++) + ": Navigate to CQ application ";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navi_CQ();
+       
+       if (material_costing_packageVerification.verify_25844_MC_screen()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - Checked on material costing screen <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - Checked on material costing screen <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "25844_Mc_screen_fail");
+			Assert.assertTrue(false);
+		}
+      
+       CalcuQuote_Material_Costing_Indexpage.click_close_cqps_screen_without_ok();
+       
+       report_msg = "Step " + (step++) + ":Test Case 25846: Verify approval parts are highlighted with green color";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.testcase_25846();
+       
+       if (material_costing_packageVerification.verify_25846()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - All verifications <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - One or more verification failed <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "25846_fail");
+			Assert.assertTrue(false);
+		}
+       report_msg = "Step " + (step++) + ":Save process for Alternate Part";
+       LogClass.logExtent(report_msg);
+       CalcuQuote_Material_Costing_Indexpage.click_save_btn_appove_alt_parts();
+    
+       report_msg = "Step " + (step++) + ": Navigate to CQ application ";
+       LogClass.logExtent(report_msg);
+       material_costing_packageVerification = CalcuQuote_Material_Costing_Indexpage.navi_CQ();
+                    
+       if (material_costing_packageVerification.verify_25844_MC_screen_after_approve()) {			
+			LogClass.VerificationPass_Extent_Report("-----> Pass - Checked on material costing screen <-----");			
+			Assert.assertTrue(true);
+		} else {			
+			LogClass.VerificationFailed_Extent_Report("-----> Fail - Checked on material costing screen <-----");
+			LogClass.AssertFailed_Extent_Report();
+			LogClass.makeScreenshot(driver, "25844_Mc_screen_fail");
+			Assert.assertTrue(false);
+		}
+             
+	}//End of Material_Costing_TestCase_06
+	
+	
+	
+	
 }

@@ -1,5 +1,7 @@
 package com.automation.indexpage;
 
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -214,7 +216,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	public static CalcuQuote_MaterialCosting_Verification navigatematerial_costing() {
 		// TODO Auto-generated method stub
 		//driver.navigate().refresh();
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(7);
 		funcs.clickon_element(driver,material_costing_tab );
 		LogClass.logExtent("==> Click on Material Costing Tab");
 		return new CalcuQuote_MaterialCosting_Verification(driver);	
@@ -508,9 +510,11 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 	}
 	public static void enter_unit_price() {
 		unit_price.sendKeys("0.292929");
+		LogClass.logExtent("==> Unit price entered");
 	}
 	public static void click_save_manual_price() {
 		funcs.clickon_element(driver,save_btn );
+		LogClass.logExtent("==> Clicked Save button Manual Price screen");
 	}
 	
 	@FindBy(xpath="//span[@class='fa fa-times close']")private static WebElement close_icon;
@@ -518,6 +522,12 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver,close_icon);
 		funcs.clickon_element(driver,ok_btn);
+	}
+	
+	public static void click_close_cqps_screen_without_ok() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,close_icon);
+		//funcs.clickon_element(driver,ok_btn);
 	}
 	
 	@FindBy(xpath="//i[@class='fa fa-ellipsis-v']")private static List<WebElement> vertical_ellipsis;
@@ -540,9 +550,9 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		LogClass.logExtent("==> Clicked Add Alternate MPN");
 	}
 	@FindBy(xpath="//input[@type='text']")private static List<WebElement> mpn_alternate_screen;
-	public static void enter_mpn_alternate_screen() {
+	public static void enter_mpn_alternate_screen(String mpn) {
 		funcs.clickon_element(driver,mpn_alternate_screen.get(2));
-		mpn_alternate_screen.get(2).sendKeys("5114");
+		mpn_alternate_screen.get(2).sendKeys(mpn);
 		mpn_alternate_screen.get(2).sendKeys(Keys.ENTER);
 		LogClass.logExtent("==> Entered MPN");
 	}
@@ -556,6 +566,72 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		LogClass.logExtent("==> Clicked Yes");
 	}
 	
+	@FindBy(xpath="//button[contains(text(),'Alternates')]")private static WebElement alternates;
+	public static void click_alternates_for_link() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver,alternates);
+		LogClass.logExtent("==> Clicked on Alternates");
+	}
+	
+	//@FindBy(xpath="//button[contains(text(),'Copy Link')]")private static WebElement copy_link;
+	@FindBy(xpath="//button[@on-copied='InformCopy()']")private static WebElement copy_link;
+	//@FindBy(xpath="//button[contains(text(),'Copy Link')]//..//..//div[3]//input")private static WebElement link_content;
+	public static void click_copy_link_alteranates() {
+		funcs.waitforseconds(5);
+		//funcs.clickon_element(driver,copy_link);
+		copy_link.click();
+		LogClass.logExtent("==> Clicked on Copy Link");
+		//String URL = link_content.getText();
+		//return URL;
+	}
+	
+	//@FindBy(xpath="//button[contains(text(),'Copy Link')]")private static WebElement copy_link;
+	@FindBy(xpath="//input[@id='ApprovalLink']")private static WebElement link_content;
+	public static void copy_link_data_url() {
+		funcs.waitforseconds(5);
+		link_content.sendKeys(Keys.CONTROL + "c");
+		LogClass.logExtent("==> Clicked Ctrl + c");		
+		//String URL = link_content.getText();
+		//return URL;
+	}
+	
+	@FindBy(xpath="//button[@ng-click='cancel()']")private static WebElement cancel_select_api;
+	public static void click_cancel_select_pricing_api() {
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,cancel_select_api);
+		LogClass.logExtent("==> Clicked on Cancel select Pricing API");
+	}
+	
+	@FindBy(xpath="//button[@title='Approve']")private static List<WebElement> approve;
+	public static void click_part_approve() {
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, approve.get(0));
+		LogClass.logExtent("==> Clicked approve button");
+	}
+
+	@FindBy(xpath="//i[@class='fa fa-save']")private static WebElement save_btn_appove_alt_parts;
+	@FindBy(xpath="//input[@name='Email']")private static WebElement email;
+	@FindBy(xpath="//input[@name='authorizedbyName']")private static WebElement authorizedby;
+	//@FindBy(xpath="//div[contains(text(),'approved/reject')]")private static WebElement toast_msg;
+	@FindBy(xpath="//button[@type='submit']//i")private static WebElement submit_btn;
+	public static void click_save_btn_appove_alt_parts() {
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, save_btn_appove_alt_parts);
+		LogClass.logExtent("==> Clicked Save button");
+		
+		funcs.waitforseconds(2);
+		funcs.senddata(driver, email, "vipul@triveniglobalsoft.com");
+		LogClass.logExtent("==> Entered email address");
+		//funcs.waitforseconds(2);
+		
+		funcs.senddata(driver, authorizedby, "Automation script");
+		LogClass.logExtent("==> Entered Authorized By");
+				
+		funcs.clickon_element(driver, submit_btn);		
+		//submit_btn.click();
+		LogClass.logExtent("==> Clicked Submit button");
+		
+	}
 	public static CalcuQuote_MaterialCosting_Verification testcase_32667() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
@@ -622,7 +698,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.waitforseconds(3);
 		click_add_alternate_mpn();
 		funcs.waitforseconds(2);
-		enter_mpn_alternate_screen();
+		enter_mpn_alternate_screen("5114");
 		funcs.waitforseconds(1);
 		if(alt_added_successfully_msg.isDisplayed() && pending_status.isDisplayed())
 			{LogClass.VerificationPass_Extent_Report("-----> Selected alternate parts are successfully added. <-----");	
@@ -637,6 +713,57 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		    LogClass.VerificationPass_Extent_Report("-----> Got msg : Current selection contains update pricing exception lines.<-----");		    
 	    else 
 		    LogClass.VerificationFailed_Extent_Report("-----> Didn't get msg : Current selection contains update pricing exception lines. <-----");		
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification testcase_25844() throws UnsupportedFlavorException, IOException {
+		// TODO Auto-generated method stub
+		click_vertical_ellipsis(0);
+		click_suggest_alternate(0);
+		
+		click_add_alternate_mpn();		
+		enter_mpn_alternate_screen("5114");
+		
+		funcs.waitforseconds(1);		
+		click_add_alternate_mpn();
+		enter_mpn_alternate_screen("5115");
+		
+		funcs.waitforseconds(1);		
+		click_add_alternate_mpn();
+		enter_mpn_alternate_screen("5116");
+		
+		click_close_add_alternate_mpn_screen();
+		click_cancel_select_pricing_api();
+		click_alternates_for_link();
+		
+		funcs.waitforseconds(3);
+		click_copy_link_alteranates(); 
+		
+		funcs.waitforseconds(4);
+		//copy_link_data_url();		
+		//funcs.waitforseconds(4);
+		String URL = funcs.getSysClipboardText();
+		System.out.println("URl:"+URL);
+		
+		//String URL1 = funcs.getstringfromclipboard();
+		//System.out.println("URl:"+URL1);
+		
+		//funcs.waitforseconds(2);
+		funcs.switchToNewtabWithUrl(driver, URL, 1);
+		//funcs.waitforseconds(10);
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification navi_CQ() {
+		// TODO Auto-generated method stub
+		funcs.switchTowindow(driver, 0);
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+	
+	public static CalcuQuote_MaterialCosting_Verification testcase_25846() {
+		// TODO Auto-generated method stub
+		funcs.switchTowindow(driver, 1);
+		click_part_approve();		
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 	

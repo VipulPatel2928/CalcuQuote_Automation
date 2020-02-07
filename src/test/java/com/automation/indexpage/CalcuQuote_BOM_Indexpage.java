@@ -51,7 +51,8 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	public static CalcuQuote_BOM_Verification ImportBOM() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
-	/*	//Remove the comment of all lines if you want the script to delete the BOM before 
+		/*
+		//Remove the comment of all lines if you want the script to delete the BOM before 
 		funcs.clickon_element(driver,actions_menu); 
 		LogClass.logExtent("==> Click On Action Menu");
 		funcs.clickon_element(driver, delete_bom);	
@@ -59,17 +60,17 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.clickon_element(driver, delete_btn);
 		LogClass.logExtent("==> Click On Delete button");
 		funcs.waitforseconds(2);
-		driver.navigate().refresh();
-	*/	
-		funcs.waitforseconds(5);
+	//	driver.navigate().refresh();
+	*/
+		funcs.waitforseconds(7);
 		funcs.clickon_element(driver, import_bom);
 		funcs.waitforseconds(4);
 		//String filepath="Resources/35LineBOM.xlsx";
 		funcs.uploadthefile(driver, choose_file, 5, filepath);
-		funcs.waitforseconds(2);
+		//funcs.waitforseconds(2);
 		LogClass.logExtent("==> File Selected for Import");
 		
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, import_bom_after_choose_file);
 		LogClass.logExtent("==> BOM imported");
 		funcs.waitforseconds(6);
@@ -110,10 +111,10 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	public static CalcuQuote_BOM_Verification clicksubmitBOM() {
 		// TODO Auto-generated method stub
 		int flag=0;
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, bom_submit_btn);
 		LogClass.logExtent("==> Click on BOM Submit Button");
-		funcs.waitforseconds(2);
+		//funcs.waitforseconds(2);
 		
 		//Remove the comment if you want to use the existing BOM. 
 		funcs.waitforseconds(4);
