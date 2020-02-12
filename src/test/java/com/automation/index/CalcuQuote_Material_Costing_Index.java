@@ -46,7 +46,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 		System.out.println("GetTest Method called");
 	}
 	// Material Costing Module TestCases , dependsOnMethods="BOM_TestCase_01"
-			@Test(priority = 0, enabled = true)
+			@Test(priority = 1, enabled = true)
 			public void Material_Costing_TestCase_01() {
 				step = 1;
 				String report_msg;// String for the log in the Report
@@ -58,11 +58,11 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 				LogClass.logExtent(report_msg);
 				
 				if (packageVerification.homepageverify()) {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
+					LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");
 					//LogClass.AssertPass_Extent_Report();
 					Assert.assertTrue(true);
 				} else {
-					LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");					
+					LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");					
 					LogClass.AssertFailed_Extent_Report();
 					LogClass.makeScreenshot(driver, "Material_Costing_Login_fail");
 					// softAssertion.assertTrue(false);
@@ -159,7 +159,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 			 
 			}//End of Material_Costing_TestCase_01
 				
-			@Test(priority = 1, enabled = true )
+			@Test(priority = 2, enabled = true )
 			public void Material_Costing_TestCase_02() {
 
 				step = 1;
@@ -248,7 +248,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 					
 			}// Material_Costing_TestCase_02
 			
-			@Test(priority = 0, enabled = true )
+			@Test(priority = 1, enabled = true )
 			public void Material_Costing_TestCase_03() {
                 int assersion_flag=0; 
 				step = 1;
@@ -432,7 +432,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 									
 			}// Material_Costing_TestCase_03
 			
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 2, enabled = true)
 	public void Material_Costing_TestCase_04() throws InterruptedException {
 		step = 1;
 		String report_msg;// String for the log in the Report
@@ -658,7 +658,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
 		
 	}// End of Material_Costing_TestCase_04
 	
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 1, enabled = true)
 	public void Material_Costing_TestCase_05() {
 		step = 1;
 		String report_msg;// String for the log in the Report
@@ -820,7 +820,7 @@ public class CalcuQuote_Material_Costing_Index extends CalcuQuote_SeleniumInit{
               
 	}//End of Material_Costing_TestCase_05
 	
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 1, enabled = true)
 	public void Material_Costing_TestCase_06() throws UnsupportedFlavorException, IOException {
 		step = 1;
 		String report_msg;// String for the log in the Report

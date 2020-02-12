@@ -352,10 +352,10 @@ public class funcs {
 	}
 	
 	public static void switchTowindow(WebDriver driver, int tab) {
-		//waitforseconds(5);		
+		
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(tab));
-		//waitforseconds(1);
+		
 		driver.navigate().refresh();		
 		waitforseconds(5);
 	}

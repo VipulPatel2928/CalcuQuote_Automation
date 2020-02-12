@@ -38,7 +38,9 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated constructor stub
 	}
 
+	public static int number_qty ;
 	@FindBy(xpath="//a[@ng-class='AssemblyStatus.Labour']")private static WebElement labor_tab;
+	@FindBy(xpath="//button[@title='Remove all']")private static WebElement remove_all;
 	@FindBy(xpath="//select[@id='sourcelabourdriver']")private static WebElement select_labor_activities;
 	@FindBy(xpath="//select[@id='sourcelabourdriver']//option")private static List<WebElement> labor_activities_options;
 	@FindBy(xpath="//button[@class='btn move btn-default']")private static WebElement arrow_labor_select;
@@ -50,9 +52,14 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, labor_tab);
-		LogClass.logExtent("---> Click on Labor Tab <---");
+		LogClass.logExtent("==> Click on Labor Tab");
 	
 		funcs.waitforseconds(6);	
+				
+		funcs.clickon_element(driver, remove_all);
+		LogClass.logExtent("==> Click on Remove All");
+		
+		funcs.waitforseconds(2);
 		funcs.senddata(driver, enter_labor_activity.get(0), "donotchange_mintime");
 		funcs.waitforseconds(1);
 		Select options = new Select(select_labor_activities);
@@ -61,23 +68,27 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 			
 			if(j>3) break;
 			options.selectByIndex(j);			
-			LogClass.logExtent("---> Labor Activity Selected <---");
+			LogClass.logExtent("==> Labor Activity Selected");
 			
 			funcs.waitforseconds(1);			
 			funcs.clickon_element(driver, arrow_labor_select);
-			LogClass.logExtent("---> Labor Activity added for the RFQ <---::"+(j+1));
+			LogClass.logExtent("==> Labor Activity added for the RFQ ::"+(j+1));
 			
 			funcs.waitforseconds(1);
 			funcs.clickon_element(driver, click_next_labor);
-			LogClass.logExtent("---> Click on Next Button <---");
+			LogClass.logExtent("==> Click on Next Button");
 			
 			options.deselectByIndex(j);	
 		    funcs.waitforseconds(1);	
 		}
 		
-		//WebElement class_value = driver.findElement(By.xpath("//input[@id='txtMOHQty_0_0']"));
-		List<WebElement> class_value = driver.findElements(By.xpath("//input[contains(@id,'txtMOHQty')]"));
-		System.out.println("Class Value"+class_value.get(0).getAttribute("class"));
+		funcs.waitforseconds(1);
+		List<WebElement> qtys = driver.findElements(By.xpath("//tbody//th"));
+		number_qty = qtys.size();
+		System.out.println("Number of Request Quantity :"+number_qty);
+		
+		
+		
 		return new CalcuQuote_Labor_Verification(driver);
 	}
 
@@ -87,7 +98,7 @@ public class CalcuQuote_Labor_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, labor_submit_btn);
-		LogClass.logExtent("---> Click on Labor Submit Button <---");
+		LogClass.logExtent("==> Click on Labor Submit Button");
 		
 		//funcs.waitforseconds(5);
 		//funcs.clickon_element(driver, labor_submit_yes_btn);

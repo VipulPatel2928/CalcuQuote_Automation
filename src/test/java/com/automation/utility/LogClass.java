@@ -114,6 +114,8 @@ public class LogClass {
 	CalcuQuote_Login_Index.extent_report_log.log(LogStatus.INFO, msg);
 	}
 	
+	
+	
 	// Function for the UnSuccessful verification
 		public static void AssertFailed_Extent_Report() {
 			//System.out.println();

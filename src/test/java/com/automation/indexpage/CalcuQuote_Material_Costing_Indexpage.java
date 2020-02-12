@@ -62,19 +62,19 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_tab );
-		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		LogClass.logExtent("==> Click on Material Costing Tab");
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,update_pricing );
-		LogClass.logExtent("---> Click on Update Pricing Tab <---");
+		LogClass.logExtent("==> Click on Update Pricing Tab");
 		
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver,digikey_uncheck );
-		LogClass.logExtent("---> Click on Digikey Uncheck <---");
+		LogClass.logExtent("==> Click on Digikey Uncheck");
 		
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver,MC_POPup_submit_btn );
-		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
+		LogClass.logExtent("==> Click on Submit Button for Update Pricing");
 		
 		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
 		///WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(element));
@@ -90,11 +90,11 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		int totalQ = Integer.parseInt(totalQuantity);
 		int prices = totalQ*4;
 		if(pricing_available.size()==prices) {
-			LogClass.logExtent("---> Pricing Available for All line and All Quantity <---");
+			LogClass.logExtent("==> Pricing Available for All line and All Quantity");
 		}
 		
 		
-		LogClass.logExtent("---> Pricing Selection for each line item start <---");
+		LogClass.logExtent("==> Pricing Selection for each line item start");
 		
 		System.out.println("pricing available="+pricing_available.size());
 		funcs.clickon_element(driver,pricing_available.get(0) );
@@ -114,7 +114,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		//funcs.waitforseconds(1);
 		//funcs.clickon_element(driver,ok_btn );
 		
-		LogClass.logExtent("---> Pricing Selection for each line item finished <---");
+		LogClass.logExtent("==> Pricing Selection for each line item finished");
 		
 		funcs.waitforseconds(1);
 		return new CalcuQuote_MaterialCosting_Verification(driver);
@@ -126,11 +126,11 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_submit_btn );
-		LogClass.logExtent("---> Click on Material Costing Submit button <---");
+		LogClass.logExtent("==> Click on Material Costing Submit button");
 		
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver,material_submit_ok_btn );
-		LogClass.logExtent("---> Click on OK button <---");
+		LogClass.logExtent("==> Click on OK button");
 		funcs.waitforseconds(1);
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
@@ -145,11 +145,11 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		driver.navigate().refresh();
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,material_costing_tab );
-		LogClass.logExtent("---> Click on Material Costing Tab <---");
+		LogClass.logExtent("==> Click on Material Costing Tab");
 		
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver,pricing_data_unavailable.get(0) );
-		LogClass.logExtent("---> Click on pricing data unavailable <---");
+		LogClass.logExtent("==> Click on pricing data unavailable");
 		int no =0;
 		funcs.waitforseconds(4);
 		for(int i=0;i<=3;i++) {
@@ -185,20 +185,20 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		*/
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,update_pricing );
-		LogClass.logExtent("---> Click on Update Pricing Tab <---");
+		LogClass.logExtent("==> Click on Update Pricing Tab");
 		
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver,digikey_uncheck );
-		LogClass.logExtent("---> Click on Digikey Uncheck <---");
+		LogClass.logExtent("==> Click on Digikey Uncheck");
 		
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver,MC_POPup_submit_btn );
-		LogClass.logExtent("---> Click on Submit Button for Update Pricing <---");
+		LogClass.logExtent("==> Click on Submit Button for Update Pricing");
 		
 		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
 		
 		funcs.clickon_element(driver,pricing_available.get(0) );
-		LogClass.logExtent("---> Click on pricing available <---");
+		LogClass.logExtent("==> Click on pricing available");
 		
 		funcs.waitforseconds(10);					
 		Total_Qty_per_line[0] = total_qty.getAttribute("value");
@@ -228,7 +228,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		funcs.waitforseconds(5);
 		
 		funcs.clickon_element(driver,pricing_available.get(0) );
-		LogClass.logExtent("---> Click on pricing available <---");
+		LogClass.logExtent("==> Click on pricing available");
 		
 		funcs.waitforseconds(8);					
 		Total_Qty_per_line[0] = total_qty.getAttribute("value");
@@ -242,7 +242,7 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver,add_manual_price_icon );
-		LogClass.logExtent("---> Click on add manual price icon <---");
+		LogClass.logExtent("==> Click on add manual price icon");
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 
@@ -701,18 +701,18 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		enter_mpn_alternate_screen("5114");
 		funcs.waitforseconds(1);
 		if(alt_added_successfully_msg.isDisplayed() && pending_status.isDisplayed())
-			{LogClass.VerificationPass_Extent_Report("-----> Selected alternate parts are successfully added. <-----");	
-		    LogClass.VerificationPass_Extent_Report("-----> Verified Pending status <-----");}
+			{LogClass.VerificationPass_Extent_Report("Pass : Selected alternate parts are successfully added.");	
+		    LogClass.VerificationPass_Extent_Report("Pass : Verified Pending status <-----");}
 		else {
-			LogClass.VerificationFailed_Extent_Report("-----> Didn't get msg : Selected alternate parts are successfully added. <-----");
-			LogClass.VerificationFailed_Extent_Report("-----> Didn't Verified Pending status <-----");
+			LogClass.VerificationFailed_Extent_Report("Fail : Didn't get msg : Selected alternate parts are successfully added.");
+			LogClass.VerificationFailed_Extent_Report("Fail : Didn't Verified Pending status");
 		}
 		click_close_add_alternate_mpn_screen();
 		funcs.waitforseconds(1);
 		if(msg.isDisplayed())
-		    LogClass.VerificationPass_Extent_Report("-----> Got msg : Current selection contains update pricing exception lines.<-----");		    
+		    LogClass.VerificationPass_Extent_Report("Pass : Got msg : Current selection contains update pricing exception lines.");		    
 	    else 
-		    LogClass.VerificationFailed_Extent_Report("-----> Didn't get msg : Current selection contains update pricing exception lines. <-----");		
+		    LogClass.VerificationFailed_Extent_Report("Fail : Didn't get msg : Current selection contains update pricing exception lines.");		
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 
@@ -764,6 +764,40 @@ public class CalcuQuote_Material_Costing_Indexpage extends CalcuQuote_AbstractPa
 		// TODO Auto-generated method stub
 		funcs.switchTowindow(driver, 1);
 		click_part_approve();		
+		return new CalcuQuote_MaterialCosting_Verification(driver);
+	}
+
+	public static CalcuQuote_MaterialCosting_Verification materialcosting_activities_for_rfq() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,material_costing_tab );
+		LogClass.logExtent("==> Click on Material Costing Tab");
+		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver,update_pricing );
+		LogClass.logExtent("==> Click on Update Pricing Tab");
+		
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver,digikey_uncheck );
+		LogClass.logExtent("==> Click on Digikey Uncheck");
+		
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver,MC_POPup_submit_btn );
+		LogClass.logExtent("==> Click on Submit Button for Update Pricing");
+		
+		new WebDriverWait(driver,300).until(ExpectedConditions.visibilityOf( update_pricing));
+		
+		funcs.waitforseconds(5);
+		
+		String totalQuantity = CalcuQuote_TestData.numberofquantity(7);
+		int totalQ = Integer.parseInt(totalQuantity);
+		int prices = totalQ*4;
+		if(pricing_available.size()==prices) {
+			LogClass.VerificationPass_Extent_Report("---> Pricing Available for All line and All Quantity <---");
+		}
+		
+		System.out.println("pricing available="+pricing_available.size());
+		
 		return new CalcuQuote_MaterialCosting_Verification(driver);
 	}
 	

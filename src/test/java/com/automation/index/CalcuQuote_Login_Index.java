@@ -54,12 +54,11 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 		LogClass.logExtent(report_msg);
 		if (packageVerification.homepageverify()) {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");			
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Login_fail");
 			// softAssertion.assertTrue(false);
@@ -73,12 +72,11 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		report_msg = "Step " + (step++) + ": Verification Start for the Test Case";
 		LogClass.logExtent(report_msg);
 		if (packageVerification.CalcuQuote_login_verification()) {
-			LogClass.logExtent("-----> Verified User has Logged in Successfully <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified User has Logged in Successfully <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified User has Not Logged in Successfully <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified User has Not Logged in Successfully <-----");			
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Login_fail");
 			// softAssertion.assertTrue(false);
@@ -97,12 +95,11 @@ public class CalcuQuote_Login_Index extends CalcuQuote_SeleniumInit {
 		report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 		LogClass.logExtent(report_msg);
 		if (packageVerification.homepageverify()) {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");			
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Login_fail");
 			// softAssertion.assertTrue(false);

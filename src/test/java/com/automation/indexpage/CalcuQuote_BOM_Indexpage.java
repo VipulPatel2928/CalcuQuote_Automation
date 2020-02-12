@@ -51,7 +51,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	public static CalcuQuote_BOM_Verification ImportBOM() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(5);
-		/*
+		
 		//Remove the comment of all lines if you want the script to delete the BOM before 
 		funcs.clickon_element(driver,actions_menu); 
 		LogClass.logExtent("==> Click On Action Menu");
@@ -61,8 +61,8 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		LogClass.logExtent("==> Click On Delete button");
 		funcs.waitforseconds(2);
 	//	driver.navigate().refresh();
-	*/
-		funcs.waitforseconds(7);
+	
+		funcs.waitforseconds(4);
 		funcs.clickon_element(driver, import_bom);
 		funcs.waitforseconds(4);
 		//String filepath="Resources/35LineBOM.xlsx";
@@ -92,15 +92,15 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver, import_bom);
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(6);
 		//String filepath="Resources/35LineBOM.xlsx";
 		funcs.uploadthefile(driver, choose_file, 5, filepath);
 		funcs.waitforseconds(2);
-		LogClass.logExtent("---> File Selected for Import <---");
+		LogClass.logExtent("==> File Selected for Import");
 		
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, import_bom_after_choose_file);
-		LogClass.logExtent("---> BOM imported <---");
+		LogClass.logExtent("==> BOM imported");
 		funcs.waitforseconds(6);
 		return new CalcuQuote_BOM_Verification(driver);
 	}
@@ -151,34 +151,34 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 	public static CalcuQuote_BOM_Verification addlineitemmanually() {
 		funcs.waitforseconds(5);
 		funcs.clickon_element(driver,actions_menu); 
-		LogClass.logExtent("---> Click On Action Menu <---");
+		LogClass.logExtent("==> Click On Action Menu");
 		funcs.clickon_element(driver, delete_bom);	
-		LogClass.logExtent("---> Click On Delete BOM <---");
+		LogClass.logExtent("==> Click On Delete BOM");
 		funcs.clickon_element(driver, delete_btn);
-		LogClass.logExtent("---> Click On Delete button<---");
+		LogClass.logExtent("==> Click On Delete button");
 		funcs.waitforseconds(2);
 		driver.navigate().refresh();
 		
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(6);
 		funcs.clickon_element(driver, plus_icon_manual_add);
-		LogClass.logExtent("---> Click On + Icon <---");
+		LogClass.logExtent("==> Click On + Icon");
 		
 		
 		//funcs.clickon_element(driver, click_line_no);
 		//LogClass.logExtent("---> Click on Line No Text Field <---");
 		funcs.waitforseconds(2);
 		funcs.senddata(driver, enter_line_no, "1");
-		LogClass.logExtent("---> Enter Line No <---");
+		LogClass.logExtent("==> Enter Line No");
 		
 		
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, click_qty_on_brd);
-		LogClass.logExtent("---> Click on Qty on Brd Text Field <---");
+		LogClass.logExtent("==> Click on Qty on Brd Text Field");
 		funcs.waitforseconds(1);
 		funcs.senddata(driver, enter_qty_on_brd, "10");
 		CalcuQuote_MaterialCosting_Verification.qty_brd="10";
-		LogClass.logExtent("---> Enter Qty/Brd <---");
+		LogClass.logExtent("==> Enter Qty/Brd");
 		
 	/*
 		funcs.waitforseconds(1);
@@ -193,26 +193,26 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, click_mpn);
-		LogClass.logExtent("---> Click On MPN Field <---");
+		LogClass.logExtent("==> Click On MPN Field");
 		funcs.waitforseconds(1);
 		//funcs.jsClick(driver, ok_btn);
 		//funcs.clickon_element(driver, ok_btn.get(1));
-		funcs.waitforseconds(1);
+		//funcs.waitforseconds(1);
 		//Actions act = new Actions(driver);
 		//act.doubleClick(click_mpn).build().perform();
 		//funcs.clickon_element(driver, click_mpn);
 		funcs.senddata(driver, enter_mpn, "5014");
-		LogClass.logExtent("---> Enter MPN <---");
+		LogClass.logExtent("==> Enter MPN");
 		
 		funcs.waitforseconds(1);
 		//funcs.clickon_element(driver, click_part_class);
 		funcs.jsClick(driver, click_part_class);
-		LogClass.logExtent("---> Click On Part Class Field <---");
+		LogClass.logExtent("==> Click On Part Class Field");
 		funcs.waitforseconds(1);
 		Select part_class = new Select(select_part_class);
 		//part_class.selectByIndex(4);
 		part_class.selectByValue("number:303");
-		LogClass.logExtent("---> Select Part Class <---");
+		LogClass.logExtent("==> Select Part Class");
 		
 		
 	/*	
@@ -231,7 +231,7 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 			// TODO Auto-generated method stub
 			funcs.waitforseconds(2);
 			funcs.clickon_element(driver, bom_submit_btn);
-			LogClass.logExtent("---> Click on BOM Submit Button <---");
+			LogClass.logExtent("==> Click on BOM Submit Button");
 			return new CalcuQuote_BOM_Verification(driver);	
 	}
 
@@ -240,11 +240,11 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, bom_submit_btn);
-		LogClass.logExtent("---> Click on BOM Submit Button <---");
+		LogClass.logExtent("==> Click on BOM Submit Button");
 		if(SMT_flag>0) {
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, restart_submit);
-		LogClass.logExtent("---> Click on BOM Submit Button <---");
+		LogClass.logExtent("==> Click on BOM Submit Button");
 		SMT_flag++;
 		}
 		return new CalcuQuote_BOM_Verification(driver);	
@@ -262,12 +262,12 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		//total_qty_reset_flag=0;
 		funcs.clickon_element(driver, bom_tab);
-		LogClass.logExtent("---> Click On BOM tab <---");
+		LogClass.logExtent("==> Click On BOM tab");
 			
 		funcs.waitforseconds(6);
 		//funcs.clickon_element(driver, click_part_class);
 		funcs.jsClick(driver, click_part_class);
-		LogClass.logExtent("---> Click On Part Class Field <---");
+		LogClass.logExtent("==> Click On Part Class Field");
 		//LogClass.logExtent("---> Select Part Class <---"+click_part_class.getText());
 		
 		////div[contains(text(),'SMT')]
@@ -281,17 +281,17 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(1);
 		funcs.jsClick(driver, click_part_class);
 		//LogClass.logExtent("---> Click On Part Class Field <---");
-		LogClass.logExtent("---> Part Class Changed <---");
+		LogClass.logExtent("==> Part Class Changed");
 		
 		funcs.waitforseconds(1);		
 		funcs.clickon_element(driver, click_qty_on_brd);
-		LogClass.logExtent("---> Click on Qty on Brd Text Field <---");
+		LogClass.logExtent("==> Click on Qty on Brd Text Field");
 		
 		funcs.waitforseconds(2);
 		
 		
 	    funcs.clickon_element(driver, yes_update_btn);
-		LogClass.logExtent("---> Click On Yes,update the values <---");
+		LogClass.logExtent("==> Click On Yes,update the values");
 				//total_qty_reset_flag=1;
 		
 		funcs.waitforseconds(2);
@@ -311,12 +311,12 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(5);
 		//total_qty_reset_flag=0;
 		funcs.clickon_element(driver, bom_tab);
-		LogClass.logExtent("---> Click On BOM tab <---");
+		LogClass.logExtent("==> Click On BOM tab");
 			
 		funcs.waitforseconds(6);
 		//funcs.clickon_element(driver, click_part_class);
 		funcs.jsClick(driver, click_part_class);
-		LogClass.logExtent("---> Click On Part Class Field <---");
+		LogClass.logExtent("==> Click On Part Class Field");
 		//LogClass.logExtent("---> Select Part Class <---"+click_part_class.getText());
 		
 		////div[contains(text(),'SMT')]
@@ -330,11 +330,11 @@ public class CalcuQuote_BOM_Indexpage extends CalcuQuote_AbstractPage {
 		funcs.waitforseconds(1);
 		funcs.jsClick(driver, click_part_class);
 		//LogClass.logExtent("---> Click On Part Class Field <---");
-		LogClass.logExtent("---> Part Class Changed <---");
+		LogClass.logExtent("==> Part Class Changed");
 		
 		funcs.waitforseconds(1);		
 		funcs.clickon_element(driver, click_qty_on_brd);
-		LogClass.logExtent("---> Click on Qty on Brd Text Field <---");
+		LogClass.logExtent("==> Click on Qty on Brd Text Field");
 		
 		funcs.waitforseconds(2);
 		

@@ -53,12 +53,11 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		LogClass.logExtent(report_msg);
 		
 		if (packageVerification.homepageverify()) {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");			
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Labor_Login_fail");
 			// softAssertion.assertTrue(false);
@@ -81,11 +80,11 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		bom_packageVerification = CalcuQuote_BOM_Indexpage.ImportBOM();
 		
 		if (bom_packageVerification.BOM_imported()) {
-			LogClass.logExtent("-----> Verified BOM Imported Successfully <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Verified BOM Imported Successfully <-----");
 			//LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified BOM is not imported Successfully <-----");					
+			LogClass.VerificationFailed_Extent_Report("-----> Verified BOM is not imported Successfully <-----");					
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "BOM_import_fail");
 			// softAssertion.assertTrue(false);
@@ -97,11 +96,11 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		bom_packageVerification = CalcuQuote_BOM_Indexpage.clicksubmitBOM();
 		
 		if (bom_packageVerification.BOM_submit()) {
-			LogClass.logExtent("-----> Verified Submit BOM is in progress <-----");
+			LogClass.VerificationPass_Extent_Report("-----> Verified Submit BOM is in progress <-----");
 			//LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified Submit BOM is in progress msg not displayed <-----");					
+			LogClass.VerificationFailed_Extent_Report("-----> Verified Submit BOM is in progress msg not displayed <-----");					
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "BOM_submission_fail");
 			// softAssertion.assertTrue(false);
@@ -117,12 +116,11 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		
 		
 		if (labor_packageVerification.laboractivity_added_verification()) {
-			LogClass.logExtent("-----> Verified Labor Activity Added Successfully <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified Labor Activity Added Successfully <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified Labor Activity is not Added Successfully <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified Labor Activity is not Added Successfully <-----");		
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Labor_activity_fail");
 			// softAssertion.assertTrue(false);
@@ -134,12 +132,11 @@ public class CalcuQuote_Labor_Index extends CalcuQuote_SeleniumInit{
 		labor_packageVerification = CalcuQuote_Labor_Indexpage.clicksubmitLabor();
 		
 		if (labor_packageVerification.laboractivity_submit()) {
-			LogClass.logExtent("-----> Verified Labor Costs added to the Quote <-----");
-			LogClass.AssertPassed();
+			LogClass.VerificationPass_Extent_Report("-----> Verified Labor Costs added to the Quote <-----");
+			LogClass.AssertPass_Extent_Report();
 			Assert.assertTrue(true);
 		} else {
-			LogClass.logExtent("-----> Verified Labor Costs not added to the Quote <-----");
-			LogClass.AssertFailed();
+			LogClass.VerificationFailed_Extent_Report("-----> Verified Labor Costs not added to the Quote <-----");		
 			LogClass.AssertFailed_Extent_Report();
 			LogClass.makeScreenshot(driver, "Labor_submission_fail");
 			// softAssertion.assertTrue(false);

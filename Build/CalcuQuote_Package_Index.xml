@@ -52,13 +52,14 @@
 		<classes>
 			<class name="com.automation.index.CalcuQuote_RFQ_Index">
 				<methods>
-	                <include name="RFQ_TestCase_01" />					
+	                <include name="RFQ_TestCase_01" />	
+	                 <include name="RFQ_TestCase_02" />					
 				</methods>
 			</class>
 		</classes>
 	</test>
 	
-   <!-- 	Methods for BOM	 -->
+  <!--  	Methods for BOM	 -->
 	<test
 		name="CalcuQuote_BOM_Module_TestCases">
 		<classes>
@@ -87,24 +88,15 @@
 	<test
 		name="CalcuQuote_Material_Costing_Module_TestCases">
 		<classes>
-			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">
-			
-			    <methods>								                 
-	                  <include name="Material_Costing_TestCase_04" />	               	
-				</methods>
-				
+			<class name="com.automation.index.CalcuQuote_Material_Costing_Index">						  		
 				<methods>							
-	             <include name="Material_Costing_TestCase_01" />		
-	             <!-- <include name="Material_Costing_TestCase_02" /> -->
-	                  <include name="Material_Costing_TestCase_03" />	
-	             <!-- <include name="Material_Costing_TestCase_04" /> -->          
-	                  <include name="Material_Costing_TestCase_05" />
-	                  <include name="Material_Costing_TestCase_06" />	                 	
-				</methods>
-				<methods>								                 
-	                  <include name="Material_Costing_TestCase_02" />	               	
-				</methods>
-				
+	           <!--   <include name="Material_Costing_TestCase_01" /> -->		
+	           <!--   <include name="Material_Costing_TestCase_02" /> -->
+	             <include name="Material_Costing_TestCase_03" />	
+	             <include name="Material_Costing_TestCase_04" />         
+	             <include name="Material_Costing_TestCase_05" />
+	             <include name="Material_Costing_TestCase_06" />	                 	
+				</methods>							
 			</class>
 		</classes>
 	</test>

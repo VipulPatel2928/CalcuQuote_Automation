@@ -52,10 +52,10 @@ public class CalcuQuote_NRE_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ":Open : https://qa.calcuquote.com/Staging2/";
 			LogClass.logExtent(report_msg);
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");		
+				LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");		
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
+				LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "NRE_Login_fail");
 				// softAssertion.assertTrue(false);

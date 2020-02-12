@@ -56,10 +56,10 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			LogClass.logExtent(report_msg);
 			
 			if (packageVerification.homepageverify()) {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is open <-----");			
+				LogClass.VerificationPass_Extent_Report("-----> Verified CalcuQuote home page is open <-----");			
 				Assert.assertTrue(true);
 			} else {
-				LogClass.logExtent("-----> Verified CalcuQuote home page is not open <-----");				
+				LogClass.VerificationFailed_Extent_Report("-----> Verified CalcuQuote home page is not open <-----");				
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "BOM_Login_fail");
 				// softAssertion.assertTrue(false);
@@ -73,6 +73,7 @@ public class CalcuQuote_BOM_Index extends CalcuQuote_SeleniumInit{
 			report_msg = "Step " + (step++) + ": Select one of the existing RFQ";
 			LogClass.logExtent(report_msg);
 			packageVerification = CalcuQuote_Login_Indexpage.select_rfq();
+			
 			
 			report_msg = "Step " + (step++) + ": Import BOM";
 			LogClass.logExtent(report_msg);

@@ -144,25 +144,25 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			
 			if(calculation==CQPS_total) {
 			//LogClass.logExtent("---> Total Quantity is Matched <---");
-			LogClass.VerificationPass_Extent_Report("---> Total Quantity is Matched <---");
+			LogClass.VerificationPass_Extent_Report("Pass : Total Quantity is Matched");
 			//LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
-			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.VerificationPass_Extent_Report("Pass : Matched Total Qty as per Calculation : "+calculation);
 			//LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);
-			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per CQPS : "+CQPS_total);}
+			LogClass.VerificationPass_Extent_Report("Pass : Matched Total Qty as per CQPS : "+CQPS_total);}
 			else {
 				//LogClass.logExtent("---> Total Quantity is not Matched <---");
-				LogClass.VerificationFailed_Extent_Report("---> Total Quantity is not Matched <---");
+				LogClass.VerificationFailed_Extent_Report("Fail : Total Quantity is not Matched");
 				//LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
-				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.VerificationFailed_Extent_Report("Fail : Not matched Total Qty as per Calculation : "+calculation);
 				//LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
-				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				LogClass.VerificationFailed_Extent_Report("Fail : Not matched Total Qty as per CQPS : "+CQPS_total);
 				flag++;
 			}
 		}
 		
 		if(flag!=0) {
 			//LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
-			LogClass.VerificationFailed_Extent_Report("---> NOs of Total Quantity not matched :" + flag);
+			LogClass.VerificationFailed_Extent_Report("Fail : NOs of Total Quantity not matched :" + flag);
 			return false;			
 		}
 		else
@@ -204,38 +204,38 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			CQPS_total =Double.parseDouble( CalcuQuote_Material_Costing_Indexpage.Total_Qty_per_line[0]);
 			
 		   if (previous_total_Qty > 0 && previous_total_Qty!=calculation) {			  
-			    LogClass.VerificationPass_Extent_Report("---> Total Qty Changed <---");
-			    LogClass.VerificationPass_Extent_Report("---> Previous Part Class Total Qty : "+previous_total_Qty);
-			    LogClass.VerificationPass_Extent_Report("---> Current Part Class Total Qty  : "+CQPS_total);
+			    LogClass.VerificationPass_Extent_Report("Pass : Total Qty Changed");
+			    LogClass.VerificationPass_Extent_Report("Pass : Previous Part Class Total Qty : "+previous_total_Qty);
+			    LogClass.VerificationPass_Extent_Report("Pass : Current Part Class Total Qty  : "+CQPS_total);
 				//LogClass.logExtent("---> Previous Part Class Total Qty : "+previous_total_Qty);
 				//LogClass.logExtent("---> Current Part Class Total Qty  : "+CQPS_total);
 		   }
 		   if (previous_total_Qty==calculation) {
-			    LogClass.VerificationPass_Extent_Report("---> Total Qty is Not Changed <---");
-			    LogClass.VerificationPass_Extent_Report("---> Previous Part Class Total Qty : "+previous_total_Qty);
-			    LogClass.VerificationPass_Extent_Report("---> Current Part Class Total Qty  : "+CQPS_total);
+			    LogClass.VerificationPass_Extent_Report("Fail : Total Qty is Not Changed");
+			    LogClass.VerificationPass_Extent_Report("Fail : Previous Part Class Total Qty : "+previous_total_Qty);
+			    LogClass.VerificationPass_Extent_Report("Fail : Current Part Class Total Qty  : "+CQPS_total);
 		   }
 			
 			if(calculation==CQPS_total) {
 			//LogClass.logExtent("---> Total Quantity is Matched <---");
 			//LogClass.logExtent("---> Matched Total Qty as per Calculation : "+calculation);
-			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per Calculation : "+calculation);
+			LogClass.VerificationPass_Extent_Report("Pass : Matched Total Qty as per Calculation : "+calculation);
 			//LogClass.logExtent("---> Matched Total Qty as per CQPS : "+CQPS_total);
-			LogClass.VerificationPass_Extent_Report("---> Matched Total Qty as per CQPS : "+CQPS_total);
+			LogClass.VerificationPass_Extent_Report("Pass : Matched Total Qty as per CQPS : "+CQPS_total);
 			}
 			else {
 				//LogClass.logExtent("---> Total Quantity is not Matched <---");
 				//LogClass.logExtent("---> Not matched Total Qty as per Calculation : "+calculation);
-				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per Calculation : "+calculation);
-				LogClass.logExtent("---> Not matched Total Qty as per CQPS : "+CQPS_total);
-				LogClass.VerificationFailed_Extent_Report("---> Not matched Total Qty as per CQPS : "+CQPS_total);
+				LogClass.VerificationFailed_Extent_Report("Fail : Not matched Total Qty as per Calculation : "+calculation);
+				LogClass.logExtent("Fail : Not matched Total Qty as per CQPS : "+CQPS_total);
+				LogClass.VerificationFailed_Extent_Report("Fail : Not matched Total Qty as per CQPS : "+CQPS_total);
 				flag++;
 			}
 		
 		
 		if(flag!=0) {
 			//LogClass.logExtent("---> NOs of Total Quantity not matched :" + flag);
-			LogClass.VerificationFailed_Extent_Report("---> NOs of Total Quantity not matched :" + flag);
+			LogClass.VerificationFailed_Extent_Report("Fail : NOs of Total Quantity not matched :" + flag);
 			return false;			
 		}
 		else
@@ -356,13 +356,13 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		funcs.waitforseconds(3);
 		WebElement Mc_unit_price = driver.findElement(By.xpath("//a[contains(text(),'   $ "+str+"')]"));
 		if(Mc_unit_price.isDisplayed()) {
-			LogClass.VerificationPass_Extent_Report("Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
-			LogClass.VerificationPass_Extent_Report("Price from Material Costing Screen : "+Mc_unit_price.getText());
+			LogClass.VerificationPass_Extent_Report("Pass : Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
+			LogClass.VerificationPass_Extent_Report("Pass : Price from Material Costing Screen : "+Mc_unit_price.getText());
 		return true;
 		}
 		else {
-			LogClass.VerificationFailed_Extent_Report("Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
-			LogClass.VerificationFailed_Extent_Report("Price from Material Costing Screen : "+Mc_unit_price.getText());
+			LogClass.VerificationFailed_Extent_Report("Fail : Unit Price as per calculation [Price in GBP] * Currency Conversion Rate : "+str);
+			LogClass.VerificationFailed_Extent_Report("Fail : Price from Material Costing Screen : "+Mc_unit_price.getText());
 		return false;}
 	}
 
@@ -460,31 +460,31 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		List<WebElement> mpn = driver.findElements(By.xpath("//div[contains(text(),'511')]"));
 		
 		if(mpn.size()==3) 
-			LogClass.VerificationPass_Extent_Report("Alternate Parts is added and display on the page");		
+			LogClass.VerificationPass_Extent_Report("Pass : Alternate Parts is added and display on the page");		
 		else {
-			LogClass.VerificationFailed_Extent_Report("Alternate Parts is not added or display on the page");
+			LogClass.VerificationFailed_Extent_Report("Fail : Alternate Parts is not added or display on the page");
 			flag++;}
 		
 		if(mpn.get(0).getAttribute("class").contains("blue-font") && mpn.get(1).getAttribute("class").contains("blue-font") &&mpn.get(2).getAttribute("class").contains("blue-font")) 
-		LogClass.VerificationPass_Extent_Report("Alternate Parts is added and font is blue");		
+		LogClass.VerificationPass_Extent_Report("Pass : Alternate Parts is added and font is blue");		
 		else {
-			LogClass.VerificationFailed_Extent_Report("Alternate Parts is added but font is not blue");
+			LogClass.VerificationFailed_Extent_Report("Fail : Alternate Parts is added but font is not blue");
 			flag++;}
 		
 		List<WebElement> pending = driver.findElements(By.xpath("//span[contains(text(),'Pending')]"));
 
 		if(pending.size()==3) 
-			LogClass.VerificationPass_Extent_Report("Alternate Parts is added and status is pending");		
+			LogClass.VerificationPass_Extent_Report("Pass : Alternate Parts is added and status is pending");		
 		else {
-			LogClass.VerificationFailed_Extent_Report("Alternate Parts is added but status is not pending");
+			LogClass.VerificationFailed_Extent_Report("Fail : Alternate Parts is added but status is not pending");
 			flag++;}
 		
 		System.out.println("color : "+pending.get(0).getAttribute("style"));
 		
 		if(pending.get(0).getAttribute("style").contains("rgb(26, 113, 210)") && pending.get(1).getAttribute("style").contains("rgb(26, 113, 210)")&&pending.get(2).getAttribute("style").contains("rgb(26, 113, 210)")) 
-			LogClass.VerificationPass_Extent_Report("Status is pending and font is blue");		
+			LogClass.VerificationPass_Extent_Report("Pass : Status is pending and font is blue");		
 			else {
-				LogClass.VerificationFailed_Extent_Report("Status is pending but font is not blue");
+				LogClass.VerificationFailed_Extent_Report("Fail : Status is pending but font is not blue");
 				flag++;}		
 		if(flag>0)
 			return false;
@@ -503,13 +503,13 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		System.out.println("bubble number :"+alt_bubble.getText());
 				
 		if(alt_mpn.isDisplayed() && pending_square.size()>0 && alt_bubble.getText().contains("4"))
-			{LogClass.VerificationPass_Extent_Report("Alternate MPN is display on MC screen");
-			LogClass.VerificationPass_Extent_Report("Pricing Status is pending");
-			LogClass.VerificationPass_Extent_Report("Alternate bubble number :"+alt_bubble.getText());	
+			{LogClass.VerificationPass_Extent_Report("Pass : Alternate MPN is display on MC screen");
+			LogClass.VerificationPass_Extent_Report("Pass : Pricing Status is pending");
+			LogClass.VerificationPass_Extent_Report("Pass : Alternate bubble number :"+alt_bubble.getText());	
 			}
 		else
 			{
-			LogClass.VerificationFailed_Extent_Report("Alternate MPN is not display on MC screen or pricing Status is not pending");
+			LogClass.VerificationFailed_Extent_Report("Fail : Alternate MPN is not display on MC screen or pricing Status is not pending");
 			flag++;
 			}
 		funcs.waitforseconds(4);
@@ -523,7 +523,7 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 			LogClass.VerificationPass_Extent_Report("Pass Verified :"+msg);
 		}
 		else {
-			LogClass.VerificationFailed_Extent_Report("Failed :Alteranate part pending for approval message is not display on cqps screen");
+			LogClass.VerificationFailed_Extent_Report("Fail :Alteranate part pending for approval message is not display on cqps screen");
 			flag++;
 		}
 		
@@ -542,9 +542,9 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		WebElement mpn = driver.findElement(By.xpath("//div[contains(text(),'5114')]"));
 				
 		if(mpn.getAttribute("class").contains("green-font")) 
-		LogClass.VerificationPass_Extent_Report("Alternate Parts font is green");		
+		LogClass.VerificationPass_Extent_Report("Pass : Alternate Parts font is green");		
 		else {
-			LogClass.VerificationFailed_Extent_Report("Alternate Parts is not green");
+			LogClass.VerificationFailed_Extent_Report("Fail : Alternate Parts is not green");
 			flag++;}
 		
 		WebElement pending = driver.findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-scope']//span[contains(text(),'Approved')]"));		
@@ -552,9 +552,9 @@ public class CalcuQuote_MaterialCosting_Verification extends CalcuQuote_Abstract
 		System.out.println("color : "+pending.getAttribute("style"));
 		
 		if(pending.getAttribute("style").contains("green")) 
-			LogClass.VerificationPass_Extent_Report("Status is Approved and font is green");		
+			LogClass.VerificationPass_Extent_Report("Pass : Status is Approved and font is green");		
 			else {
-				LogClass.VerificationFailed_Extent_Report("Status is Approved but font is not green");
+				LogClass.VerificationFailed_Extent_Report("Fail : Status is Approved but font is not green");
 				flag++;}		
 		if(flag>0)
 			return false;
